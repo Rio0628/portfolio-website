@@ -5,3 +5,72 @@ body {
   font-family: 'Inconsolata';
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: #1c1d21;
+  color: #f1faee;
+}
+
+/* -- NAV BAR STYLES -- */
+
+.nav-bar {
+  height: 4.5rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background: #333437;
+  justify-content: space-between;
+  /* outline: 1px solid red; */
+}
+
+.logo {
+  position: relative;
+  left: 5px;
+  width: 40%;
+  /* outline: 1px solid red; */
+  text-align: center;
+  font-family: 'Bebas Neue';
+  font-size: 23px;
+  line-height: 22px;
+  letter-spacing: 3px;
+}
+
+.nav-barBtns {
+  position: relative;
+  right: 15px;
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  /* outline: 1px solid red; */
+}
+
+.aboutBtn, .contactBtn {
+  font-size: 18px;
+  padding: 2px 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  /* outline: 1px solid red; */
+}
+
+.aboutBtn:hover, .contactBtn:hover {
+  box-shadow: 0px -1.5px 0px #f1faee;
+  transition: .3s linear;
+}
+
+.aboutBtn:active, .contactBtn:active {
+  box-shadow: none;
+  background: rgba(241, 250, 239, .5);
+  border-radius: 2px;
+  transition: .2s linear;
+}
+
+
+/* div className='nav-bar'>
+          <p className='logo'>Mario Domenech</p>
+
+          className='nav-barBtns'
+          <p className='aboutBtn'>About</p>
+          <p className='contactBtn' */
