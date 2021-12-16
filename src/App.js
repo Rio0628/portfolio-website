@@ -15,7 +15,12 @@ export default class App extends Component {
           </div>
         </div>
 
-        <h1>Hello</h1>
+        <div className='homeView'>
+          <p className='homeText'>
+            <p className='nameText'>Mario Domenech</p>
+            <p className='posText'>Front-end developer</p>
+          </p>
+        </div>
       </div>
     );
   };
