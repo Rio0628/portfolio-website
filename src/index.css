@@ -27,7 +27,7 @@ body {
   /* outline: 1px solid red; */
 }
 
-.logo {
+.mainLogo {
   position: relative;
   left: 5px;
   width: 40%;
@@ -71,7 +71,7 @@ body {
 
 /* -- HOME VIEW TEXT */
 
-.homeView {
+.homeView, .aboutView{
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -100,55 +100,126 @@ body {
   bottom: 2.5rem;
   /* color: #bbadff; */
   background-image: -webkit-linear-gradient(45deg, #bbadff, #5E5780);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* 'aboutView'>
-            <p className='aboutViewHeading'>About Me</p>
+/* -- ABOUT VIEW STYLES -- */
 
-            <p className='aboutViewMainInfo'
+.aboutView {
+  outline: 1px solid green;
+  /* height: 100%; */
+}
 
-            <div className='porgressBarsCntr'>
-                <div className='HTMLinfoCntr'>
-                    <div className='HTMLlogo-name'>
-                        <p className='htmlName'>HTML</p>
-                        <AiFillHtml5 />
-                    </div>
+.aboutViewHeading {
+  width: 100%;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding-left: 55px;
+  /* outline: 1px solid red; */
+}
 
-                    <div className='progressBar HTML'><div className='HTMLfill'>70%</div></div>
-                </div>
+.aboutViewMainInfo {
+  position: relative;
+  bottom: 20px;
+  /* height: 50rem; */
+  width: 85%;
+  /* line-height: 10px; */
+  letter-spacing: 1px;
+  /* outline: 1px solid blue; */
+}
 
-                <div className='CSSinfoCntr'>
-                    <div className='CSSlogo-name'>
-                        <p className='cssName'>CSS</p>
-                        <IoLogoCss3 />
-                    </div>
+.porgressBarsCntr {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  /* outline: 1px solid red; */
+}
 
-                    <div className='progressBar CSS'><div className='CSSfill'>60%</div></div>
-                </div>
+.HTMLinfoCntr, .CSSinfoCntr, .JSinfoCntr, .ReactinfoCntr, .NodeinfoCntr {
+  height: 4.6rem;
+  display: flex;
+  /* justify-content: space-between; */
+  /* outline: 1px solid blue;  */
+}
 
-                <div className='JSinfoCntr'>
-                    <div className='JSlogo-name'>
-                        <p className='jsName'>Javascript</p>
-                        <SiJavascript />
-                    </div>
+.HTMLlogo-name, .CSSlogo-name, .JSlogo-name, .Reactlogo-name, .Nodelogo-name {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  /* outline: 1px solid magenta; */
+}
 
-                    <div className='progressBar JS'><div className='JSfill'>65%</div></div>
-                </div>
-                <div className='ReactinfoCntr'>
-                    <div className='Reactlogo-name'>
-                        <p className='reactName'>React</p>
-                        <SiReact />
-                    </div>
+.jsName {
+  font-size: 12px;
+}
 
-                    <div className='progressBar React'><div className='Reactfill'>50%</div></div>
-                </div>
+.logo {
+  position: relative;
+  bottom: 10px;
+  font-size: 40px;
+  /* height: 80%; */
+  /* outline: 1px solid red; */
+}
 
-                <div className='NodeinfoCntr'>
-                    <div className='Nodelogo-name'>
-                        <p className='nodeName'>Node</p>
-                        <SiNodedotjs />
-                    </div>
+.logo.HTML { color: #e34c26; }
 
-                    <div className='progressBar Node'><div className='Nodefill'>20 */
+.logo.CSS { color: #264de4; }
+
+.logo.JS {
+  font-size: 25px;
+  color: #f0db4f;
+}
+
+.logo.React { color: #61dbfb; }
+
+.logo.Node { color: #3C873A; }
+
+.progressBar {
+  position: relative;
+  top: 1.5rem;
+  left: .5rem;
+  width: 75%;
+  height: 40%;
+  /* outline: 1px solid yellow; */
+  background: #3A3B3E;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.HTMLfill, .CSSfill, .JSfill, .Reactfill, .Nodefill {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 10px;
+  /* outline: 1px solid red; */
+}
+
+.HTMLfill {
+  width: 70%;
+  background: #e34c26;
+}
+
+.CSSfill {
+  width: 60%;
+  background: #264de4;
+}
+
+.JSfill {
+  width: 65%;
+  background: #f0db4f;
+}
+
+.Reactfill {
+  width: 50%;
+  background: #61dbfb;
+}
+
+.Nodefill {
+  width: 20%;
+  background: #3C873A;
+}

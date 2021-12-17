@@ -8,7 +8,7 @@ export default class App extends Component {
     return (
       <div className="container">
         <div className='nav-bar'>
-          <p className='logo'>Mario Domenech</p>
+          <p className='mainLogo'>Mario Domenech</p>
 
           <div className='nav-barBtns'>
             <p className='aboutBtn'>About</p>
