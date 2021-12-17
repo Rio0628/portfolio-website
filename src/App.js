@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AboutView from './components/AboutView';
 
 
 export default class App extends Component {
@@ -21,6 +22,10 @@ export default class App extends Component {
             <p className='posText'>Front-end developer</p>
           </p>
         </div>
+
+        <AboutView />
+
+        
       </div>
     );
   };
