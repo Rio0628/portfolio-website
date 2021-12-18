@@ -16,7 +16,7 @@ const ContactView = () => {
                 <div className='submitBtn'>Submit</div>
             </div>
 
-            <a className='githubRedBtn' href='https://github.com/Rio0628'><AiFillGithub /></a>
+            <div className='btnCntr'><a className='githubBtn' href='https://github.com/Rio0628'><AiFillGithub /></a></div>
         </div>
     );
 }

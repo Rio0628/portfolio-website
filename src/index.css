@@ -85,14 +85,10 @@ body {
   top: 20%;
   width: 90%;
   height: 10rem;
-  /* font-size: 2rem; */
-  /* outline: 1px solid red; */
-}
-
-.nameText, .posText {
   font-family: "Bebas Neue";
   font-size: 35px;
   letter-spacing: 2px;
+  /* font-size: 2rem; */
   /* outline: 1px solid red; */
 }
 
@@ -289,21 +285,76 @@ body {
   background: #3a3b3e;
 }
 
-.githubRedBtn {
+.btnCntr {
   width: 100%;
-  font-size: 22px;
   padding-left: 3.5rem;
+}
+
+.githubBtn {
+  /* position: relative; */
+  /* right: 11rem; */
+
+  font-size: 22px;
+
   color: #f1faee;
   cursor: pointer;
   /* outline: 1px solid red; */
 }
 
-.githubRedBtn:hover {
+.githubBtn:hover {
   transition: .2s linear;
   color: #4E4F51;
 }
 
-.githubRedBtn:active {
+.githubBtn:active {
   transition: .2s linear;
   color: #757678;
+}
+
+@media screen and (min-width: 400px) {
+  .mainLogo {
+    left: 15px;
+  }
+
+  .nav-barBtns {
+    right: 25px;
+    width: 35%;
+  }
+
+  .btnCntr {
+    padding-left: 4rem;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .mainLogo {
+    left: -5px;
+    /* outline: 1px solid red; */
+  }
+
+  .nav-barBtns {
+    width: 30%;
+  }
+
+  .homeText {
+    top: 10%;
+    font-size: 40px;
+  }
+
+  .aboutViewHeading, .contactViewHeading {
+    letter-spacing: 7px;
+    padding-left: 5.5rem;
+  }
+
+  .inputFieldsCntr {
+    width: 82%;
+  }
+
+  .btnCntr {
+    padding-left: 6.5rem;
+  }
+
+  .githubBtn {
+    font-size: 25px;
+  }
 }
