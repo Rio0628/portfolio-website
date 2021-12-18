@@ -12,7 +12,8 @@ body {
   width: 100vw;
   background: #1c1d21;
   color: #f1faee;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 /* -- NAV BAR STYLES -- */
@@ -50,6 +51,7 @@ body {
 
 .aboutBtn, .contactBtn {
   font-size: 18px;
+  font-weight: 600;
   padding: 2px 5px;
   letter-spacing: 1px;
   cursor: pointer;
@@ -356,5 +358,58 @@ body {
 
   .githubBtn {
     font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .mainLogo {
+    left: -15px;
+    font-size: 28px;
+    /* outline: 1px solid red; */
+  }
+
+  .nav-barBtns {
+    width: 25%;
+    right: 50px;
+  }
+
+  .aboutBtn, .contactBtn {
+    font-size: 20px;
+    padding: 2px 7px;
+  }
+
+  .homeText {
+    top: 10%;
+    font-size: 50px;
+    letter-spacing: 3px;
+    line-height: 50px;
+  }
+
+  .aboutViewHeading, .contactViewHeading {
+    letter-spacing: 7px;
+    padding-left: 9rem;
+  }
+
+  .aboutViewMainInfo {
+    width: 82%;
+  }
+
+  .porgressBarsCntr {
+    position: relative;
+    right: 10px;
+    /* outline: 1px solid red; */
+    width: 75%;
+  }
+
+  .inputFieldsCntr {
+    width: 78%;
+  }
+
+  .btnCntr {
+    padding-left: 11.5rem;
+  }
+
+  .githubBtn {
+    font-size: 30px;
   }
 }
