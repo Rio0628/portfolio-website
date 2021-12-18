@@ -16,6 +16,8 @@ const AboutView = () => {
                 <p>I have experience with various front-end technologies like HTML, CSS, and JavaScript. On top of that I am experienced with multiple JavaScript libraries and frameworks like React, Express, and Node JS. As well as familiarity using the MongoDB database for various projects.</p>
 
                 <p>I enjoy learning and working on projects that allow me to test my skills and learn new technologies that further my understanding of web development and software engineering as a whole.</p> 
+
+                <p>You can view my work on my <a className='githubLink' href="https://github.com/Rio0628">Github</a></p>
     
             </div>
 
