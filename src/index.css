@@ -470,3 +470,90 @@ body {
     font-size: 30px;
   } */
 }
+
+@media screen and (min-width: 1200px) {
+  .nav-bar {
+    height: 5rem;
+  }
+
+  .mainLogo {
+    left: -60px;
+    font-size: 32px;
+    letter-spacing: 5px;
+    /* outline: 1px solid red; */
+  }
+
+  .homeText {
+    /* top: 12%; */
+    font-size: 55px;
+    letter-spacing: 7px;
+    /* line-height: 50px; */
+  }
+
+  .aboutViewHeading, .contactViewHeading {
+    letter-spacing: 10px;
+    padding-left: 14rem;
+  }
+
+  .aboutViewMainInfo {
+    width: 80%;
+    font-size: 17px;
+  }
+
+  .porgressBarsCntr {
+    /* position: relative; */
+    right: 12px;
+    outline: 1px solid red;
+    width: 68%;
+  }
+
+  .HTMLinfoCntr, .CSSinfoCntr, .JSinfoCntr, .ReactinfoCntr, .NodeinfoCntr {
+    height: 5.2rem;
+    outline: 1px solid blue; 
+  }
+
+  .jsName { font-size: 15px; }
+
+  .progressBar {
+    /* position: relative;
+    top: 1.5rem;
+    left: .5rem; */
+    width: 72%;
+    height: 43%;
+  }
+
+  .HTMLfill, .CSSfill, .JSfill, .Reactfill, .Nodefill {
+    font-size: 19px;
+    /* outline: 1px solid red; */
+  }
+
+  /* .inputFieldsCntr {
+    width: 70%;
+  } */
+
+  .inputName, .inputEmail, .inputMessage {
+    font-size: 17px;
+    padding: 1px 6px;
+  }
+  
+  .inputMessage {
+    padding: 7px;
+    font-size: 21px;
+  }
+
+  .submitBtn {
+    font-size: 26px;
+    letter-spacing: 8px;
+    padding: 4px 0px;
+  } 
+
+  .btnCntr {
+    position: relative;
+    top: 1.5rem; 
+    padding-left: 22.7rem;
+  }
+
+  .githubBtn {
+    font-size: 35px;
+  }
+}
