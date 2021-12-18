@@ -111,6 +111,7 @@ body {
   flex-direction: column;
   align-items: center;
   outline: 1px solid blue; 
+  padding-top: 2rem;
 }
 
 .aboutViewHeading, .contactViewHeading {
@@ -120,6 +121,7 @@ body {
   font-family: 'Bebas Neue';
   letter-spacing: 5px;
   padding-left: 55px;
+  margin-bottom: 3rem;
   /* outline: 1px solid red; */
 }
 
@@ -235,6 +237,7 @@ body {
   flex-direction: column;
   align-items: center;
   outline: 1px solid blue; 
+  padding-top: 2rem;
 }
 
 .inputFieldsCntr {
@@ -412,4 +415,58 @@ body {
   .githubBtn {
     font-size: 30px;
   }
+}
+
+@media screen and (min-width: 1000px) {
+  .mainLogo {
+    left: -50px;
+    font-size: 30px;
+    letter-spacing: 4px;
+    /* outline: 1px solid red; */
+  }
+
+  .nav-barBtns {
+    width: 18%;
+    right: 65px;
+  }
+
+  .aboutBtn, .contactBtn {
+    /* font-size: 22px; */
+    padding: 2px 10px;
+  }
+
+  .homeText {
+    top: 12%;
+    /* font-size: 50px; */
+    letter-spacing: 5px;
+    /* line-height: 50px; */
+  }
+
+  .aboutViewHeading, .contactViewHeading {
+    letter-spacing: 7px;
+    padding-left: 12.5rem;
+  }
+
+  .aboutViewMainInfo {
+    /* width: 82%; */
+  }
+
+  .porgressBarsCntr {
+    /* position: relative; */
+    right: 12px;
+    /* outline: 1px solid red; */
+    width: 73%;
+  }
+
+  .inputFieldsCntr {
+    width: 70%;
+  }
+
+  .btnCntr {
+    padding-left: 20.5rem;
+  }
+
+  /* .githubBtn {
+    font-size: 30px;
+  } */
 }
