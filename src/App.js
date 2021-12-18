@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AboutView from './components/AboutView';
-
+import ContactView from './components/ContactView';
 
 export default class App extends Component {
   
@@ -25,6 +25,7 @@ export default class App extends Component {
 
         <AboutView />
 
+        <ContactView />
         
       </div>
     );
