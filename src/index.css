@@ -557,3 +557,60 @@ body {
     font-size: 35px;
   }
 }
+
+@media screen and (min-width: 1500px) {
+
+  .nav-barBtns {
+    width: 14.2rem;
+  }
+
+  .homeText {
+    /* top: 12%; */
+    font-size: 55px;
+    letter-spacing: 7px;
+    /* line-height: 50px; */
+  }
+
+  .aboutViewHeading, .contactViewHeading {
+    letter-spacing: 10px;
+    padding-left: 30rem;
+  }
+
+  .aboutViewMainInfo {
+    width: 65.5rem;
+    font-size: 18px;
+  }
+
+  .porgressBarsCntr {
+    /* position: relative; */
+    right: 15px;
+    /* outline: 1px solid red; */
+    width: 61rem;
+  }
+
+  .inputFieldsCntr {
+    width: 64rem;
+  }
+
+  .inputName, .inputEmail, .inputMessage {
+    font-size: 18px;
+    padding: 2px 6px;
+  }
+  
+  .inputMessage {
+    padding: 7px;
+    font-size: 23px;
+  }
+
+  .submitBtn {
+    font-size: 26px;
+    letter-spacing: 8px;
+    padding: 5px 0px;
+  } 
+
+  .btnCntr {
+    position: relative;
+    top: 1.5rem; 
+    padding-left: 30rem;
+  }
+}
