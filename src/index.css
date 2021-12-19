@@ -614,3 +614,27 @@ body {
     padding-left: 30rem;
   }
 }
+
+@media screen and (min-width: 1600px) {
+
+  .aboutViewHeading, .contactViewHeading {
+    /* letter-spacing: 10px; */
+    padding-left: 38rem;
+  }
+
+  .btnCntr {
+    padding-left: 38.5rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+
+  .aboutViewHeading, .contactViewHeading {
+    /* letter-spacing: 10px; */
+    padding-left: 52rem;
+  }
+
+  .btnCntr { 
+    padding-left: 50.5rem;
+  }
+}
