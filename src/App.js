@@ -1,14 +1,45 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import AboutView from './components/AboutView';
 import ContactView from './components/ContactView';
 
-export default class App extends Component {
-  
-  render () {
+const App = () => {
+    const useOnScreen = (options) => {
+      const [ref, setRef] = useState(null);
+      const [visible, setVisible] = useState(false);
+
+      React.useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+          // console.log(entry)
+          setVisible(entry.isIntersecting);
+        }, options)
+
+        if (ref) { observer.observe(ref); }
+
+        return () => {
+          if (ref) { observer.unobserve(ref); }
+        };
+      }, [ref, options] );
+    
+      return [setRef, visible];
+    }
+
+    const options = {
+      root: null,
+      threshold: 0,
+      rootMargin: '-150px',
+    }
+    const [setHomeRef, homeViewVisible] = useOnScreen(options);
+   
+
+    console.log(homeViewVisible)
+
+    const homeViewActive = () => homeViewVisible ? ' active' : '';
+
+    console.log(homeViewActive())
     return (
       <div className="container">
-        <div className='nav-bar'>
-          <p className='mainLogo'>Mario Domenech</p>
+        <div className={'nav-bar' + homeViewActive()}>
+          <p className={'mainLogo' + homeViewActive()}>Mario Domenech</p>
 
           <div className='nav-barBtns'>
             <p className='aboutBtn'>About</p>
@@ -16,11 +47,11 @@ export default class App extends Component {
           </div>
         </div>
 
-        <div className='homeView'>
-          <p className='homeText'>
+        <div className='homeView' ref={setHomeRef}>
+          <div className='homeText'>
             <p className='nameText'>Mario Domenech</p>
             <p className='posText'>Front-end developer</p>
-          </p>
+          </div>
         </div>
 
         <AboutView />
@@ -29,7 +60,6 @@ export default class App extends Component {
         
       </div>
     );
-  };
 }
 
-// export default App;
+export default App;

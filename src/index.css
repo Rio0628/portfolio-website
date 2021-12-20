@@ -19,13 +19,28 @@ body {
 /* -- NAV BAR STYLES -- */
 
 .nav-bar {
+  position: fixed;
   height: 4.5rem;
+  width: 100%;
   display: flex;
   text-align: center;
   align-items: center;
   background: #333437;
+  opacity: .5;
+  z-index: 1;
   justify-content: space-between;
   /* outline: 1px solid red; */
+  transition: .5s linear;
+}
+
+.nav-bar:hover {
+  opacity: 1;
+  transition: .5s linear;
+}
+
+.nav-bar.active {
+  opacity: 1;
+  transition: .5s linear;
 }
 
 .mainLogo {
@@ -38,6 +53,35 @@ body {
   font-size: 23px;
   line-height: 22px;
   letter-spacing: 3px;
+  opacity: 1;
+  pointer-events: none;
+  animation: mainLogoShow 1s 1;
+}
+
+@keyframes mainLogoDel {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.mainLogo.active {
+  opacity: 0;
+  pointer-events: all;
+  animation: mainLogoDel 1s 1;
+}
+
+@keyframes mainLogoShow {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 .nav-barBtns {
