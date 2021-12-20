@@ -10,12 +10,12 @@ const ContactView = (props) => {
             <p className={'contactViewHeading ' + contactViewActive()}>Contact</p>
 
             <div className='inputFieldsCntr'>
-                <input className={'inputName ' + contactViewActive()} placeholder='Enter Name...' type='text'/>
+                <input className={'inputName ' + contactViewActive()} id='name' placeholder='Enter Name...' type='text' onChange={props.onChange}/>
 
-            <input className={'inputEmail ' + contactViewActive()} placeholder='Enter Email Address...' type='text'/>
+                <input className={'inputEmail ' + contactViewActive()} id='email' placeholder='Enter Email Address...' type='text' onChange={props.onChange}/>
                 
-                <textarea className={'inputMessage ' + contactViewActive()} placeholder='Enter Message...' type='text'/>
-
+                <textarea className={'inputMessage ' + contactViewActive()} id='message' placeholder='Enter Message...' type='text' onChange={props.onChange}/>
+    
                 <div className={'submitBtn ' + contactViewActive()}>Submit</div>
             </div>
 

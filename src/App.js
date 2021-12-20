@@ -3,6 +3,24 @@ import AboutView from './components/AboutView';
 import ContactView from './components/ContactView';
 
 const App = () => {
+    const [ nameInput, setNameInput ] = useState('');
+    const [ emailInput, setEmailInput ] = useState('');
+    const [ messageInput, setMessageInput ] = useState('');
+
+    const onChange = (e) => {
+      console.log(e.target);
+
+      if (e.target.id === 'name') { setNameInput(e.target.value) };
+
+      if (e.target.id === 'email') { setEmailInput(e.target.value) };
+
+      if (e.target.id === 'message') { setMessageInput(e.target.value) }
+    }
+
+    console.log(nameInput);
+    console.log(emailInput);
+    console.log(messageInput);
+
     const useOnScreen = (options) => {
       const [ref, setRef] = useState(null);
       const [visible, setVisible] = useState(false);
@@ -62,7 +80,7 @@ const App = () => {
 
         <AboutView setAboutRef={setAboutRef} aboutViewVisible={aboutViewVisible}/>
 
-        <ContactView setContactRef={setContactRef} contactViewVisible={contactViewVisible}/>
+        <ContactView setContactRef={setContactRef} contactViewVisible={contactViewVisible} onChange={onChange}/>
         
       </div>
     );
