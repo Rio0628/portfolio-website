@@ -1,9 +1,9 @@
 import React from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 
-const ContactView = () => {
+const ContactView = (props) => {
     return (
-        <div className='contactView'>
+        <div className='contactView' ref={props.setContactRef}>
             <p className='contactViewHeading'>Contact</p>
 
             <div className='inputFieldsCntr'>

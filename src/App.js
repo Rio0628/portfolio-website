@@ -29,13 +29,21 @@ const App = () => {
       rootMargin: '-150px',
     }
     const [setHomeRef, homeViewVisible] = useOnScreen(options);
+    const [setAboutRef, aboutViewVisible] = useOnScreen(options);
+    const [setContactRef, contactViewVisible] = useOnScreen(options);
    
 
-    console.log(homeViewVisible)
+    // console.log(homeViewVisible)
+
 
     const homeViewActive = () => homeViewVisible ? ' active' : '';
+   
+    const contactViewActive = () => contactViewVisible ? ' active' : '';
 
-    console.log(homeViewActive())
+    // console.log(aboutViewActive())
+    // console.log(contactViewActive())
+    // console.log(<AboutView />)
+
     return (
       <div className="container">
         <div className={'nav-bar' + homeViewActive()}>
@@ -54,9 +62,9 @@ const App = () => {
           </div>
         </div>
 
-        <AboutView />
+        <AboutView setAboutRef={setAboutRef} aboutViewVisible={aboutViewVisible}/>
 
-        <ContactView />
+        <ContactView setContactRef={setContactRef} contactViewActive={contactViewActive()}/>
         
       </div>
     );

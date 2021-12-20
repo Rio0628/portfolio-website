@@ -3,12 +3,15 @@ import { AiFillHtml5 } from 'react-icons/ai';
 import { IoLogoCss3 } from 'react-icons/io';
 import { SiJavascript, SiReact, SiNodedotjs } from 'react-icons/si';
 
-const AboutView = () => {
-    return (
-        <div className='aboutView'>
-            <p className='aboutViewHeading'>About Me</p>
+const AboutView = (props) => {
 
-            <div className='aboutViewMainInfo'>
+    const aboutViewActive = () => props.aboutViewVisible ? ' active' : '';
+
+    return (
+        <div className='aboutView' ref={props.setAboutRef}>
+            <p className={'aboutViewHeading ' + aboutViewActive()}>About Me</p>
+
+            <div className={'aboutViewMainInfo' + aboutViewActive()}>
                 <p>I am Mario Domenech, an entry-level front-end developer.</p>
                 
                 <p>For the last year I have been building my skills and knowledge on programming focusing most of the time on front-end focused technologies with the last couple months focusing on making programs and application to test said skills. </p>
@@ -22,7 +25,7 @@ const AboutView = () => {
             </div>
 
             <div className='porgressBarsCntr'>
-                <div className='HTMLinfoCntr'>
+                <div className={'HTMLinfoCntr ' + aboutViewActive()}>
                     <div className='HTMLlogo-name'>
                         <p className='htmlName'>HTML</p>
                         <AiFillHtml5 className='logo HTML'/>
@@ -31,7 +34,7 @@ const AboutView = () => {
                     <div className='progressBar HTML'><div className='HTMLfill'>70%</div></div>
                 </div>
 
-                <div className='CSSinfoCntr'>
+                <div className={'CSSinfoCntr ' + aboutViewActive()}>
                     <div className='CSSlogo-name'>
                         <p className='cssName'>CSS</p>
                         <IoLogoCss3 className='logo CSS'/>
@@ -40,7 +43,7 @@ const AboutView = () => {
                     <div className='progressBar CSS'><div className='CSSfill'>60%</div></div>
                 </div>
 
-                <div className='JSinfoCntr'>
+                <div className={'JSinfoCntr ' + aboutViewActive()}>
                     <div className='JSlogo-name'>
                         <p className='jsName'>Javascript</p>
                         <SiJavascript className='logo JS'/>
@@ -49,7 +52,7 @@ const AboutView = () => {
                     <div className='progressBar JS'><div className='JSfill'>65%</div></div>
                 </div>
 
-                <div className='ReactinfoCntr'>
+                <div className={'ReactinfoCntr ' + aboutViewActive()}>
                     <div className='Reactlogo-name'>
                         <p className='reactName'>React</p>
                         <SiReact className='logo React'/>
@@ -58,7 +61,7 @@ const AboutView = () => {
                     <div className='progressBar React'><div className='Reactfill'>50%</div></div>
                 </div>
 
-                <div className='NodeinfoCntr'>
+                <div className={'NodeinfoCntr ' + aboutViewActive()}>
                     <div className='Nodelogo-name'>
                         <p className='nodeName'>Node</p>
                         <SiNodedotjs className='logo Node'/>

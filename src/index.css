@@ -159,6 +159,7 @@ body {
 }
 
 .aboutViewHeading, .contactViewHeading {
+  position: relative;
   width: 100%;
   font-size: 35px;
   font-weight: 600;
@@ -166,7 +167,26 @@ body {
   letter-spacing: 5px;
   padding-left: 55px;
   margin-bottom: 3rem;
+  opacity: 0;
   /* outline: 1px solid red; */
+  /* animation: showElmnt 2s infinite; */
+}
+
+.aboutViewHeading.active, .contactViewHeading.active {
+  animation: showElmnt 3s 1;
+  opacity: 1;
+}
+
+@keyframes showElmnt {
+  0% {
+    opacity: 0;
+    right: 2rem;
+  }
+
+  50% {
+    opacity: 1;
+    right: 0;
+  }
 }
 
 .aboutViewMainInfo {
@@ -176,7 +196,13 @@ body {
   width: 85%;
   /* line-height: 10px; */
   letter-spacing: 1px;
+  opacity: 0;
   /* outline: 1px solid blue; */
+}
+
+.aboutViewMainInfo.active {
+  animation: showElmnt 4s 1;
+  opacity: 1;
 }
 
 .porgressBarsCntr {
@@ -187,10 +213,37 @@ body {
 }
 
 .HTMLinfoCntr, .CSSinfoCntr, .JSinfoCntr, .ReactinfoCntr, .NodeinfoCntr {
+  position: relative;
   height: 4.6rem;
   display: flex;
+  opacity: 0;
   /* justify-content: space-between; */
   /* outline: 1px solid blue;  */
+}
+
+.HTMLinfoCntr.active {
+  animation: showElmnt 4s 1;
+  opacity: 1;
+}
+
+.CSSinfoCntr.active {
+  animation: showElmnt 4.5s 1;
+  opacity: 1;
+}
+
+.JSinfoCntr.active {
+  animation: showElmnt 5s 1;
+  opacity: 1;
+}
+
+.ReactinfoCntr.active {
+  animation: showElmnt 6s 1;
+  opacity: 1;
+}
+
+.NodeinfoCntr.active {
+  animation: showElmnt 8s 1;
+  opacity: 1;
 }
 
 .HTMLlogo-name, .CSSlogo-name, .JSlogo-name, .Reactlogo-name, .Nodelogo-name {
