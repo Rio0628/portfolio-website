@@ -8,7 +8,7 @@ const AboutView = (props) => {
     const aboutViewActive = () => props.aboutViewVisible ? ' active' : '';
 
     return (
-        <div className='aboutView' ref={props.setAboutRef}>
+        <div className='aboutView' id='about' ref={props.setAboutRef}>
             <p className={'aboutViewHeading ' + aboutViewActive()}>About Me</p>
 
             <div className={'aboutViewMainInfo' + aboutViewActive()}>

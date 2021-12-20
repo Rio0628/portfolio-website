@@ -53,9 +53,16 @@ body {
   font-size: 23px;
   line-height: 22px;
   letter-spacing: 3px;
+  color:#f1faee;
+  text-decoration: none;
   opacity: 1;
-  pointer-events: none;
+  pointer-events: auto;
   animation: mainLogoShow 1s 1;
+}
+
+.mainLogo:active {
+  color:#bbadff;
+  transition: .1s linear;
 }
 
 @keyframes mainLogoDel {
@@ -70,7 +77,7 @@ body {
 
 .mainLogo.active {
   opacity: 0;
-  pointer-events: all;
+  pointer-events: none;
   animation: mainLogoDel 1s 1;
 }
 
@@ -98,6 +105,8 @@ body {
   font-weight: 600;
   padding: 2px 5px;
   letter-spacing: 1px;
+  color:#f1faee;
+  text-decoration: none;
   cursor: pointer;
   /* outline: 1px solid red; */
 }

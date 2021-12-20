@@ -45,15 +45,15 @@ const App = () => {
     return (
       <div className="container">
         <div className={'nav-bar' + homeViewActive()}>
-          <p className={'mainLogo' + homeViewActive()}>Mario Domenech</p>
+          <a className={'mainLogo' + homeViewActive()} href='#home'>Mario Domenech</a>
 
           <div className='nav-barBtns'>
-            <p className='aboutBtn'>About</p>
-            <p className='contactBtn'>Contact</p>
+            <a className='aboutBtn' href='#about'>About</a>
+            <a className='contactBtn' href='#contact'>Contact</a>
           </div>
         </div>
 
-        <div className='homeView' ref={setHomeRef}>
+        <div className='homeView' id='home' ref={setHomeRef}>
           <div className={'homeText ' + homeViewActive()}>
             <p className='nameText'>Mario Domenech</p>
             <p className='posText'>Front-end developer</p>

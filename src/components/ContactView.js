@@ -6,7 +6,7 @@ const ContactView = (props) => {
     const contactViewActive = () => props.contactViewVisible ? ' active' : '';
 
     return (
-        <div className='contactView' ref={props.setContactRef}>
+        <div className='contactView' id='contact' ref={props.setContactRef}>
             <p className={'contactViewHeading ' + contactViewActive()}>Contact</p>
 
             <div className='inputFieldsCntr'>
