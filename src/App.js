@@ -37,8 +37,6 @@ const App = () => {
 
 
     const homeViewActive = () => homeViewVisible ? ' active' : '';
-   
-    const contactViewActive = () => contactViewVisible ? ' active' : '';
 
     // console.log(aboutViewActive())
     // console.log(contactViewActive())
@@ -56,7 +54,7 @@ const App = () => {
         </div>
 
         <div className='homeView' ref={setHomeRef}>
-          <div className='homeText'>
+          <div className={'homeText ' + homeViewActive()}>
             <p className='nameText'>Mario Domenech</p>
             <p className='posText'>Front-end developer</p>
           </div>
@@ -64,7 +62,7 @@ const App = () => {
 
         <AboutView setAboutRef={setAboutRef} aboutViewVisible={aboutViewVisible}/>
 
-        <ContactView setContactRef={setContactRef} contactViewActive={contactViewActive()}/>
+        <ContactView setContactRef={setContactRef} contactViewVisible={contactViewVisible}/>
         
       </div>
     );

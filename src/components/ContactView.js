@@ -2,21 +2,24 @@ import React from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 
 const ContactView = (props) => {
+
+    const contactViewActive = () => props.contactViewVisible ? ' active' : '';
+
     return (
         <div className='contactView' ref={props.setContactRef}>
-            <p className='contactViewHeading'>Contact</p>
+            <p className={'contactViewHeading ' + contactViewActive()}>Contact</p>
 
             <div className='inputFieldsCntr'>
-                <input className='inputName' placeholder='Enter Name...' type='text'/>
+                <input className={'inputName ' + contactViewActive()} placeholder='Enter Name...' type='text'/>
 
-                <input className='inputEmail' placeholder='Enter Email Address...' type='text'/>
+            <input className={'inputEmail ' + contactViewActive()} placeholder='Enter Email Address...' type='text'/>
                 
-                <textarea className='inputMessage' placeholder='Enter Message...' type='text'/>
+                <textarea className={'inputMessage ' + contactViewActive()} placeholder='Enter Message...' type='text'/>
 
-                <div className='submitBtn'>Submit</div>
+                <div className={'submitBtn ' + contactViewActive()}>Submit</div>
             </div>
 
-            <div className='btnCntr'><a className='githubBtn' href='https://github.com/Rio0628'><AiFillGithub /></a></div>
+            <div className='btnCntr'><a className={'githubBtn ' + contactViewActive()} href='https://github.com/Rio0628'><AiFillGithub /></a></div>
         </div>
     );
 }

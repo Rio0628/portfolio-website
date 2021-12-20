@@ -134,8 +134,14 @@ body {
   font-family: "Bebas Neue";
   font-size: 35px;
   letter-spacing: 2px;
+  opacity: 0;
   /* font-size: 2rem; */
   /* outline: 1px solid red; */
+}
+
+.homeText.active {
+  animation: showElmnt 8s 1;
+  opacity: 1;
 }
 
 .posText {
@@ -173,6 +179,11 @@ body {
 }
 
 .aboutViewHeading.active, .contactViewHeading.active {
+  animation: showElmnt 3s 1;
+  opacity: 1;
+}
+
+.contactViewHeading.active {
   animation: showElmnt 3s 1;
   opacity: 1;
 }
@@ -346,6 +357,7 @@ body {
 }
 
 .inputName, .inputEmail, .inputMessage {
+  position: relative;
   background: none;
   height: 10%;
   margin-bottom: 20px;
@@ -365,7 +377,23 @@ body {
   height: 40%;
 }
 
+.inputName.active {
+  animation: showElmnt 4s 1;
+  opacity: 1;
+}
+
+.inputEmail.active {
+  animation: showElmnt 5s 1;
+  opacity: 1;
+}
+
+.inputMessage.active {
+  animation: showElmnt 6s 1;
+  opacity: 1;
+}
+
 .submitBtn {
+  position: relative;
   font-size: 22px;
   font-weight: 600;
   text-align: center;
@@ -375,6 +403,11 @@ body {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+}
+
+.submitBtn.active {
+  animation: showElmnt 8s 1;
+  opacity: 1;
 }
 
 .submitBtn:hover {
@@ -393,14 +426,18 @@ body {
 }
 
 .githubBtn {
-  /* position: relative; */
+  position: relative;
   /* right: 11rem; */
-
+  opacity: 0;
   font-size: 22px;
-
   color: #f1faee;
   cursor: pointer;
   /* outline: 1px solid red; */
+}
+
+.githubBtn.active {
+  animation: showElmnt 8s 1;
+  opacity: 1;
 }
 
 .githubBtn:hover {
