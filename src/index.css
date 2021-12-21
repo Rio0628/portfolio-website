@@ -409,6 +409,9 @@ body {
   letter-spacing: 4px;
   padding: 2px 0px;
   outline: 1px solid #3A3B3E;
+  background: transparent;
+  border: none;
+  color: #f1faee;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;

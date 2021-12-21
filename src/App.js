@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import AboutView from './components/AboutView';
 import ContactView from './components/ContactView';
 
@@ -17,9 +18,14 @@ const App = () => {
       if (e.target.id === 'message') { setMessageInput(e.target.value) }
     }
 
-    console.log(nameInput);
-    console.log(emailInput);
-    console.log(messageInput);
+    const sendEmail = (e) => {
+      e.preventDefault();
+
+      emailjs.sendForm('service_s96ceec', 'template_sbt77qu', e.target, 'user_ZnbEy3YQ1cqh19gURzYbS').then((result) => {
+        alert('Email Sent.');
+        window.location.reload();
+      }, (err) => { alert(err.text) });
+    }
 
     const useOnScreen = (options) => {
       const [ref, setRef] = useState(null);
@@ -80,7 +86,7 @@ const App = () => {
 
         <AboutView setAboutRef={setAboutRef} aboutViewVisible={aboutViewVisible}/>
 
-        <ContactView setContactRef={setContactRef} contactViewVisible={contactViewVisible} onChange={onChange}/>
+        <ContactView setContactRef={setContactRef} sendEmail={sendEmail} contactViewVisible={contactViewVisible} onChange={onChange}/>
         
       </div>
     );
