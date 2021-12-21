@@ -3,6 +3,7 @@ import { AiFillGithub } from 'react-icons/ai';
 
 const ContactView = (props) => {
 
+    // Will trigger the animations in the contact view once it is within the viewport 
     const contactViewActive = () => props.contactViewVisible ? ' active' : '';
 
     return (

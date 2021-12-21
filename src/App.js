@@ -4,21 +4,10 @@ import AboutView from './components/AboutView';
 import ContactView from './components/ContactView';
 
 const App = () => {
-    const [ nameInput, setNameInput ] = useState('');
-    const [ emailInput, setEmailInput ] = useState('');
-    const [ messageInput, setMessageInput ] = useState('');
-
-    const onChange = (e) => {
-      console.log(e.target);
-
-      if (e.target.id === 'name') { setNameInput(e.target.value) };
-
-      if (e.target.id === 'email') { setEmailInput(e.target.value) };
-
-      if (e.target.id === 'message') { setMessageInput(e.target.value) }
-    }
+    
 
     const sendEmail = (e) => {
+      // Send the email message that the user creates to maker's main email.  
       e.preventDefault();
 
       emailjs.sendForm('service_s96ceec', 'template_sbt77qu', e.target, 'user_ZnbEy3YQ1cqh19gURzYbS').then((result) => {
@@ -28,12 +17,13 @@ const App = () => {
     }
 
     const useOnScreen = (options) => {
+      // Function to create a new intersection obsverer on a certain element
+      // Will trigger true if the element is within view 
       const [ref, setRef] = useState(null);
       const [visible, setVisible] = useState(false);
 
       React.useEffect(() => {
         const observer = new IntersectionObserver(([entry]) => {
-          // console.log(entry)
           setVisible(entry.isIntersecting);
         }, options)
 
@@ -48,23 +38,20 @@ const App = () => {
     }
 
     const options = {
+      // Main options for intersectionObserver functioning
       root: null,
       threshold: 0,
       rootMargin: '-150px',
     }
+  
+    // Will set a new intersection observer for each of the view in the website. 
     const [setHomeRef, homeViewVisible] = useOnScreen(options);
     const [setAboutRef, aboutViewVisible] = useOnScreen(options);
     const [setContactRef, contactViewVisible] = useOnScreen(options);
-   
+  
 
-    // console.log(homeViewVisible)
-
-
+    // Will trigger the animations in the home view once it is within the viewport 
     const homeViewActive = () => homeViewVisible ? ' active' : '';
-
-    // console.log(aboutViewActive())
-    // console.log(contactViewActive())
-    // console.log(<AboutView />)
 
     return (
       <div className="container">
@@ -86,7 +73,7 @@ const App = () => {
 
         <AboutView setAboutRef={setAboutRef} aboutViewVisible={aboutViewVisible}/>
 
-        <ContactView setContactRef={setContactRef} sendEmail={sendEmail} contactViewVisible={contactViewVisible} onChange={onChange}/>
+        <ContactView setContactRef={setContactRef} sendEmail={sendEmail} contactViewVisible={contactViewVisible}/>
         
       </div>
     );

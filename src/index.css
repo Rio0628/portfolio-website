@@ -8,7 +8,6 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  /* height: 100vh; */
   width: 100vw;
   background: #1c1d21;
   color: #f1faee;
@@ -29,7 +28,6 @@ body {
   opacity: .5;
   z-index: 1;
   justify-content: space-between;
-  /* outline: 1px solid red; */
   transition: .5s linear;
 }
 
@@ -47,7 +45,6 @@ body {
   position: relative;
   left: 5px;
   width: 40%;
-  /* outline: 1px solid red; */
   text-align: center;
   font-family: 'Bebas Neue';
   font-size: 23px;
@@ -97,7 +94,6 @@ body {
   width: 45%;
   display: flex;
   justify-content: space-between;
-  /* outline: 1px solid red; */
 }
 
 .aboutBtn, .contactBtn {
@@ -108,7 +104,6 @@ body {
   color:#f1faee;
   text-decoration: none;
   cursor: pointer;
-  /* outline: 1px solid red; */
 }
 
 .aboutBtn:hover, .contactBtn:hover {
@@ -127,12 +122,10 @@ body {
 /* -- HOME VIEW TEXT */
 
 .homeView{
-  height: 50rem;
+  height: 60rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  outline: 1px solid red;
-  /* padding-bottom: 20rem;  */
 }
 
 .homeText {
@@ -144,8 +137,6 @@ body {
   font-size: 35px;
   letter-spacing: 2px;
   opacity: 0;
-  /* font-size: 2rem; */
-  /* outline: 1px solid red; */
 }
 
 .homeText.active {
@@ -156,7 +147,6 @@ body {
 .posText {
   position: relative;
   bottom: 2.5rem;
-  /* color: #bbadff; */
   background-image: -webkit-linear-gradient(45deg, #bbadff, #5E5780);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -169,7 +159,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  outline: 1px solid blue; 
   padding-top: 2rem;
 }
 
@@ -183,8 +172,6 @@ body {
   padding-left: 55px;
   margin-bottom: 3rem;
   opacity: 0;
-  /* outline: 1px solid red; */
-  /* animation: showElmnt 2s infinite; */
 }
 
 .aboutViewHeading.active, .contactViewHeading.active {
@@ -212,12 +199,9 @@ body {
 .aboutViewMainInfo {
   position: relative;
   bottom: 20px;
-  /* height: 50rem; */
   width: 85%;
-  /* line-height: 10px; */
   letter-spacing: 1px;
   opacity: 0;
-  /* outline: 1px solid blue; */
 }
 
 .aboutViewMainInfo.active {
@@ -229,7 +213,6 @@ body {
   width: 85%;
   display: flex;
   flex-direction: column;
-  /* outline: 1px solid red; */
 }
 
 .HTMLinfoCntr, .CSSinfoCntr, .JSinfoCntr, .ReactinfoCntr, .NodeinfoCntr {
@@ -237,8 +220,6 @@ body {
   height: 4.6rem;
   display: flex;
   opacity: 0;
-  /* justify-content: space-between; */
-  /* outline: 1px solid blue;  */
 }
 
 .HTMLinfoCntr.active {
@@ -273,7 +254,6 @@ body {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  /* outline: 1px solid magenta; */
 }
 
 .jsName {
@@ -284,8 +264,6 @@ body {
   position: relative;
   bottom: 10px;
   font-size: 40px;
-  /* height: 80%; */
-  /* outline: 1px solid red; */
 }
 
 .logo.HTML { color: #e34c26; }
@@ -307,7 +285,6 @@ body {
   left: .5rem;
   width: 75%;
   height: 40%;
-  /* outline: 1px solid yellow; */
   background: #3A3B3E;
   border-radius: 10px;
   overflow: hidden;
@@ -318,7 +295,6 @@ body {
   align-items: center;
   height: 100%;
   padding-left: 10px;
-  /* outline: 1px solid red; */
 }
 
 .HTMLfill {
@@ -353,7 +329,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  outline: 1px solid blue; 
   padding-top: 2rem;
 }
 
@@ -362,7 +337,6 @@ body {
   height: 20rem;
   display: flex;
   flex-direction: column;
-  /* outline: 1px solid turquoise; */
 }
 
 .inputName, .inputEmail, .inputMessage {
@@ -382,7 +356,6 @@ body {
   padding: 5px;
   font-family: 'inconsolata';
   font-size: 17px;
-  /* line-height: 70px; */
   height: 40%;
 }
 
@@ -439,12 +412,10 @@ body {
 
 .githubBtn {
   position: relative;
-  /* right: 11rem; */
   opacity: 0;
   font-size: 22px;
   color: #f1faee;
   cursor: pointer;
-  /* outline: 1px solid red; */
 }
 
 .githubBtn.active {
@@ -480,7 +451,6 @@ body {
 @media screen and (min-width: 550px) {
   .mainLogo {
     left: -5px;
-    /* outline: 1px solid red; */
   }
 
   .nav-barBtns {
@@ -514,7 +484,6 @@ body {
   .mainLogo {
     left: -15px;
     font-size: 28px;
-    /* outline: 1px solid red; */
   }
 
   .nav-barBtns {
@@ -546,7 +515,6 @@ body {
   .porgressBarsCntr {
     position: relative;
     right: 10px;
-    /* outline: 1px solid red; */
     width: 75%;
   }
 
@@ -568,7 +536,6 @@ body {
     left: -50px;
     font-size: 30px;
     letter-spacing: 4px;
-    /* outline: 1px solid red; */
   }
 
   .nav-barBtns {
@@ -577,15 +544,12 @@ body {
   }
 
   .aboutBtn, .contactBtn {
-    /* font-size: 22px; */
     padding: 2px 10px;
   }
 
   .homeText {
     top: 12%;
-    /* font-size: 50px; */
     letter-spacing: 5px;
-    /* line-height: 50px; */
   }
 
   .aboutViewHeading, .contactViewHeading {
@@ -593,14 +557,8 @@ body {
     padding-left: 12.5rem;
   }
 
-  .aboutViewMainInfo {
-    /* width: 82%; */
-  }
-
   .porgressBarsCntr {
-    /* position: relative; */
     right: 12px;
-    /* outline: 1px solid red; */
     width: 73%;
   }
 
@@ -611,10 +569,6 @@ body {
   .btnCntr {
     padding-left: 20.5rem;
   }
-
-  /* .githubBtn {
-    font-size: 30px;
-  } */
 }
 
 @media screen and (min-width: 1200px) {
@@ -626,14 +580,11 @@ body {
     left: -60px;
     font-size: 32px;
     letter-spacing: 5px;
-    /* outline: 1px solid red; */
   }
 
   .homeText {
-    /* top: 12%; */
     font-size: 55px;
     letter-spacing: 7px;
-    /* line-height: 50px; */
   }
 
   .aboutViewHeading, .contactViewHeading {
@@ -647,35 +598,24 @@ body {
   }
 
   .porgressBarsCntr {
-    /* position: relative; */
     right: 12px;
-    outline: 1px solid red;
     width: 68%;
   }
 
   .HTMLinfoCntr, .CSSinfoCntr, .JSinfoCntr, .ReactinfoCntr, .NodeinfoCntr {
     height: 5.2rem;
-    outline: 1px solid blue; 
   }
 
   .jsName { font-size: 15px; }
 
   .progressBar {
-    /* position: relative;
-    top: 1.5rem;
-    left: .5rem; */
     width: 72%;
     height: 43%;
   }
 
   .HTMLfill, .CSSfill, .JSfill, .Reactfill, .Nodefill {
     font-size: 19px;
-    /* outline: 1px solid red; */
   }
-
-  /* .inputFieldsCntr {
-    width: 70%;
-  } */
 
   .inputName, .inputEmail, .inputMessage {
     font-size: 17px;
@@ -711,10 +651,8 @@ body {
   }
 
   .homeText {
-    /* top: 12%; */
     font-size: 55px;
     letter-spacing: 7px;
-    /* line-height: 50px; */
   }
 
   .aboutViewHeading, .contactViewHeading {
@@ -728,9 +666,7 @@ body {
   }
 
   .porgressBarsCntr {
-    /* position: relative; */
     right: 15px;
-    /* outline: 1px solid red; */
     width: 61rem;
   }
 
@@ -764,7 +700,6 @@ body {
 @media screen and (min-width: 1600px) {
 
   .aboutViewHeading, .contactViewHeading {
-    /* letter-spacing: 10px; */
     padding-left: 38rem;
   }
 
@@ -776,7 +711,6 @@ body {
 @media screen and (min-width: 1800px) {
 
   .aboutViewHeading, .contactViewHeading {
-    /* letter-spacing: 10px; */
     padding-left: 52rem;
   }
 

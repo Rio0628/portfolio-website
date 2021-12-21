@@ -5,6 +5,7 @@ import { SiJavascript, SiReact, SiNodedotjs } from 'react-icons/si';
 
 const AboutView = (props) => {
 
+    // Will trigger the animations in the about view once it is within the viewport 
     const aboutViewActive = () => props.aboutViewVisible ? ' active' : '';
 
     return (
