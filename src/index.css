@@ -141,7 +141,7 @@ body {
 
 .workBtn:hover::before {
   transform: scaleX(.3);
-  transform-origin: top;
+  transform-origin: bottom center;
 }
 
 .contactBtn:hover::before {
@@ -494,8 +494,8 @@ body {
   }
 
   .nav-barBtns {
-    right: 25px;
-    width: 35%;
+    right: 1rem;
+    width: 11.5rem;
   }
 
   .btnCntr {
@@ -509,7 +509,8 @@ body {
   }
 
   .nav-barBtns {
-    width: 30%;
+    right: 1.6rem;
+    width: 16rem;
   }
 
   .homeText {
@@ -537,12 +538,13 @@ body {
 @media screen and (min-width: 800px) {
 
   .mainLogo {
+    top: .5rem;
     left: -15px;
     font-size: 28px;
   }
 
   .nav-barBtns {
-    width: 25%;
+    width: 18rem;
     right: 50px;
   }
 
@@ -594,7 +596,6 @@ body {
   }
 
   .nav-barBtns {
-    width: 18%;
     right: 65px;
   }
 
@@ -634,6 +635,7 @@ body {
   .mainLogo {
     left: -60px;
     font-size: 32px;
+    top: .5rem;
     letter-spacing: 5px;
   }
 
@@ -700,11 +702,6 @@ body {
 }
 
 @media screen and (min-width: 1500px) {
-
-  .nav-barBtns {
-    width: 14.2rem;
-  }
-
   .homeText {
     font-size: 55px;
     letter-spacing: 7px;
