@@ -91,23 +91,29 @@ body {
 .nav-barBtns {
   position: relative;
   right: 15px;
-  width: 45%;
+  width: 13.5rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  /* outline: 1px solid red; */
 }
 
-.aboutBtn, .contactBtn {
+.aboutBtn, .contactBtn, .workBtn {
   font-size: 18px;
   font-weight: 600;
   padding: 2px 5px;
-  letter-spacing: 1px;
+  letter-spacing: 1px;            
+  text-align: center;
   color:#f1faee;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   cursor: pointer;
   border-radius: 2px;
+  /* outline: 1px solid blue; */
 }
 
-.aboutBtn::before, .contactBtn::before {
+.aboutBtn::before, .contactBtn::before, .workBtn::before {
   content: " ";
   display: block;
   position: absolute;
@@ -120,8 +126,11 @@ body {
   transform-origin: bottom left;
 }
 
+.workBtn::before {
+  transform-origin: bottom;
+}
+
 .contactBtn::before {
-  transform: scaleX(0);
   transform-origin: bottom right;
 }
 
@@ -130,14 +139,24 @@ body {
   transform-origin: bottom left;
 }
 
+.workBtn:hover::before {
+  transform: scaleX(.3);
+  transform-origin: top;
+}
+
 .contactBtn:hover::before {
-  transform: scaleX(.4);
+  transform: scaleX(.37);
   transform-origin: bottom right;
 }
 
 .aboutBtn:active::before{
   transform: scaleX(0);
   transform-origin: bottom left;
+}
+
+.workBtn:active::before {
+  transform: scaleX(0);
+  transform-origin: top;
 }
 
 .contactBtn:active::before {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import AboutView from './components/AboutView';
 import ContactView from './components/ContactView';
+import WorkView from './components/WorkView';
 
 const App = () => {
     
@@ -60,6 +61,7 @@ const App = () => {
 
           <div className='nav-barBtns'>
             <a className='aboutBtn' href='#about'>About</a>
+            <a className='workBtn' href='#work'>Work</a>
             <a className='contactBtn' href='#contact'>Contact</a>
           </div>
         </div>
@@ -72,6 +74,8 @@ const App = () => {
         </div>
 
         <AboutView setAboutRef={setAboutRef} aboutViewVisible={aboutViewVisible}/>
+
+        <WorkView />
 
         <ContactView setContactRef={setContactRef} sendEmail={sendEmail} contactViewVisible={contactViewVisible}/>
         
