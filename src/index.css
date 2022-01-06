@@ -140,7 +140,7 @@ body {
 }
 
 .homeText.active {
-  animation: showElmnt 8s 1;
+  animation: showElmnt 1s 1;
   opacity: 1;
 }
 
@@ -175,24 +175,24 @@ body {
 }
 
 .aboutViewHeading.active, .contactViewHeading.active {
-  animation: showElmnt 3s 1;
+  animation: showElmnt 1s 1;
   opacity: 1;
 }
 
 .contactViewHeading.active {
-  animation: showElmnt 3s 1;
+  animation: showElmnt 1s 1;
   opacity: 1;
 }
 
 @keyframes showElmnt {
   0% {
     opacity: 0;
-    right: 2rem;
+    transform: scale(.2);
   }
 
   50% {
-    opacity: 1;
-    right: 0;
+    opacity: .5;
+    transform: scale(1.1);
   }
 }
 
@@ -205,7 +205,7 @@ body {
 }
 
 .aboutViewMainInfo.active {
-  animation: showElmnt 4s 1;
+  animation: showElmnt 1s 1;
   opacity: 1;
 }
 
@@ -223,27 +223,27 @@ body {
 }
 
 .HTMLinfoCntr.active {
-  animation: showElmnt 4s 1;
+  animation: showElmnt 1.2s 1;
   opacity: 1;
 }
 
 .CSSinfoCntr.active {
-  animation: showElmnt 4.5s 1;
+  animation: showElmnt 1.4s 1;
   opacity: 1;
 }
 
 .JSinfoCntr.active {
-  animation: showElmnt 5s 1;
+  animation: showElmnt 1.6s 1;
   opacity: 1;
 }
 
 .ReactinfoCntr.active {
-  animation: showElmnt 6s 1;
+  animation: showElmnt 1.8s 1;
   opacity: 1;
 }
 
 .NodeinfoCntr.active {
-  animation: showElmnt 8s 1;
+  animation: showElmnt 2s 1;
   opacity: 1;
 }
 
@@ -360,17 +360,17 @@ body {
 }
 
 .inputName.active {
-  animation: showElmnt 4s 1;
+  animation: showElmnt 1.4s 1;
   opacity: 1;
 }
 
 .inputEmail.active {
-  animation: showElmnt 5s 1;
+  animation: showElmnt 1.8s 1;
   opacity: 1;
 }
 
 .inputMessage.active {
-  animation: showElmnt 6s 1;
+  animation: showElmnt 2s 1;
   opacity: 1;
 }
 
@@ -391,7 +391,7 @@ body {
 }
 
 .submitBtn.active {
-  animation: showElmnt 8s 1;
+  animation: showElmnt 2s 1;
   opacity: 1;
 }
 
