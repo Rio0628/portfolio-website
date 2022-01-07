@@ -8,7 +8,22 @@ const WorkView = () => {
 
             <div className='projectsCntr'>
                 <div className='projectsPreviewCntr'>
-                
+                    <div className='indProject'>
+                        <img className='projectImage' src='../favicon.ico' alt='Project'></img>
+
+                        <div className='imageHover'>
+                            <p className='appName'>App Name</p>
+
+                            <a className='visitAppBtn'>Visit App</a>
+
+                            <div className='techUsedCntr'>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                                <p>JS</p>
+                                <p>React</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className='expandCntrBtn'><BsChevronCompactDown className='icon'/></div>
