@@ -3,10 +3,11 @@ import emailjs from 'emailjs-com';
 import AboutView from './components/AboutView';
 import ContactView from './components/ContactView';
 import WorkView from './components/WorkView';
+import API from './api';
 
 const App = () => {
     
-
+    API.getAllProjects().then( data => console.log(data.data.data))
     const sendEmail = (e) => {
       // Send the email message that the user creates to maker's main email.  
       e.preventDefault();
