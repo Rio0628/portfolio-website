@@ -26,4 +26,4 @@ getProjects = async (req, res) => {
     }).catch( err => console.log(err) );
 }
 
-module.exports = { createProject, getProjects };
+module.exports = { createProject, getProjects }
