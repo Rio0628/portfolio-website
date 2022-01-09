@@ -6,8 +6,9 @@ import WorkView from './components/WorkView';
 import API from './api';
 
 const App = () => {
-    
-    API.getAllProjects().then( data => console.log(data.data.data))
+    const  [ expandDropdown, setExpandDropdown ] = useState(false);
+
+    // API.getAllProjects().then( data => console.log(data.data.data))
     const sendEmail = (e) => {
       // Send the email message that the user creates to maker's main email.  
       e.preventDefault();
@@ -49,8 +50,11 @@ const App = () => {
     // Will set a new intersection observer for each of the view in the website. 
     const [setHomeRef, homeViewVisible] = useOnScreen(options);
     const [setAboutRef, aboutViewVisible] = useOnScreen(options);
+    const [setWorkRef, workViewVisible] = useOnScreen(options);
     const [setContactRef, contactViewVisible] = useOnScreen(options);
   
+    
+    console.log(expandDropdown)
 
     // Will trigger the animations in the home view once it is within the viewport 
     const homeViewActive = () => homeViewVisible ? ' active' : '';
@@ -76,7 +80,7 @@ const App = () => {
 
         <AboutView setAboutRef={setAboutRef} aboutViewVisible={aboutViewVisible}/>
 
-        <WorkView />
+        <WorkView setWorkRef={setWorkRef} workViewVisible={workViewVisible} expandDropdown={expandDropdown} setExpandDropdown={setExpandDropdown}/>
 
         <ContactView setContactRef={setContactRef} sendEmail={sendEmail} contactViewVisible={contactViewVisible}/>
         

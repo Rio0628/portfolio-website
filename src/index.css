@@ -140,12 +140,12 @@ body {
 }
 
 .aboutBtn:hover::before {
-  transform: scaleX(3);
+  transform: scaleX(.3);
   transform-origin: bottom left;
 }
 
 .workBtn:hover::before {
-  transform: scaleX(1);
+    transform: scaleX(1.5);
   transform-origin: bottom center;
 }
 
@@ -234,7 +234,7 @@ body {
   opacity: 0;
 }
 
-.aboutViewHeading.active, .contactViewHeading.active, .workViewHeading {
+.aboutViewHeading.active, .contactViewHeading.active, .workViewHeading.active {
   animation: showElmnt 1s 1;
   opacity: 1;
 }
@@ -287,7 +287,7 @@ body {
   opacity: 1;
 }
 
-.JSinfoCntr.active {
+.JSinfoCntr.active, .projectsCntr.active {
   animation: showElmnt 1.6s 1;
   opacity: 1;
 }
@@ -380,11 +380,12 @@ body {
 /* -- WORK VIEW STYLES -- */
 
 .workView {
-  min-height: 40rem;
+  min-height: 50rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 2rem;
+  outline: 1px solid magenta;
 }
 
 .projectsCntr {
@@ -409,6 +410,10 @@ body {
   grid-template-columns: repeat(2, 10.8rem);
   grid-template-rows: repeat(3, 11rem);
 }
+
+ .projectsPreviewCntr.active {
+   height: 100%;
+ }
 
 .expandCntrBtn, .contractCntrBtn {
   position: relative;
@@ -469,7 +474,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: rgba(241, 250, 239, .2);
+  /* background: rgba(241, 250, 239, .2); */
+  background: blue;
   transition: .5s linear;
   border-radius: 2px;
 }

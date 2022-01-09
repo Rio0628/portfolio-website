@@ -1,13 +1,13 @@
 import React from 'react';
 import { BsChevronCompactDown, BsChevronContract } from 'react-icons/bs'
 
-const WorkView = () => {
+const WorkView = (props) => {
     return (
-        <div className='workView' id='work'>
-            <p className={'workViewHeading'}>Work - Projects</p>
+        <div className='workView' id='work' ref={props.setWorkRef}>
+            <p className={ props.workViewVisible ? 'workViewHeading active' : 'workViewHeading'}>Work - Projects</p>
 
-            <div className='projectsCntr'>
-                <div className='projectsPreviewCntr'>
+            <div className={ props.workViewVisible ? 'projectsCntr active' : 'projectsCntr'}>
+                <div className={ props.expandDropdown ? 'projectsPreviewCntr active' : 'projectsPreviewCntr'}>
                     <div className='indProject'>
                         <img className='projectImage' src='../favicon.ico' alt='Project'></img>
 
@@ -77,9 +77,15 @@ const WorkView = () => {
                     </div>
                 </div>
 
-                <div className='expandCntrBtn'><BsChevronCompactDown className='icon'/></div>
+                {!props.expandDropdown ? 
+                    <div className='expandCntrBtn' onClick={ () => props.setExpandDropdown(true) }><BsChevronCompactDown className='icon'/></div>
+                : ''}
 
-                {/* <div className='contractCntrBtn'><BsChevronContract className='icon'/></div> */}
+                {props.expandDropdown ? 
+                    <div className='contractCntrBtn' onClick={ () => props.setExpandDropdown(false) }><BsChevronContract className='icon'/></div>
+                : ''}
+                
+                {/*  */}
             </div>
         </div>
     );
