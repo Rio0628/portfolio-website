@@ -1,5 +1,6 @@
 import React from 'react';
 import { BsChevronCompactDown, BsChevronContract } from 'react-icons/bs'
+import { BookFinder, TicTacToe, TimerLogo, TodoListLogo } from '../images'; 
 
 const WorkView = (props) => {
     return (
@@ -9,7 +10,7 @@ const WorkView = (props) => {
             <div className={ props.workViewVisible ? 'projectsCntr active' : 'projectsCntr'}>
                 <div className={ props.expandDropdown ? 'projectsPreviewCntr active' : 'projectsPreviewCntr'}>
                     <div className='indProject'>
-                        <img className='projectImage' src='../favicon.ico' alt='Project'></img>
+                        <div className='projectImage todoList' src={BookFinder} alt='Project'></div>
 
                         <div className='imageHover'>
                             <p className='appName'>App Name</p>
@@ -26,7 +27,7 @@ const WorkView = (props) => {
                     </div>
 
                     <div className='indProject'>
-                        <img className='projectImage' src='../favicon.ico' alt='Project'></img>
+                        <div className='projectImage bookFinder' alt='Project'></div>
 
                         <div className='imageHover'>
                             <p className='appName'>App Name</p>
@@ -43,7 +44,7 @@ const WorkView = (props) => {
                     </div>
                     
                     <div className='indProject'>
-                        <img className='projectImage' src='../favicon.ico' alt='Project'></img>
+                        <div className='projectImage ticTacToe' alt='Project'></div>
 
                         <div className='imageHover'>
                             <p className='appName'>App Name</p>
@@ -58,9 +59,9 @@ const WorkView = (props) => {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className='indProject'>
-                        <img className='projectImage' src='../favicon.ico' alt='Project'></img>
+                        <div className='projectImage timer' alt='Project'></div>
 
                         <div className='imageHover'>
                             <p className='appName'>App Name</p>
@@ -75,6 +76,7 @@ const WorkView = (props) => {
                             </div>
                         </div>
                     </div>
+                  
                 </div>
 
                 {!props.expandDropdown ? 
