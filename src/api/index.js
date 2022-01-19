@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-const api = axios.create({ baseURL: 'http://localhost:3000/api', });
-
-export const getAllProjects = () => api.get('/projects');
+export const getAllProjects = () => axios.get('/api/projects');
 
 const apis = { getAllProjects }; 
 export default apis;
