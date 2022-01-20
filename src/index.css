@@ -796,6 +796,15 @@ body {
     width: 75%;
   }
 
+  .projectsCntr {
+    width: 40rem;
+  }
+
+  .projectsPreviewCntr {
+    grid-template-columns: repeat(3, 12.8rem);
+    grid-template-rows: repeat(3, 11.5rem);
+  }
+
   .inputFieldsCntr {
     width: 78%;
   }
