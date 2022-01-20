@@ -848,6 +848,52 @@ body {
     width: 73%;
   }
 
+  .projectsCntr {
+    width: 45rem;
+  }
+
+  .projectsPreviewCntr { height: 12rem; }
+
+  .projectsPreviewCntr {
+    grid-template-columns: repeat(3, 14rem);
+    grid-template-rows: repeat(3, 12.8rem);
+  }
+
+  .indProject {
+    left: 40px;
+    top: 30px;
+    width: 11.5rem;
+    height: 10rem;
+  }
+
+  .projectImage {
+    width: 12rem;
+  }
+
+  .imageHover {
+    height: 10rem;
+    width: 11.5rem;
+  }
+
+  .appName { font-size: 21px; }
+
+  .visitAppBtn {
+    bottom: 20px;
+    font-size: 21px;
+    padding: 6px 11px;
+  }
+
+  .techUsedCntr {
+    grid-template-columns: repeat(3, 3.5rem);
+    grid-template-rows: repeat(2, 30px);
+  }
+
+  .techUsedCntr p {
+    font-size: 15px;
+    padding: 2px 6px;
+    left: 10px;
+  }
+
   .inputFieldsCntr {
     width: 70%;
   }
