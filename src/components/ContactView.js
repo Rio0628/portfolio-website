@@ -20,7 +20,7 @@ const ContactView = (props) => {
                 <input type='submit' className={'submitBtn ' + contactViewActive()}></input>
             </form>
 
-            <div className='btnCntr'><a className={'githubBtn ' + contactViewActive()} href='https://github.com/Rio0628'><AiFillGithub /></a></div>
+            <div className='btnCntr'><a className={'githubBtn ' + contactViewActive()} target='_blank' rel='noopener noreferrer' href='https://github.com/Rio0628'><AiFillGithub /></a></div>
         </div>
     );
 }

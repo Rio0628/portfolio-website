@@ -3,6 +3,7 @@ import React from 'react';
 const IndProject = (props) => {
     let techsCntr = [];
     
+    // For statement to bring all technologies of a project into view
     for (let i = 0; i < props.project.technologies.length; i++ ) {
         techsCntr.push( <p key={'tech' + i}>{props.project.technologies[i]}</p> );
     }

@@ -5,13 +5,12 @@ import IndProject from './IndProject';
 const WorkView = (props) => {
     let indProjectsCntr = [];
 
+    // For statement to create ind project components according the objects gathered from the database 
     if (props.projects) {
         for (let i = 0; i < props.projects.length; i++) {
             indProjectsCntr.push( <IndProject project={props.projects[i]} key={'project' + i} />);
         }
     }
-
-    // console.log(props.projects.length)
 
     return (
         <div className='workView' id='work' ref={props.setWorkRef}>
