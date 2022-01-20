@@ -478,7 +478,7 @@ body {
   top: 0px;
   height: 8.7rem;
   width: 10rem;
-  opacity: 1;
+  opacity: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
