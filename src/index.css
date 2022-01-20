@@ -455,7 +455,7 @@ body {
   border-radius: 2px;
   transition: .5s linear;
   backface-visibility: hidden;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 .projectImage {
@@ -487,7 +487,7 @@ body {
   top: 0px;
   height: 8.7rem;
   width: 10rem;
-  opacity: 0;
+  opacity: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -546,7 +546,7 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 3.2rem);
-  grid-template-rows: repeat(3, 25px);
+  grid-template-rows: repeat(2, 25px);
 }
 
 .techUsedCntr p {
@@ -563,16 +563,6 @@ body {
   margin-top: 5px;
   /* outline: 1px solid red; */
 }
-
-/* ='indProject'>
-                        <img className='projectImage' src='' alt='Project'></img>
-
-                        <div className='imagHover'>
-                            <a className='visitAppBtn'>Visit App</a>
-
-                            <div className='techUsedCntr'>
-                                <p>HTML</p>
-                                <p>CSS</p> */
 
 /* -- CONTACT VIEW STYLES -- */
 
@@ -712,6 +702,40 @@ body {
 
   .homeText {
     font-size: 40px;
+  }
+
+  .projectsCntr {
+    width: 27rem;
+  }
+
+  .projectsPreviewCntr {
+    grid-template-columns: repeat(2, 12.8rem);
+    grid-template-rows: repeat(3, 11.5rem);
+  }
+
+  .indProject {
+    left: 25px;
+    top: 23px;
+    width: 11rem;
+    height: 10rem;
+  }
+
+  .projectImage {
+    width: 11rem;
+  }
+
+  .imageHover {
+    height: 9.7rem;
+    width: 11rem;
+  }
+
+  .techUsedCntr {
+    grid-template-columns: repeat(3, 3.5rem);
+    grid-template-rows: repeat(2, 30px);
+  }
+
+  .techUsedCntr p {
+    left: 10px;
   }
 
   .aboutViewHeading, .contactViewHeading {
