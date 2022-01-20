@@ -948,6 +948,13 @@ body {
   .projectsPreviewCntr {
     grid-template-columns: repeat(4, 14rem);
     grid-template-rows: repeat(1, 12.8rem);
+    padding-bottom: 1.5rem;
+  }
+
+  .expandCntrBtn {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
   }
 
   .inputName, .inputEmail, .inputMessage {

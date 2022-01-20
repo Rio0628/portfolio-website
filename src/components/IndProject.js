@@ -4,7 +4,7 @@ const IndProject = (props) => {
     let techsCntr = [];
     
     for (let i = 0; i < props.project.technologies.length; i++ ) {
-        techsCntr.push( <p>{props.project.technologies[i]}</p> );
+        techsCntr.push( <p key={'tech' + i}>{props.project.technologies[i]}</p> );
     }
 
     return (

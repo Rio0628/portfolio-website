@@ -7,7 +7,7 @@ const WorkView = (props) => {
 
     if (props.projects) {
         for (let i = 0; i < props.projects.length; i++) {
-            indProjectsCntr.push( <IndProject project={props.projects[i]} />);
+            indProjectsCntr.push( <IndProject project={props.projects[i]} key={'project' + i} />);
         }
     }
 
