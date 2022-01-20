@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.be73fc54.css",
-    "main.js": "/static/js/main.8a4c7538.js",
+    "main.css": "/static/css/main.53be3af6.css",
+    "main.js": "/static/js/main.97b81433.js",
     "static/js/787.49138e18.chunk.js": "/static/js/787.49138e18.chunk.js",
     "static/media/BookFinder.PNG": "/static/media/BookFinder.06cf421e2ee1eff56d70.PNG",
     "static/media/TodoListLogo.PNG": "/static/media/TodoListLogo.7c54c054840f0bf251a9.PNG",
     "static/media/TimerLogo.PNG": "/static/media/TimerLogo.af4918c993f41c3f6314.PNG",
     "static/media/Tic-Tac-Toe.PNG": "/static/media/Tic-Tac-Toe.d4ecd5d8f9d0ccc86a95.PNG",
     "index.html": "/index.html",
-    "main.be73fc54.css.map": "/static/css/main.be73fc54.css.map",
-    "main.8a4c7538.js.map": "/static/js/main.8a4c7538.js.map",
+    "main.53be3af6.css.map": "/static/css/main.53be3af6.css.map",
+    "main.97b81433.js.map": "/static/js/main.97b81433.js.map",
     "787.49138e18.chunk.js.map": "/static/js/787.49138e18.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.be73fc54.css",
-    "static/js/main.8a4c7538.js"
+    "static/css/main.53be3af6.css",
+    "static/js/main.97b81433.js"
   ]
 }

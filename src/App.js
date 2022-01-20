@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import AboutView from './components/AboutView';
 import ContactView from './components/ContactView';
 import WorkView from './components/WorkView';
 import API from './api';
 
-const App = () => {
-    const  [ expandDropdown, setExpandDropdown ] = useState(false);
+const App = () => {  
+    const [ expandDropdown, setExpandDropdown ] = useState(false);
+    const [ projects, setProjects ] = useState();
 
-    // API.getAllProjects().then( data => console.log(data.data.data))
+    useEffect( () => {
+      const getProjects = async () => {
+        let projects;
+        await API.getAllProjects().then( indProjects => projects = indProjects.data.data )
+    
+        setProjects(projects)
+      }
+      getProjects();
+    }, []);
+
     const sendEmail = (e) => {
       // Send the email message that the user creates to maker's main email.  
       e.preventDefault();
@@ -52,9 +62,6 @@ const App = () => {
     const [setAboutRef, aboutViewVisible] = useOnScreen(options);
     const [setWorkRef, workViewVisible] = useOnScreen(options);
     const [setContactRef, contactViewVisible] = useOnScreen(options);
-  
-    
-    console.log(expandDropdown)
 
     // Will trigger the animations in the home view once it is within the viewport 
     const homeViewActive = () => homeViewVisible ? ' active' : '';
@@ -80,7 +87,7 @@ const App = () => {
 
         <AboutView setAboutRef={setAboutRef} aboutViewVisible={aboutViewVisible}/>
 
-        <WorkView setWorkRef={setWorkRef} workViewVisible={workViewVisible} expandDropdown={expandDropdown} setExpandDropdown={setExpandDropdown}/>
+        <WorkView projects={projects} setWorkRef={setWorkRef} workViewVisible={workViewVisible} expandDropdown={expandDropdown} setExpandDropdown={setExpandDropdown}/>
 
         <ContactView setContactRef={setContactRef} sendEmail={sendEmail} contactViewVisible={contactViewVisible}/>
         

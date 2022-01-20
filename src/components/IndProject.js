@@ -1,0 +1,27 @@
+import React from 'react';
+
+const IndProject = (props) => {
+    let techsCntr = [];
+    
+    for (let i = 0; i < props.project.technologies.length; i++ ) {
+        techsCntr.push( <p>{props.project.technologies[i]}</p> );
+    }
+
+    return (
+        <div className='indProject'>
+            <div className={`projectImage ${props.project.image}`} alt='Project'></div>
+
+            <div className='imageHover'>
+                <p className='appName'>{props.project.name}</p>
+
+                <a className='visitAppBtn' target='_blank' rel='noopener noreferrer' href={props.project.url}>Visit App</a>
+
+                <div className='techUsedCntr'>
+                    { techsCntr }
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default IndProject;

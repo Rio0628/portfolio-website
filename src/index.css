@@ -486,6 +486,7 @@ body {
   background: rgba(241, 250, 239, .2);
   transition: .5s linear;
   border-radius: 2px;
+  pointer-events: none;
 }
 
 .indProject:hover .projectImage {
@@ -494,6 +495,7 @@ body {
 
 .indProject:hover .imageHover {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .appName {
