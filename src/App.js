@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 // import emailjs from 'emailjs-com';
-// import AboutView from './components/AboutView';
-// import ContactView from './components/ContactView';
-// import WorkView from './components/WorkView';
 // import API from './api';
+import { HomeView, AboutView, WorkView, ContactView } from './components';
 import { CgMenuGridR } from 'react-icons/cg';
 import { FaRegWindowClose } from 'react-icons/fa';
 
@@ -13,7 +11,7 @@ export default class App extends Component {
       <div className="container">
         <CgMenuGridR className='menuBtn' />
 
-        <div className='nav'>
+        {/* <div className='nav'>
           <FaRegWindowClose className='closeNavBtn'/>
 
           <p className='mainLogo'>Mario Domenech</p>
@@ -25,10 +23,10 @@ export default class App extends Component {
             <li className='workItem'>Work</li>
             <li className='contactItem'>Contact</li>
           </ul>
-        </div>
+        </div> */}
         
         <div className='mainContainer'>
-
+          <HomeView />
         </div>
 
       </div>
