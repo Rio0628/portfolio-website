@@ -1,13 +1,42 @@
 import React, { Component } from 'react';
-import emailjs from 'emailjs-com';
-import AboutView from './components/AboutView';
-import ContactView from './components/ContactView';
-import WorkView from './components/WorkView';
-import API from './api';
+// import emailjs from 'emailjs-com';
+// import AboutView from './components/AboutView';
+// import ContactView from './components/ContactView';
+// import WorkView from './components/WorkView';
+// import API from './api';
+import { CgMenuGridR } from 'react-icons/cg';
+import { FaRegWindowClose } from 'react-icons/fa';
 
 export default class App extends Component {  
   render () {
-    // const [ expandDropdown, setExpandDropdown ] = useState(false);
+    return (
+      <div className="container">
+        <CgMenuGridR className='menuBtn' />
+
+        <div className='nav'>
+          <FaRegWindowClose className='closeNavBtn'/>
+
+          <p className='mainLogo'>Mario Domenech</p>
+
+          <ul className='navItems'>
+            <li className='homeItem'>Home</li>
+            <li className='aboutItem'>About</li>
+            <li className='skillsItem'>Skills</li>
+            <li className='workItem'>Work</li>
+            <li className='contactItem'>Contact</li>
+          </ul>
+        </div>
+        
+        <div className='mainContainer'>
+
+        </div>
+
+      </div>
+    );
+  }
+}
+
+// const [ expandDropdown, setExpandDropdown ] = useState(false);
     // const [ projects, setProjects ] = useState();
     
     // useEffect( () => {
@@ -65,11 +94,3 @@ export default class App extends Component {
 
     // Will trigger the animations in the home view once it is within the viewport 
     // const homeViewActive = () => homeViewVisible ? ' active' : '';
-
-    return (
-      <div className="container">
-        <h1>Hello</h1>
-      </div>
-    );
-  }
-}
