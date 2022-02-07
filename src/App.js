@@ -1,98 +1,75 @@
-import React, { useState, useEffect } from 'react';
+import React, { Component } from 'react';
 import emailjs from 'emailjs-com';
 import AboutView from './components/AboutView';
 import ContactView from './components/ContactView';
 import WorkView from './components/WorkView';
 import API from './api';
 
-const App = () => {  
-    const [ expandDropdown, setExpandDropdown ] = useState(false);
-    const [ projects, setProjects ] = useState();
-
-    useEffect( () => {
-      const getProjects = async () => {
-        let projects;
-        await API.getAllProjects().then( indProjects => projects = indProjects.data.data )
+export default class App extends Component {  
+  render () {
+    // const [ expandDropdown, setExpandDropdown ] = useState(false);
+    // const [ projects, setProjects ] = useState();
     
-        setProjects(projects)
-      }
-      getProjects();
-    }, []);
+    // useEffect( () => {
+    //   const getProjects = async () => {
+    //     let projects;
+    //     await API.getAllProjects().then( indProjects => projects = indProjects.data.data )
+    
+    //     setProjects(projects)
+    //   }
+    //   getProjects();
+    // }, []);
 
-    const sendEmail = (e) => {
-      // Send the email message that the user creates to maker's main email.  
-      e.preventDefault();
+    // const sendEmail = (e) => {
+    //   // Send the email message that the user creates to maker's main email.  
+    //   e.preventDefault();
 
-      emailjs.sendForm('service_s96ceec', 'template_sbt77qu', e.target, 'user_ZnbEy3YQ1cqh19gURzYbS').then((result) => {
-        alert('Email Sent.');
-        window.location.reload();
-      }, (err) => { alert(err.text) });
-    }
+    //   emailjs.sendForm('service_s96ceec', 'template_sbt77qu', e.target, 'user_ZnbEy3YQ1cqh19gURzYbS').then((result) => {
+    //     alert('Email Sent.');
+    //     window.location.reload();
+    //   }, (err) => { alert(err.text) });
+    // }
 
-    const useOnScreen = (options) => {
+    // const useOnScreen = (options) => {
       // Function to create a new intersection obsverer on a certain element
       // Will trigger true if the element is within view 
-      const [ref, setRef] = useState(null);
-      const [visible, setVisible] = useState(false);
+    //   const [ref, setRef] = useState(null);
+    //   const [visible, setVisible] = useState(false);
 
-      React.useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-          setVisible(entry.isIntersecting);
-        }, options)
+    //   React.useEffect(() => {
+    //     const observer = new IntersectionObserver(([entry]) => {
+    //       setVisible(entry.isIntersecting);
+    //     }, options)
 
-        if (ref) { observer.observe(ref); }
+    //     if (ref) { observer.observe(ref); }
 
-        return () => {
-          if (ref) { observer.unobserve(ref); }
-        };
-      }, [ref, options] );
+    //     return () => {
+    //       if (ref) { observer.unobserve(ref); }
+    //     };
+    //   }, [ref, options] );
     
-      return [setRef, visible];
-    }
+    //   return [setRef, visible];
+    // }
 
-    const options = {
-      // Main options for intersectionObserver functioning
-      root: null,
-      threshold: 0,
-      rootMargin: '-150px',
-    }
+    // const options = {
+    //   root: null,
+    //   threshold: 0,
+    //   rootMargin: '-150px',
+    // }
   
     // Will set a new intersection observer for each of the view in the website. 
-    const [setHomeRef, homeViewVisible] = useOnScreen(options);
-    const [setAboutRef, aboutViewVisible] = useOnScreen(options);
-    const [setWorkRef, workViewVisible] = useOnScreen(options);
-    const [setContactRef, contactViewVisible] = useOnScreen(options);
+    // const [setHomeRef, homeViewVisible] = useOnScreen(options);
+    // const [setAboutRef, aboutViewVisible] = useOnScreen(options);
+    // const [setWorkRef, workViewVisible] = useOnScreen(options);
+    // const [setContactRef, contactViewVisible] = useOnScreen(options);
 
     // Will trigger the animations in the home view once it is within the viewport 
-    const homeViewActive = () => homeViewVisible ? ' active' : '';
+    // const homeViewActive = () => homeViewVisible ? ' active' : '';
 
     return (
       <div className="container">
-        <div className={'nav-bar' + homeViewActive()}>
-          <a className={'mainLogo' + homeViewActive()} href='#home'>Mario Domenech</a>
-
-          <div className='nav-barBtns'>
-            <a className='aboutBtn' href='#about'>About</a>
-            <a className='workBtn' href='#work'>Work</a>
-            <a className='contactBtn' href='#contact'>Contact</a>
-          </div>
-        </div>
-
-        <div className='homeView' id='home' ref={setHomeRef}>
-          <div className={'homeText ' + homeViewActive()}>
-            <p className='nameText'>Mario Domenech</p>
-            <p className='posText'>Front-end developer</p>
-          </div>
-        </div>
-
-        <AboutView setAboutRef={setAboutRef} aboutViewVisible={aboutViewVisible}/>
-
-        <WorkView projects={projects} setWorkRef={setWorkRef} workViewVisible={workViewVisible} expandDropdown={expandDropdown} setExpandDropdown={setExpandDropdown}/>
-
-        <ContactView setContactRef={setContactRef} sendEmail={sendEmail} contactViewVisible={contactViewVisible}/>
-        
+        <h1>Hello</h1>
       </div>
     );
+  }
 }
-
-export default App;
