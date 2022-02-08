@@ -34,35 +34,60 @@ body {
 
 .nav {
   position: absolute;
+  top: -150%;
   height: 100vh;
   width: 100vw;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(5px);
   /* background: white; */
-  /* opacity: 0; */
-  /* pointer-events: none; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
+  opacity: 1;
+}
+
+.bgTitle {
+  position: absolute;
+  bottom: 4rem;
+  color: #2c343a;
+  height: 100%;
+  width: 100%;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: 'Titillium Web';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 13rem;
+  /* letter-spacing: 2px; */
+  font-weight: 800;
+  /* outline: 1px solid red; */
 }
 
 .closeNavBtn {
   position: absolute;
   top: 8px;
+  right: 10px;
+  /* left: -100px; */
   font-size: 45px;
+  opacity: 1;
   cursor: pointer;
   /* background: red; */
 }
 
+.icon {
+  pointer-events: none;
+}
+
 .mainLogo {
   position: relative;
-  bottom: 7rem;
-  font-size: 32px;
+  bottom: 6rem;
+  font-size: 35px;
   font-family: 'Titillium Web';
   font-weight: 800;
+  opacity: 0;
   letter-spacing: 2px;
   /* outline: 1px solid red; */
 }
@@ -75,6 +100,8 @@ body {
   flex-direction: column;
   align-items: center;
   list-style-type: none;
+  margin-top: -20px;
+  opacity: 0;
   /* outline: 1px solid blue; */
 }
 
@@ -84,7 +111,7 @@ body {
   font-size: 25px;
   /* width: 22rem; */
   width: 116%;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   letter-spacing: 3px;
   cursor: pointer;
@@ -93,7 +120,7 @@ body {
 }
 
 .navItems li:hover {
-  background: #0b0d0f;
+  color: #bfc0c0;
   transition: .1s linear;
 }
 

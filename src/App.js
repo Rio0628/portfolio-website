@@ -4,26 +4,72 @@ import React, { Component } from 'react';
 import { HomeView, AboutView, WorkView, ContactView } from './components';
 import { CgMenuGridR } from 'react-icons/cg';
 import { FaRegWindowClose } from 'react-icons/fa';
+import { gsap } from 'gsap';
 
 export default class App extends Component {  
+  constructor(props) {
+    super(props);
+    this.state = {
+      test: "HEllo"
+    }
+    this.navRef = null;
+    this.navBtnRef = null;
+    this.navLogoRef = null;
+    this.navItemsRef = null;
+    this.setNavRef = (el) => { this.navRef = el }
+    this.setNavBtnRef = (el) => { this.navBtnRef = el }
+    this.setNavLogoRef = (el) => { this.navLogoRef = el}
+    this.setNavItemsRef = (el) => { this.navItemsRef = el }
+    this.test = gsap.timeline({ paused: true });
+  }
+
+  componentDidMount () {
+    console.log(this.navRef);
+    console.log(this.navBtnRef);
+    console.log(this.navLogoRef);
+    console.log(this.navItemsRef);
+    let test = gsap.timeline({ paused: true });
+    test.to(this.navRef, { opacity: 1, duration: 1, x: 0});
+    // test.play().timeScale(1);
+  }
+
+  testForFunction() {
+    this.test.to(this.navRef, { opacity: 1, duration: 1, top: 0 });
+    this.test.to(this.navBtnRef, { opacity: 1, duration: .4 });
+    this.test.to(this.navLogoRef, { opacity: 1, duration: .4 });
+    this.test.to(this.navItemsRef, { opacity: 1, marginTop: 0, duration: .4 });
+    this.test.play().timeScale(1);
+  }
+
+  testForAnimation() {
+    this.test.to(this.navRef, { opacity: 0, duration: .6, top: -1000});
+    this.test.to(this.navBtnRef, { opacity: 0, duration: 1, right: 0});
+    this.test.to(this.navLogoRef, { opacity: 0, duration: 1});
+    this.test.to(this.navItemsRef, { opacity: 0, marginTop: -20, duration: 1});
+    this.test.play().timeScale(1);
+  }
+
   render () {
+
     return (
       <div className="container">
-        <CgMenuGridR className='menuBtn' />
+        <CgMenuGridR className='menuBtn' onClick={() => this.testForFunction()} />
 
-        {/* <div className='nav'>
-          <FaRegWindowClose className='closeNavBtn'/>
+        <div className='nav' ref={this.setNavRef}>
+          <div className='bgTitle'>NAV</div>
 
-          <p className='mainLogo'>Mario Domenech</p>
+          <div className='closeNavBtn' ref={this.setNavBtnRef} onClick={() => this.testForAnimation()}><FaRegWindowClose className='icon'/></div>
 
-          <ul className='navItems'>
+          <p className='mainLogo' ref={this.setNavLogoRef}>Mario Domenech</p>
+
+          <ul className='navItems' ref={this.setNavItemsRef}>
             <li className='homeItem'>Home</li>
             <li className='aboutItem'>About</li>
             <li className='skillsItem'>Skills</li>
             <li className='workItem'>Work</li>
             <li className='contactItem'>Contact</li>
           </ul>
-        </div> */}
+        </div>
         
         <div className='mainContainer'>
           <HomeView />
