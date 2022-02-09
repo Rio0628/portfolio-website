@@ -84,6 +84,7 @@ body {
 .mainLogo {
   position: relative;
   bottom: 6rem;
+  right: 50px;
   font-size: 35px;
   font-family: 'Titillium Web';
   font-weight: 800;
@@ -95,6 +96,7 @@ body {
 .navItems {
   position: relative;
   bottom: 5rem;
+  left: 50px;
   width: 19rem;
   display: flex;
   flex-direction: column;
@@ -120,23 +122,6 @@ body {
 }
 
 .navItems li:hover {
-  color: #bfc0c0;
+  color: #fdfcdc;
   transition: .1s linear;
 }
-
-/* ssName="container">
-        <AiOutlineMenu className='menuBtn' />
-
-        <div className='nav-bar'>
-          <p className='mainLogo'>Mario Domenech</p>
-
-          <ul className='navbarItems'>
-            <li className='aboutItem'>About</li>
-            <li className='skillsItem'>Skills</li>
-            <li className='workItem'>Work</li>
-            <li className='contactItem'>Contact</li>
-          </ul>
-        </div>
-        
-        <div className='mainContainer'>
-           */

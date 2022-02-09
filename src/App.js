@@ -20,45 +20,39 @@ export default class App extends Component {
     this.setNavBtnRef = (el) => { this.navBtnRef = el }
     this.setNavLogoRef = (el) => { this.navLogoRef = el}
     this.setNavItemsRef = (el) => { this.navItemsRef = el }
-    this.test = gsap.timeline({ paused: true });
+    this.navAnims = gsap.timeline({ paused: true });
   }
 
   componentDidMount () {
-    console.log(this.navRef);
-    console.log(this.navBtnRef);
-    console.log(this.navLogoRef);
-    console.log(this.navItemsRef);
-    let test = gsap.timeline({ paused: true });
-    test.to(this.navRef, { opacity: 1, duration: 1, x: 0});
-    // test.play().timeScale(1);
+    // console.log(this.navRef);
+    // console.log(this.navBtnRef);
+    // console.log(this.navLogoRef);
+    // console.log(this.navItemsRef);
+    this.navAnims.to(this.navRef, { opacity: 1, duration: 1, top: 0 });
+    this.navAnims.to(this.navBtnRef, { opacity: 1, duration: .3 });
+    this.navAnims.to(this.navLogoRef, { opacity: 1, duration: .3, right: 0});
+    this.navAnims.to(this.navItemsRef, { opacity: 1, marginTop: 0, duration: .3, left: 0 });
+    // test.play().timeScale(1)
   }
 
   testForFunction() {
-    this.test.to(this.navRef, { opacity: 1, duration: 1, top: 0 });
-    this.test.to(this.navBtnRef, { opacity: 1, duration: .4 });
-    this.test.to(this.navLogoRef, { opacity: 1, duration: .4 });
-    this.test.to(this.navItemsRef, { opacity: 1, marginTop: 0, duration: .4 });
-    this.test.play().timeScale(1);
+    this.test.play();
   }
 
   testForAnimation() {
-    this.test.to(this.navRef, { opacity: 0, duration: .6, top: -1000});
-    this.test.to(this.navBtnRef, { opacity: 0, duration: 1, right: 0});
-    this.test.to(this.navLogoRef, { opacity: 0, duration: 1});
-    this.test.to(this.navItemsRef, { opacity: 0, marginTop: -20, duration: 1});
-    this.test.play().timeScale(1);
+    this.test.reverse();
   }
 
   render () {
 
     return (
       <div className="container">
-        <CgMenuGridR className='menuBtn' onClick={() => this.testForFunction()} />
+        <CgMenuGridR className='menuBtn' onClick={() => this.navAnims.play()} />
 
         <div className='nav' ref={this.setNavRef}>
           <div className='bgTitle'>NAV</div>
 
-          <div className='closeNavBtn' ref={this.setNavBtnRef} onClick={() => this.testForAnimation()}><FaRegWindowClose className='icon'/></div>
+          <div className='closeNavBtn' ref={this.setNavBtnRef} onClick={() => this.navAnims.reverse()}><FaRegWindowClose className='icon'/></div>
 
           <p className='mainLogo' ref={this.setNavLogoRef}>Mario Domenech</p>
 
