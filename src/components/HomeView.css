@@ -18,7 +18,7 @@
     /* width: 100%; */
     font-family: 'Titillium Web';
     /* text-align: center; */
-    font-size: 4.5rem;
+    font-size: 4.8rem;
     letter-spacing: 2px;
     font-weight: 800;
     /* outline: 1px solid red; */
@@ -26,7 +26,7 @@
 
 .welcomeTxt-DetailsCntr {
     position: relative;
-    bottom: 2.5rem;
+    bottom: 3rem;
     display: flex;
     flex-direction: column;
     font-family: 'Titillium Web';
@@ -42,6 +42,7 @@
     bottom: 3.2rem;
     left: 1rem;
     width: 90%;
+    opacity: 0;
     /* font-size: 28px; */
     /* outline: 1px solid blue; */
 }
@@ -57,6 +58,7 @@
     bottom: 13.5rem;
     left: 1rem;
     width: 90%;
+    opacity: 0;
     /* outline: 1px solid magenta; */
     height: 6rem;
 }
@@ -68,6 +70,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
     /* outline: 1px solid red; */
 } 
 

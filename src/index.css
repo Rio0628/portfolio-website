@@ -64,6 +64,7 @@ body {
   font-size: 13rem;
   /* letter-spacing: 2px; */
   font-weight: 800;
+  pointer-events: none;
   /* outline: 1px solid red; */
 }
 
