@@ -67,6 +67,10 @@ export default class App extends Component {
         
         <div className='mainContainer'>
           <HomeView />
+
+          <p className='holderContainer'>
+            HOLDER TEST
+          </p>
         </div>
 
       </div>

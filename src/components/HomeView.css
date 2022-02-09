@@ -5,13 +5,14 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    outline: 1px solid red;
     /* justify-content: center; */
 }
 
 .mainTxtBG {
-    position: absolute;
+    position: relative;
     left: .5rem;
-    top: 5rem;
+    top: 3rem;
     color: #2c343a;
     /* height: 100%; */
     /* width: 100%; */
@@ -25,31 +26,78 @@
 
 .welcomeTxt-DetailsCntr {
     position: relative;
-    top: 15rem;
+    bottom: 2.5rem;
     display: flex;
     flex-direction: column;
     font-family: 'Titillium Web';
     /* font-size: 30px; */
     font-weight: 800;
+    font-size: 3rem;
     letter-spacing: 1px;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 .welcomeTxt {
-    font-size: 28px;
-    outline: 1px solid blue;
+    position: relative;
+    bottom: 3.2rem;
+    left: 1rem;
+    width: 90%;
+    /* font-size: 28px; */
+    /* outline: 1px solid blue; */
 }
 
+.welcomeTxt p:nth-child(2) {
+    position: relative;
+    bottom: 4rem;
+    /* color: red; */
+}
 
+.homeViewDetails {
+    position: relative;
+    bottom: 13.5rem;
+    left: 1rem;
+    width: 90%;
+    /* outline: 1px solid magenta; */
+    height: 6rem;
+}
 
+.homeViewBtns {
+    position: relative;
+    bottom: 7rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* outline: 1px solid red; */
+} 
 
-/* ='sName='homeView'>
-           
-        
-            <p className='mainTxtBG'>Welcome</p>
+.viewWorkBtn, .contactMeBtn {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 18px 30px;
+    text-align: center;
+    outline: 3px solid white;
+    cursor: pointer;
+}
 
-            <div className='welcomeTxt-DetailsCntr'>
-                <p className='welcomeTxt'>Hello I am Mario Domenech</p>
-                <div className='homeViewDetails'>
-                    <span className='detailsText'>
-                        <Typical > */
+.contactMeBtn {
+    padding: 18px 28px;
+}
+
+.viewWorkBtn:hover, .contactMeBtn:hover {
+    background: white;
+    color:#2c343a;
+    transition: .1s linear; 
+}
+
+.viewWorkBtn:active, .contactMeBtn:active {
+    background: none;
+    color: white;
+    transition: none;
+}
+
+/* 
+         'homeViewBtns'>
+                <p className='viewWorkBtn'>View Work</p>
+                <p className='contactMeBtn'> */

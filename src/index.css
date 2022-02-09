@@ -126,3 +126,8 @@ body {
   color: #fdfcdc;
   transition: .1s linear;
 }
+
+.holderContainer {
+  outline: 1px solid red;
+  height: 100vh;
+}
