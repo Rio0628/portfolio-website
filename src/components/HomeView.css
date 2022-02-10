@@ -45,6 +45,7 @@
     left: 1rem;
     width: 90%;
     opacity: 0;
+    text-shadow: 5px 5px 5px #161a1d, -5px -5px 5px #161a1d;
     /* font-size: 28px; */
     /* outline: 1px solid blue; */
 }
@@ -63,6 +64,7 @@
     opacity: 0;
     /* outline: 1px solid magenta; */
     height: 6rem;
+    text-shadow: 5px 5px 5px #161a1d, -5px -5px 5px #161a1d;
 }
 
 .homeViewBtns {
@@ -109,6 +111,6 @@
     /* opacity: 0; */
     /* pointer-events: none; */
     margin: auto;
-    z-index: 2;
+    /* z-index: 2; */
     outline: 1px solid magenta;
 }

@@ -15,9 +15,9 @@ const HomeView = () => {
     useEffect( () => {
         
         let homeViewAnims = gsap.timeline({ paused: false });
-        homeViewAnims.to(welcomeTxtRef.current, { opacity: 0, duration: .5 }).play();
-        homeViewAnims.to(detailsTxtRef.current, { opacity: 0, duration: .3 }).play();
-        homeViewAnims.to(homeBtnRef.current, { opacity: 0, duration: .3 }).play();
+        homeViewAnims.to(welcomeTxtRef.current, { opacity: 1, duration: .5 }).play();
+        homeViewAnims.to(detailsTxtRef.current, { opacity: 1, duration: .3 }).play();
+        homeViewAnims.to(homeBtnRef.current, { opacity: 1, duration: .3 }).play();
 
         let canvas = canvasRef.current;
         let context = canvas.getContext('2d');
@@ -36,7 +36,7 @@ const HomeView = () => {
         const clear = () => { context.clearRect( 0, 0, width, height ) };
 
         const step = () => {
-            time += velocity / 2;
+            time += velocity / 4;
             velocity += ( velocityTarget - velocity ) * .3;
 
             clear();
@@ -107,7 +107,7 @@ const HomeView = () => {
         }
 
         const onTouchStart = (event) => {
-            event.preventDefault();
+            // event.preventDefault();
 
             lastX = event.touches[0].clientX;
             lastY = event.touches[0].clientY;
@@ -140,7 +140,7 @@ const HomeView = () => {
 
             window.addEventListener('resize', resize);
             window.addEventListener('mousedown', onMouseDown);
-            document.addEventListener('touchstart', onTouchStart);
+            document.addEventListener('touchstart', onTouchStart, { passive: true } );
         }
 
         setup();

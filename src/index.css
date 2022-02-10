@@ -24,6 +24,7 @@ body {
   font-size: 45px;
   font-weight: 600;
   cursor: pointer;
+  z-index: 2;
   /* outline: 1px solid red; */
 }
 
