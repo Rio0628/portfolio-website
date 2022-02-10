@@ -2,7 +2,7 @@
 
 .homeView {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     outline: 1px solid red;
@@ -100,7 +100,8 @@
     transition: none;
 }
 
-/* 
-         'homeViewBtns'>
-                <p className='viewWorkBtn'>View Work</p>
-                <p className='contactMeBtn'> */
+.spiralCanvas {
+    /* position: absolute; */
+    margin: auto;
+    outline: 1px solid magenta;
+}
