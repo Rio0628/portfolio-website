@@ -1,11 +1,13 @@
 
 
 .homeView {
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     outline: 1px solid red;
+    /* background: red; */
     /* justify-content: center; */
 }
 
@@ -101,7 +103,12 @@
 }
 
 .spiralCanvas {
-    /* position: absolute; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* opacity: 0; */
+    /* pointer-events: none; */
     margin: auto;
+    z-index: 2;
     outline: 1px solid magenta;
 }

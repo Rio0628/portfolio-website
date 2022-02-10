@@ -15,9 +15,9 @@ const HomeView = () => {
     useEffect( () => {
         
         let homeViewAnims = gsap.timeline({ paused: false });
-        homeViewAnims.to(welcomeTxtRef.current, { opacity: 1, duration: .5 }).play();
-        homeViewAnims.to(detailsTxtRef.current, { opacity: 1, duration: .3 }).play();
-        homeViewAnims.to(homeBtnRef.current, { opacity: 1, duration: .3 }).play();
+        homeViewAnims.to(welcomeTxtRef.current, { opacity: 0, duration: .5 }).play();
+        homeViewAnims.to(detailsTxtRef.current, { opacity: 0, duration: .3 }).play();
+        homeViewAnims.to(homeBtnRef.current, { opacity: 0, duration: .3 }).play();
 
         let canvas = canvasRef.current;
         let context = canvas.getContext('2d');
@@ -26,13 +26,17 @@ const HomeView = () => {
 
         let MAX_OFFSET = 400, SPACING = 4, POINTS = MAX_OFFSET / SPACING, PEAK = MAX_OFFSET * .25, POINTS_PER_LAP = 6, SHADOW_STRENGTH = 6;
 
+       
+        
         const resize = () => {
             width = canvas.width = window.innerWidth;
             height = canvas.height = window.innerHeight;
         }
+        
+        const clear = () => { context.clearRect( 0, 0, width, height ) };
 
         const step = () => {
-            time += velocity;
+            time += velocity / 2;
             velocity += ( velocityTarget - velocity ) * .3;
 
             clear();
@@ -41,15 +45,13 @@ const HomeView = () => {
             requestAnimationFrame( step );
         }
 
-        const clear = () => { context.clearRect( 0, 0, width, height ) };
-
         const render = () => {
             let x, y, cx = width / 2, cy = height / 2;
 
-            context.globalComposieOperation = 'lighter';
+            context.globalCompositeOperation = 'lighter';
             context.strokeStyle = '#fff';
             context.shadowColor = '#fff';
-            context.lineWidth = 2;
+            context.lineWidth = 4;
             context.beginPath();
 
             for (let i = POINTS; i > 0; i--) {
@@ -62,8 +64,8 @@ const HomeView = () => {
 
                 let o = 1 - ( Math.min( value, PEAK ) / PEAK );
 
-                y -= Math.pow(0, 2) * 200;
-                y += 200 * value / MAX_OFFSET;
+                y -= Math.pow(o, 2) * 200;
+                y += 100 * value / MAX_OFFSET;
                 y += x / cx * width * .1;
 
                 context.globalAlpha = 1 - ( value / MAX_OFFSET );
@@ -78,7 +80,7 @@ const HomeView = () => {
             context.lineTo( cx, 0);
             context.stroke();
         }
-
+        
         const onMouseDown = (event) => {
             lastX = event.clientX;
             lastY = event.clientY;
@@ -136,8 +138,8 @@ const HomeView = () => {
             resize();
             step();
 
-            homeView.addEventListener('resize', resize);
-            homeView.addEventListener('mousedown', onMouseDown);
+            window.addEventListener('resize', resize);
+            window.addEventListener('mousedown', onMouseDown);
             document.addEventListener('touchstart', onTouchStart);
         }
 
@@ -169,15 +171,15 @@ const HomeView = () => {
                             loop={Infinity}
                             steps={[
                                 "Front-End Developer",
-                                2000,
+                                3000,
                                 "Web Developer",
-                                2000,
+                                3000,
                                 "React Developer",
-                                2000,
+                                3000,
                                 "Enthusiastic Dev",
-                                2000,
+                                3000,
                                 "Full Stack Developer",
-                                2000,
+                                3000,
                             ]}
                         />
                     </span>
