@@ -9,6 +9,8 @@ const AboutView = (props) => {
         <div className='aboutView' >
             <p className='mainTxtBG'>About</p>
 
+            <p className='aboutMeTitle'>About Me</p>
+            
             <div className='aboutTXT'>
                 {/* This is where the text will go | Include different p elements for the text*/}
                 <p>
@@ -28,6 +30,8 @@ const AboutView = (props) => {
                     Apart from having a passion for Software Development I have a passion for exercising and spending time outdoors.
                 </p>
             </div>
+
+            <p className='skillsTitle'>Skills</p>
         </div>
     );
 }

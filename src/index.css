@@ -17,6 +17,11 @@ body {
   /* background: red; */
 }
 
+.mainContainer {
+  height: 100%;
+  width: 100%;
+}
+
 .menuBtn {
   position: absolute;
   right: 10px;
@@ -136,8 +141,6 @@ body {
 
 /* -- HOME VIEW STYLES  */
 
-
-
 .homeView, .aboutView  {
   position: relative;
   width: 100%;
@@ -151,7 +154,7 @@ body {
 
 .mainTxtBG {
   position: relative;
-  left: .5rem;
+  left: .8rem;
   top: 3rem;
   color: #2c343a;
   /* height: 100%; */
@@ -257,6 +260,55 @@ body {
 
 /* -- ABOUT VIEW STYLES -- */
 
-.aboutView {
-  background: red;
+.aboutTXT {
+  position: relative;
+  top: 2rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  /* outline: 1px solid red; */
 }
+
+/* .aboutView {
+  margin-bottom: 20rem;
+} */
+
+.aboutTXT p {
+  position: relative;
+  bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  /* outline: 1px solid blue; */
+}
+
+.aboutTXT p:nth-child(2) { bottom: 2.2rem; }
+
+.aboutTXT p:nth-child(3) { bottom: 3.2rem; }
+
+.aboutMeTitle {
+  position: absolute;
+  top: 12rem;
+  left: 1.4rem;
+  font-family: 'Titillium Web';
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 5px -10px #505f6b;
+  /* outline: 1px solid red; */
+}
+
+.skillsTitle {
+  position: absolute;
+  bottom: 9rem;
+  left: 1.5rem;
+  font-family: 'Titillium Web';
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 5px -10px #505f6b;
+}
+/* 
+      
+
+            <p className='skillsTitle'*/
