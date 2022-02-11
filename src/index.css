@@ -311,7 +311,6 @@ body {
        
 .skillCanvas {
   position: relative;
-  left: 1rem;
   /* top: 2rem; */
   height: 200px;
   outline: 1px solid red;
