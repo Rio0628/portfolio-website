@@ -288,27 +288,33 @@ body {
 
 .aboutMeTitle {
   position: absolute;
-  top: 12rem;
+  top: 11rem;
   left: 1.4rem;
   font-family: 'Titillium Web';
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 800;
   letter-spacing: 2px;
-  text-shadow: 5px -10px #505f6b;
+  text-shadow: 5px -7px #505f6b;
   /* outline: 1px solid red; */
 }
 
 .skillsTitle {
   position: absolute;
-  bottom: 9rem;
+  bottom: 4rem;
   left: 1.5rem;
   font-family: 'Titillium Web';
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 800;
   letter-spacing: 2px;
-  text-shadow: 5px -10px #505f6b;
+  text-shadow: 5px -7px #505f6b;
 }
-/* 
-      
+       
+.skillCanvas {
+  position: relative;
+  left: 1rem;
+  /* top: 2rem; */
+  height: 200px;
+  outline: 1px solid red;
+}
 
-            <p className='skillsTitle'*/
+/*            <p className='skillsTitle'*/

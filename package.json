@@ -18,6 +18,8 @@
     "express": "^4.17.2",
     "gsap": "^3.9.1",
     "heroku": "^7.59.2",
+    "jquery": "^3.6.0",
+    "jquery-tagcanvas": "^2.9.0",
     "mongoose": "^6.1.5",
     "node": "^17.4.0",
     "nodemon": "^2.0.15",
