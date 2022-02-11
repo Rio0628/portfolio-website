@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import Typical from 'react-typical';
 import { gsap } from 'gsap';
-import './HomeView.css';
 
 const HomeView = () => {
     
@@ -36,7 +35,7 @@ const HomeView = () => {
         const clear = () => { context.clearRect( 0, 0, width, height ) };
 
         const step = () => {
-            time += velocity / 4;
+            time += velocity / 3.5;
             velocity += ( velocityTarget - velocity ) * .3;
 
             clear();
