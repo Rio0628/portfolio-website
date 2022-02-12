@@ -7,67 +7,57 @@ const AboutView = (props) => {
     // const aboutViewActive = () => props.aboutViewVisible ? ' active' : '';
 
     const skills = [
-        { href: "#git_", title: "Git" },
-        { href: "#json_", title: "JSON" },
-        { href: "#solidity_", title: "Solidity" },
-        { href: "#html_", title: "HTML" },
-        { href: "#react_", title: "React" },
+        { href: "#git_", title: "Git" }, // HAVE IT 
+        { href: "#express_", title: "Express" }, // 
+        { href: "#axios_", title: "Axios" }, //
+        { href: "#html_", title: "HTML" }, // HAVE IT
+        { href: "#react_", title: "React" }, // HAVE IT
         { href: "#python_", title: "Python" },
-        { href: "#sql_", title: "SQL" },
-        { href: "#shopify_", title: "Shopify" },
-        { href: "#aws_", title: "AWS" },
+        { href: "#sql_", title: "SQL" }, // HAVE IT
+        { href: "#laravel_", title: "Laravel" }, // HAVE IT
         { href: "#wordpress_", title: "WordPress" },
-        { href: "#npm_", title: "npm" },
-        { href: "#css_", title: "CSS" },
+        { href: "#npm_", title: "npm" }, // HAVE IT
+        { href: "#css_", title: "CSS" }, // HAVE IT
         { href: "#jquery_", title: "jQuery" },
-        { href: "#js_", title: "JavaScript" },
-        { href: "#c++_", title: "C++" },
-        { href: "#java_", title: "Java" },
-        { href: "#php_", title: "PHP" },
-        { href: "#selenium_", title: "Selenium" },
-        { href: "#remix_", title: "Remix" },
-        { href: "#ganache_", title: "Ganache" },
-        { href: "#hubspot_", title: "HubSpot" },
-        { href: "#node.js_", title: "Node.js" },
-        { href: "#hiveos_", title: "HiveOS" },
-        { href: "#crypto_", title: "Crypto" },
-        { href: "#mining_", title: "Mining" },
-        { href: "#photoshop_", title: "Photoshop" },
-        { href: "#illustrator_", title: "Illustrator" },
-        { href: "#premier-pro_", title: "Premier Pro" },
-        { href: "#truffle_", title: "Truffle" },
-        { href: "#pyqt_", title: "PyQT" },
-        { href: "#hardhat_", title: "Hardhat" }
+        { href: "#js_", title: "JavaScript" }, // HAVE IT
+        { href: "#c++_", title: "C++" }, // HAVE IT
+        { href: "#java_", title: "Java" }, // HAVE IT
+        { href: "#php_", title: "PHP" }, // HAVE IT
+        { href: "#github", title: "Github" },// 
+        { href: "#ts_", title: "TypeScript" },// 
+        { href: "#angular_", title: "Angular" }, //
+        { href: "#gsap_", title: "GSAP" }, // 
+        { href: "#node.js_", title: "Node.js" }, // HAVE IT
+        { href: "#nodemon_", title: "Nodemon" }, // HAVE IT
     ];
-
+    
+    console.log(window.innerWidth);
     useEffect( () => {
       
         
         const TagCanvas = window.TagCanvas;
         const tagCanvasOptions = {
            textColour: '#fff',
-           outlineThickness: 0.5,
-           outlineColour: '#FE0853',
-           maxSpeed: 0.1,
-           freezeActive: true,
+           outlineThickness: 5,
+           outlineColour: '#fff',
+           maxSpeed: 0.05,
+           freezeActive: false,
            shuffleTags: true,
            shape: 'sphere',
-           zoom: 1,
-           wheelZoom: true,
+           zoom: .9,
+           wheelZoom: false,
            noSelect: true,
            textFont: 'Titillium Web',
-        //    textWeight: 600,
-           textHeight: 12,
+           textHeight: 25,
            reverse: true,
            freezeDecel: true,
            fadeIn: 3000,
-        //    initial: [0.3, -.1],
+           initial: [0.05, -.1],
            depth: 1.1,
 
         };
         try {
            TagCanvas.Start('canvas', 'allTags', tagCanvasOptions);
-            console.log(TagCanvas)
         } catch (e) {
             console.log('Canvas Error: ');
             console.log(e)
@@ -80,8 +70,6 @@ const AboutView = (props) => {
         <div className='aboutView' >
 
             <p className='mainTxtBG'>About</p>
-
-            <p className='aboutMeTitle'>About Me</p>
             
             <div className='aboutTXT'>
                 {/* This is where the text will go | Include different p elements for the text*/}
@@ -106,7 +94,7 @@ const AboutView = (props) => {
             {/* <p className='skillsTitle'>Skills</p> */}
 
             <div className='skillCanvasCntr'>
-                <canvas className='skillCanvas' id='canvas' style={{ width: '100%', height: '100%'}}></canvas>
+                <canvas className='skillCanvas' id='canvas' width='500' height='500'></canvas>
             </div>
 
             <div className='tags' id='allTags' style={{ display: 'none'}}>
