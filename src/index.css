@@ -141,7 +141,7 @@ body {
 
 /* -- HOME VIEW STYLES  */
 
-.homeView, .aboutView  {
+.homeView, .aboutView, .skillsView {
   position: relative;
   width: 100%;
   height: 100%;
@@ -260,31 +260,31 @@ body {
 
 /* -- ABOUT VIEW STYLES -- */
 
-.aboutView {
-  height: 110%;
+.aboutView, .skillsView{
+  height: 130%;
   align-items: center;
 }
 
-.aboutView .mainTxtBG {
-  position: absolute;
+.aboutView .mainTxtBG, .skillsView .mainTxtBG {
+  position: absolute; 
   /* right: 2rem; */
 }
 
-.aboutTXT {
+.aboutTXT, .skillsViewText {
   position: relative;
   top: 16rem;
   /* left: 1rem; */
   display: flex;
   flex-direction: column;
   width: 90%;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 /* .aboutView {
   margin-bottom: 20rem;
 } */
 
-.aboutTXT p {
+.aboutTXT p, .skillsViewText {
   position: relative;
   bottom: 1rem;
   font-size: 1.2rem;
@@ -304,3 +304,77 @@ body {
   width: 19rem;
   /* outline: 1px solid red; */
 }
+
+/* -- SKILLS VIEW STYLES -- */
+
+.skillsViewText {
+  position: relative;
+}
+
+.allSkillsCntr {
+  position: relative;
+  top: 17rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, 20rem);
+  height: 100%;
+  width: 90%;
+  outline: 1px solid blue;
+}
+
+.allSkillsCntr * {
+  min-height: 100px;
+  min-width: 100px;
+  outline: 1px solid #FFF;
+}
+
+/* 
+  ++ CODE FOR BREAKPOINT OF GRID ++
+.allSkillsCntr {
+  position: relative;
+  top: 17rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 20rem;
+  width: 90%;
+  outline: 1px solid blue;
+}
+
+.allSkillsCntr * {
+  min-height: 100px;
+  min-width: 100px;
+  background: lightgreen;
+  outline: 1px solid magenta;
+}
+
+.allSkillsCntr *:nth-child(1) {
+  background: red;
+  grid-column: 1 / 3; 
+  grid-row: 1;
+  width: 100%;
+}
+
+.allSkillsCntr *:nth-child(4) {
+  background: blue;
+}
+ */
+
+/* e='skillsView'>
+            <p className='mainTxtBG'>Skills</p>
+        
+            <p className='skillsViewText'>
+                I create intuitive and responsive web applications using a variety of techonologies. I specialize in Front End Development using different frameworks, implementing APIs, and creating animations to bring applications to life. I also have Full Stack Development experience creating backend servers and working with REST APIs.
+            </p>
+
+            <div className='allSkillsCntr'>
+                <div className='front-endSkillsCntr'>
+                    <p className='indSkillsCntrBgText'>Front-End</p>
+                    <div className='skillsObjsCntr'>
+                        <div className='techObj'>
+                            <a className='techLogo'><AiFillHtml5 /></a>
+                            <p className='techName'>HTML</p>
+                        </div>
+
+                        <div className='techObj'>
+                            <a className='techLogo' href='/'><IoLogoCss3 className='logo' /></a>
+                            <p className='techName' */

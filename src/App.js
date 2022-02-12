@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import emailjs from 'emailjs-com';
 // import API from './api';
-import { HomeView, AboutView, WorkView, ContactView } from './components';
+import { HomeView, AboutView, SkillsView, WorkView, ContactView } from './components';
 import { CgMenuGridR } from 'react-icons/cg';
 import { FaRegWindowClose } from 'react-icons/fa';
 import { gsap } from 'gsap';
@@ -69,6 +69,8 @@ export default class App extends Component {
           <HomeView />
 
           <AboutView />
+
+          <SkillsView />
         </div>
 
       </div>

@@ -7,31 +7,31 @@ const AboutView = (props) => {
     // const aboutViewActive = () => props.aboutViewVisible ? ' active' : '';
 
     const skills = [
-        { href: "#git_", title: "Git" }, // HAVE IT 
-        { href: "#express_", title: "Express" }, // 
-        { href: "#axios_", title: "Axios" }, //
-        { href: "#html_", title: "HTML" }, // HAVE IT
-        { href: "#react_", title: "React" }, // HAVE IT
+        { href: "#git_", title: "Git" },  
+        { href: "#express_", title: "Express" },  
+        { href: "#axios_", title: "Axios" },
+        { href: "#html_", title: "HTML" }, 
+        { href: "#react_", title: "React" }, 
         { href: "#python_", title: "Python" },
-        { href: "#sql_", title: "SQL" }, // HAVE IT
-        { href: "#laravel_", title: "Laravel" }, // HAVE IT
-        { href: "#wordpress_", title: "WordPress" },
-        { href: "#npm_", title: "npm" }, // HAVE IT
-        { href: "#css_", title: "CSS" }, // HAVE IT
+        { href: "#sql_", title: "SQL" }, 
+        { href: "#laravel_", title: "Laravel" }, 
+        { href: "#mern_", title: "MERN" },
+        { href: "#npm_", title: "npm" }, 
+        { href: "#css_", title: "CSS" }, 
         { href: "#jquery_", title: "jQuery" },
-        { href: "#js_", title: "JavaScript" }, // HAVE IT
-        { href: "#c++_", title: "C++" }, // HAVE IT
-        { href: "#java_", title: "Java" }, // HAVE IT
-        { href: "#php_", title: "PHP" }, // HAVE IT
-        { href: "#github", title: "Github" },// 
-        { href: "#ts_", title: "TypeScript" },// 
-        { href: "#angular_", title: "Angular" }, //
-        { href: "#gsap_", title: "GSAP" }, // 
-        { href: "#node.js_", title: "Node.js" }, // HAVE IT
-        { href: "#nodemon_", title: "Nodemon" }, // HAVE IT
+        { href: "#js_", title: "JavaScript" },
+        { href: "#c++_", title: "C++" }, 
+        { href: "#java_", title: "Java" },
+        { href: "#php_", title: "PHP" }, 
+        { href: "#github", title: "Github" }, 
+        { href: "#ts_", title: "TypeScript" },
+        { href: "#angular_", title: "Angular" }, 
+        { href: "#gsap_", title: "GSAP" }, 
+        { href: "#node.js_", title: "Node.js" },
+        { href: "#nodemon_", title: "Nodemon" },
     ];
     
-    console.log(window.innerWidth);
+    // console.log(window.innerWidth);
     useEffect( () => {
       
         
