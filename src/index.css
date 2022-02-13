@@ -307,6 +307,10 @@ body {
 
 /* -- SKILLS VIEW STYLES -- */
 
+.skillsView {
+  height: 100rem;
+}
+
 .skillsViewText {
   position: relative;
 }
@@ -317,17 +321,115 @@ body {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(5, 20rem);
-  height: 100%;
+  height: 150%;
   width: 90%;
   outline: 1px solid blue;
 }
 
-.allSkillsCntr * {
-  min-height: 100px;
-  min-width: 100px;
-  outline: 1px solid #FFF;
+.frontEndSkillsCntr, .backEndSkillsCntr, .databasesSkillsCntr, .toolsSkillsCntr, .learningSkillsCntr {
+  position: relative;
+  outline: 1px solid magenta;
 }
 
+.indSkillsCntrBgText {
+  font-size: 3.5rem;
+  color:#2c343a;
+  /* font-family: 'Titillium Web'; */
+  font-weight: 800;
+  position: absolute;
+  top: -10px;
+  outline: 1px solid blue;
+  z-index: 2; /* 2 */
+}
+
+.skillsObjsCntr {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(auto, 4rem);
+  /* height: 100%; */
+  z-index: 3;
+  /* background: gray; */
+}
+
+.techObj {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  outline: 1px solid red;
+}
+
+#frontEndObj {
+  grid-column: span 3;
+  /* padding: 0px 80px; */
+}
+
+/* #frontEndObj:nth-child(n + 3) {
+  grid-column: span 2;
+} */
+
+.techLogo {
+  /* font-size: 20px; */
+  /* height: 20px; */
+  /* width: 20px; */
+  outline: 1px solid red;
+}
+
+.logo {
+  height: 4rem;
+  width: 4rem;
+  /* font-size: 10px; */
+  color: #fff;
+  outline: 1px solid blue;
+  pointer-events: none; 
+}
+
+.techName {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.backEndSkillsCntr {
+  top: 7rem;
+}
+
+#backEndObj, #toolsObj, #dbsObj, #learningObj {
+  grid-column: span 3;
+  /* padding: 0px 80px; */
+}
+
+#backEndObj:nth-child(7), #toolsObj:nth-child(3), #dbsObj:nth-child(3) {
+  grid-column: span 6;
+  /* background: red; */
+}
+
+.databasesSkillsCntr {
+  top: 20rem;
+}
+
+.toolsSkillsCntr {
+  top: 20rem;
+}
+
+
+/* 
+            <div className='allSkillsCntr'>
+                <div className='front-endSkillsCntr'>
+                    <p className='indSkillsCntrBgText'>Front-End</p>
+                    <div className='skillsObjsCntr'>
+                        <div className='techObj'>
+                            <a className='techLogo'><AiFillHtml5 /></a>
+                            <p className='techName'>HTML</p>
+                        </div>
+
+                        <div className='techObj'>
+                            <a className='techLogo' href='/'><IoLogoCss3 className='logo' /></a>
+                            <p className='techName' */
+
+
+
+                            
 /* 
   ++ CODE FOR BREAKPOINT OF GRID ++
 .allSkillsCntr {
@@ -358,23 +460,3 @@ body {
   background: blue;
 }
  */
-
-/* e='skillsView'>
-            <p className='mainTxtBG'>Skills</p>
-        
-            <p className='skillsViewText'>
-                I create intuitive and responsive web applications using a variety of techonologies. I specialize in Front End Development using different frameworks, implementing APIs, and creating animations to bring applications to life. I also have Full Stack Development experience creating backend servers and working with REST APIs.
-            </p>
-
-            <div className='allSkillsCntr'>
-                <div className='front-endSkillsCntr'>
-                    <p className='indSkillsCntrBgText'>Front-End</p>
-                    <div className='skillsObjsCntr'>
-                        <div className='techObj'>
-                            <a className='techLogo'><AiFillHtml5 /></a>
-                            <p className='techName'>HTML</p>
-                        </div>
-
-                        <div className='techObj'>
-                            <a className='techLogo' href='/'><IoLogoCss3 className='logo' /></a>
-                            <p className='techName' */
