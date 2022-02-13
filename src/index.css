@@ -18,6 +18,7 @@ body {
 }
 
 .mainContainer {
+  position: relative;
   height: 100%;
   width: 100%;
 }
@@ -260,7 +261,7 @@ body {
 
 /* -- ABOUT VIEW STYLES -- */
 
-.aboutView, .skillsView{
+.aboutView {
   height: 130%;
   align-items: center;
 }
@@ -276,8 +277,8 @@ body {
   /* left: 1rem; */
   display: flex;
   flex-direction: column;
-  width: 90%;
-  outline: 1px solid red;
+  width: 20rem;
+  /* outline: 1px solid red; */
 }
 
 /* .aboutView {
@@ -298,7 +299,7 @@ body {
        
 .skillCanvas {
   position: relative;
-  top: 14.5rem;
+  top: 18rem;
   /* left: 1rem; */
   height: 18rem;
   width: 19rem;
@@ -308,27 +309,31 @@ body {
 /* -- SKILLS VIEW STYLES -- */
 
 .skillsView {
-  height: 100rem;
+  height: 200%;
+  align-items: center;
 }
 
 .skillsViewText {
   position: relative;
+  top: 14rem;
 }
 
 .allSkillsCntr {
   position: relative;
-  top: 17rem;
+  top: 15rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(5, 20rem);
-  height: 150%;
-  width: 90%;
-  outline: 1px solid blue;
+  grid-template-rows: repeat(auto, 1fr);
+  height: 71%;
+  width: 20rem;
+  /* background: magenta; */
+  outline: 1px solid rgb(21, 21, 56);
+  /* background: yellow; */
 }
 
 .frontEndSkillsCntr, .backEndSkillsCntr, .databasesSkillsCntr, .toolsSkillsCntr, .learningSkillsCntr {
   position: relative;
-  outline: 1px solid magenta;
+  /* outline: 1px solid magenta; */
 }
 
 .indSkillsCntrBgText {
@@ -337,8 +342,8 @@ body {
   /* font-family: 'Titillium Web'; */
   font-weight: 800;
   position: absolute;
-  top: -10px;
-  outline: 1px solid blue;
+  top: -35px;
+  /* outline: 1px solid blue; */
   z-index: 2; /* 2 */
 }
 
@@ -357,7 +362,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 #frontEndObj {
@@ -373,15 +378,15 @@ body {
   /* font-size: 20px; */
   /* height: 20px; */
   /* width: 20px; */
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 .logo {
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   /* font-size: 10px; */
   color: #fff;
-  outline: 1px solid blue;
+  /* outline: 1px solid blue; */
   pointer-events: none; 
 }
 
@@ -390,9 +395,9 @@ body {
   font-weight: 600;
 }
 
-.backEndSkillsCntr {
+/* .backEndSkillsCntr {
   top: 7rem;
-}
+} */
 
 #backEndObj, #toolsObj, #dbsObj, #learningObj {
   grid-column: span 3;
@@ -404,13 +409,13 @@ body {
   /* background: red; */
 }
 
-.databasesSkillsCntr {
-  top: 20rem;
+/* .databasesSkillsCntr {
+  top: 8rem;
 }
 
 .toolsSkillsCntr {
-  top: 20rem;
-}
+  bottom: 10rem;
+} */
 
 
 /* 
