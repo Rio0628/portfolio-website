@@ -186,7 +186,7 @@ body {
   position: relative;
   bottom: 3.2rem;
   left: 1rem;
-  width: 90%;
+  width: 20rem;
   opacity: 0;
   text-shadow: 5px 5px 5px #161a1d, -5px -5px 5px #161a1d;
   /* font-size: 28px; */
@@ -203,7 +203,7 @@ body {
   position: relative;
   bottom: 13.5rem;
   left: 1rem;
-  width: 90%;
+  width: 20rem;
   opacity: 0;
   /* outline: 1px solid magenta; */
   height: 6rem;
@@ -262,7 +262,7 @@ body {
 /* -- ABOUT VIEW STYLES -- */
 
 .aboutView {
-  height: 130%;
+  height: 72rem;
   align-items: center;
 }
 
@@ -309,8 +309,9 @@ body {
 /* -- SKILLS VIEW STYLES -- */
 
 .skillsView {
-  height: 200%;
+  height: 125rem;
   align-items: center;
+  /* background: red; */
 }
 
 .skillsViewText {
@@ -325,7 +326,7 @@ body {
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(auto, 1fr);
   grid-row-gap: 15px;
-  height: 71%;
+  height: 89rem;
   width: 20rem;
   /* background: magenta; */
   outline: 1px solid red;
@@ -334,7 +335,7 @@ body {
 
 .frontEndSkillsCntr, .backEndSkillsCntr, .databasesSkillsCntr, .toolsSkillsCntr, .learningSkillsCntr {
   position: relative;
-  outline: 2px solid #fff;
+  outline: 2.5px solid #fff;
 }
 
 .indSkillsCntrBgText {
@@ -414,25 +415,6 @@ body {
 /* .databasesSkillsCntr {
   top: 8rem;
 }
-
-.toolsSkillsCntr {
-  bottom: 10rem;
-} */
-
-
-/* 
-            <div className='allSkillsCntr'>
-                <div className='front-endSkillsCntr'>
-                    <p className='indSkillsCntrBgText'>Front-End</p>
-                    <div className='skillsObjsCntr'>
-                        <div className='techObj'>
-                            <a className='techLogo'><AiFillHtml5 /></a>
-                            <p className='techName'>HTML</p>
-                        </div>
-
-                        <div className='techObj'>
-                            <a className='techLogo' href='/'><IoLogoCss3 className='logo' /></a>
-                            <p className='techName' */
 
 
 
