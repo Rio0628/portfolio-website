@@ -1,0 +1,46 @@
+
+/* ++ HOVER EFFECTS FOR EACH SKILL HOVERED ++ */
+
+.techObj:hover {
+    background: rgba( 245, 243, 244, .1 );
+    transition: .1s linear;
+}
+
+#frontEndObj:nth-child(1):hover .logo { color: #e44d26; }
+
+#frontEndObj:nth-child(2):hover .logo { color: #2965f1; }
+
+#frontEndObj:nth-child(3):hover .logo { color: #f0db4f; }
+
+#frontEndObj:nth-child(4):hover .logo, #backEndObj:nth-child(2):hover .logo { color: #61dbfb; }
+
+#frontEndObj:nth-child(5):hover .logo { color: #dd1b16; }
+
+
+#frontEndObj:nth-child(6):hover .logo { color: #007acc; }
+
+#backEndObj:nth-child(1):hover .logo { color: #3c873a; }
+
+#backEndObj:nth-child(3):hover .logo { color: #787cb5; }
+
+#backEndObj:nth-child(4):hover .logo { color: #f05340; }
+
+#backEndObj:nth-child(5):hover .logo { color: #f89820; }
+
+#backEndObj:nth-child(6):hover .logo  { color: rgba( 93, 135, 188, 1); }
+
+#backEndObj:nth-child(7):hover .logo { color: #4888be;}
+
+#dbsObj:nth-child(1):hover .logo { color: #f29111; }
+
+#dbsObj:nth-child(2):hover .logo { color: #00758f; }
+
+#dbsObj:nth-child(3):hover .logo { color: #4db33d; }
+
+#toolsObj:nth-child(1):hover .logo, #learningObj:nth-child(1):hover .logo { color: #161a1d; }
+
+#toolsObj:nth-child(2):hover .logo { color: #cc3534; }
+
+#toolsObj:nth-child(3):hover .logo { color: #f1502f }
+
+#learningObj:nth-child(2):hover .logo { color: #e535ab; }

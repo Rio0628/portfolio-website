@@ -367,6 +367,9 @@ body {
   justify-content: space-around;
   /* outline: 1px solid red; */
   /* background: red; */
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
 }
 
 #frontEndObj {
@@ -378,13 +381,9 @@ body {
   grid-column: span 2;
 } */
 
-.techLogo {
+.logo {
   position: relative;
   top: 10px;
-  /* color: red; */
-}
-
-.logo {
   height: 3rem;
   width: 3rem;
   /* font-size: 10px; */

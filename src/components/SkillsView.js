@@ -5,6 +5,7 @@ import { IoLogoCss3, IoLogoJavascript, IoLogoAngular, IoLogoNodejs, IoLogoLarave
 import { FaReact, FaLaravel, FaGitAlt } from 'react-icons/fa';
 import { SiExpress, SiPhp, SiCplusplus, SiJava, SiTypescript, SiMongodb, SiMysql, SiThreedotjs, SiGraphql } from 'react-icons/si'; 
 import { GrMysql } from 'react-icons/gr';
+import './SkillsHoverEffects.css';
 
 const SkillsView = () => {
     return (
@@ -19,10 +20,10 @@ const SkillsView = () => {
                 <div className='frontEndSkillsCntr'>
                     <p className='indSkillsCntrBgText'>Front-End</p>
                     <div className='skillsObjsCntr'>
-                        <div className='techObj' id='frontEndObj'>
-                            <a className='techLogo' href='/'><AiFillHtml5 className='logo' /></a>
+                        <a className='techObj' id='frontEndObj' href='/'>
+                            <AiFillHtml5 className='logo' />
                             <p className='techName'>HTML</p>
-                        </div>
+                        </a>
 
                         <div className='techObj' id='frontEndObj'>
                             <a className='techLogo' href='/'><IoLogoCss3 className='logo' /></a>
@@ -75,7 +76,7 @@ const SkillsView = () => {
                         </div>
 
                         <div className='techObj' id='backEndObj'>
-                            <a className='techLogo' href='/'><SiJava className='logo' /></a>
+                            <div className='techLogo' href='/'><SiJava className='logo' /></div>
                             <p className='techName'>Java</p>
                         </div>
 
