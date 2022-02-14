@@ -72,7 +72,7 @@ export default class App extends Component {
 
           <SkillsView />
 
-          {/* <WorkView /> */}
+          <WorkView />
         </div>
 
       </div>
