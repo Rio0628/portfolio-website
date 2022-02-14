@@ -309,7 +309,7 @@ body {
 /* -- SKILLS VIEW STYLES -- */
 
 .skillsView {
-  height: 125rem;
+  height: 130rem;
   align-items: center;
   /* background: red; */
 }
@@ -335,7 +335,7 @@ body {
 
 .frontEndSkillsCntr, .backEndSkillsCntr, .databasesSkillsCntr, .toolsSkillsCntr, .learningSkillsCntr {
   position: relative;
-  outline: 2.5px solid #fff;
+  outline: 2px solid #fff;
 }
 
 .indSkillsCntrBgText {
@@ -372,11 +372,6 @@ body {
   color: #fff;
 }
 
-#frontEndObj {
-  grid-column: span 3;
-  /* padding: 0px 80px; */
-}
-
 /* #frontEndObj:nth-child(n + 3) {
   grid-column: span 2;
 } */
@@ -384,8 +379,8 @@ body {
 .logo {
   position: relative;
   top: 10px;
-  height: 3rem;
-  width: 3rem;
+  height: 3.2rem;
+  width: 3.2rem;
   /* font-size: 10px; */
   color: #fff;
   /* outline: 1px solid blue; */
@@ -393,7 +388,7 @@ body {
 }
 
 .techName {
-  font-size: 19px;
+  font-size: 19.8px;
   font-weight: 800;
 }
 
@@ -401,12 +396,12 @@ body {
   top: 7rem;
 } */
 
-#backEndObj, #toolsObj, #dbsObj, #learningObj {
+#backEndObj, #toolsObj, #dbsObj, #learningObj, #frontEndObj {
   grid-column: span 3;
   /* padding: 0px 80px; */
 }
 
-#backEndObj:nth-child(7), #toolsObj:nth-child(3), #dbsObj:nth-child(3) {
+#backEndObj:nth-child(7), #toolsObj:nth-child(3), #dbsObj:nth-child(3), #frontEndObj:nth-child(5) {
   grid-column: span 6;
   /* background: red; */
 }

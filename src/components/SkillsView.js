@@ -8,6 +8,41 @@ import { GrMysql } from 'react-icons/gr';
 import './SkillsHoverEffects.css';
 
 const SkillsView = () => {
+
+    const technologies = [
+        // FRONT END OBJECTS
+        { name: 'HTML', icon: <AiFillHtml5 className='logo' />, techId: 'frontEndObj', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML?retiredLocale=fi'},
+        { name: 'CSS', icon: <IoLogoCss3 className='logo' />, techId: 'frontEndObj', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS'},
+        { name: 'Javascript', icon: <IoLogoJavascript className='logo' />, techId: 'frontEndObj', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'},
+        { name: 'React', icon: <FaReact className='logo' />, techId: 'frontEndObj', url: 'https://reactjs.org/'},
+        { name: 'Angular', icon: <IoLogoAngular className='logo' />, techId: 'frontEndObj', url: 'https://angular.io/'},
+
+        // BACK END OBJECTS
+        { name: 'Node', icon: <IoLogoNodejs className='logo' />, techId: 'backEndObj', url: 'https://nodejs.org/en/'},
+        { name: 'Express', icon: <SiExpress className='logo' />, techId: 'backEndObj', url: 'https://expressjs.com/'},
+        { name: 'PHP', icon: <SiPhp className='logo' />, techId: 'backEndObj', url: 'https://www.php.net/'},
+        { name: 'Laravel', icon: <FaLaravel className='logo' />, techId: 'backEndObj', url: 'https://laravel.com/'},
+        { name: 'Java', icon: <SiJava className='logo' />, techId: 'backEndObj', url: 'https://docs.oracle.com/javase/8/docs/technotes/guides/language/index.html'},
+        { name: 'C++', icon: <SiCplusplus className='logo' />, techId: 'backEndObj', url: 'https://www.cplusplus.com/'},
+        { name: 'Python', icon: <IoLogoPython className='logo' />, techId: 'backEndObj', url: 'https://www.python.org/'},
+
+        // DATABASE OBJECTS
+        { name: 'SQL', icon: <GrMysql className='logo' />, techId: 'dbsObj', url: 'https://searchdatamanagement.techtarget.com/definition/SQL#:~:text=Structured%20Query%20Language%20(SQL)%20is,on%20the%20data%20in%20them.&text=SQL%20is%20used%20for%20the,deleting%20rows%20of%20data%3B%20and'},
+        { name: 'My Sql', icon: <SiMysql className='logo' />, techId: 'dbsObj', url: 'https://www.mysql.com/'},
+        { name: 'Monog DB', icon: <SiMongodb className='logo' />, techId: 'dbsObj', url: 'https://www.mongodb.com/'},
+        
+        // TOOLS OBJECTS
+        { name: 'Github', icon: <BsGithub className='logo' />, techId: 'toolsObj', url: 'https://github.com/'},
+        { name: 'NPM', icon: <IoLogoNpm className='logo' />, techId: 'toolsObj', url: 'https://www.npmjs.com/'},
+        { name: 'Git', icon: <FaGitAlt className='logo' />, techId: 'toolsObj', url: 'https://git-scm.com/'},
+        
+        // LEARNING OBJECTS
+        { name: 'Three JS', icon: <SiThreedotjs className='logo' />, techId: 'learningObj', url: 'https://threejs.org/'},
+        { name: 'GraphQL', icon: <SiGraphql className='logo' />, techId: 'learningObj', url: 'https://graphql.org/'},
+    ];
+
+    console.log(technologies.filter(tech => tech.techId === 'frontEndObj').map(tech => tech))
+
     return (
         <div className='skillsView'>
             <p className='mainTxtBG'>Skills</p>
@@ -20,130 +55,60 @@ const SkillsView = () => {
                 <div className='frontEndSkillsCntr'>
                     <p className='indSkillsCntrBgText'>Front-End</p>
                     <div className='skillsObjsCntr'>
-                        <a className='techObj' id='frontEndObj' href='/'>
-                            <AiFillHtml5 className='logo' />
-                            <p className='techName'>HTML</p>
-                        </a>
-
-                        <div className='techObj' id='frontEndObj'>
-                            <a className='techLogo' href='/'><IoLogoCss3 className='logo' /></a>
-                            <p className='techName'>CSS</p>
-                        </div>
-
-                        <div className='techObj' id='frontEndObj'>
-                            <a className='techLogo' href='/'><IoLogoJavascript className='logo'/></a>
-                            <p className='techName'>Javascript</p>
-                        </div>
-
-                        <div className='techObj' id='frontEndObj'>
-                            <a className='techLogo' href='/'><FaReact className='logo'/></a>
-                            <p className='techName'>React</p>
-                        </div>
-
-                        <div className='techObj' id='frontEndObj'>
-                            <a className='techLogo' href='/'><IoLogoAngular className='logo' /></a>
-                            <p className='techName'>Angular</p>
-                        </div>
-
-                        <div className='techObj' id='frontEndObj'>
-                            <a className='techLogo' href='/'><SiTypescript className='logo' /></a>
-                            <p className='techName'>Typescript</p>
-                        </div>
+                        { technologies.filter(tech => tech.techId === 'frontEndObj').map(tech => 
+                            <a className='techObj' id='frontEndObj' target='_blank' rel='noopener noreferrer' href={tech.url}>
+                                {tech.icon}
+                                <p className='techName'>{tech.name}</p>
+                            </a>
+                        ) }
                     </div>
                 </div>
 
                 <div className='backEndSkillsCntr'>
                     <p className='indSkillsCntrBgText'>Back-End</p>
                     <div className='skillsObjsCntr'>
-                        <div className='techObj' id='backEndObj'>
-                            <a className='techLogo' href='/'><IoLogoNodejs className='logo' /></a>
-                            <p className='techName'>Node</p>
-                        </div>
-
-                        <div className='techObj' id='backEndObj'>
-                            <a className='techLogo' href='/'><SiExpress className='logo' /></a>
-                            <p className='techName'>Express</p>
-                        </div>
-
-                        <div className='techObj' id='backEndObj'>
-                            <a className='techLogo' href='/'><SiPhp className='logo'/></a>
-                            <p className='techName'>PHP</p>
-                        </div>
-
-                        <div className='techObj' id='backEndObj'>
-                            <a className='techLogo' href='/'><FaLaravel className='logo'/></a>
-                            <p className='techName'>Laravel</p>
-                        </div>
-
-                        <div className='techObj' id='backEndObj'>
-                            <div className='techLogo' href='/'><SiJava className='logo' /></div>
-                            <p className='techName'>Java</p>
-                        </div>
-
-                        <div className='techObj' id='backEndObj'>
-                            <a className='techLogo' href='/'><SiCplusplus className='logo' /></a>
-                            <p className='techName'>C++</p>
-                        </div>
-
-                        <div className='techObj' id='backEndObj'>
-                            <a className='techLogo' href='/'><IoLogoPython className='logo' /></a>
-                            <p className='techName'>Python</p>
-                        </div>
+                        { technologies.filter(tech => tech.techId === 'backEndObj').map(tech => 
+                            <a className='techObj' id='backEndObj' target='_blank' rel='noopener noreferrer' href={tech.url}>
+                                {tech.icon}
+                                <p className='techName'>{tech.name}</p>
+                            </a>
+                        ) }
                     </div>
                 </div>
                  
                 <div className='databasesSkillsCntr'>
                     <p className='indSkillsCntrBgText'>Databases</p>
                     <div className='skillsObjsCntr'>
-                        <div className='techObj' id='dbsObj'>
-                            <a className='techLogo' href='/'><GrMysql className='logo' /></a>
-                            <p className='techName'>SQL</p>
-                        </div>
-
-                        <div className='techObj' id='dbsObj'>
-                            <a className='techLogo' href='/'><SiMysql className='logo' /></a>
-                            <p className='techName'>My Sql</p>
-                        </div>
-
-                        <div className='techObj' id='dbsObj'>
-                            <a className='techLogo' href='/'><SiMongodb className='logo'/></a>
-                            <p className='techName'>Mongo DB</p>
-                        </div>
+                        { technologies.filter(tech => tech.techId === 'dbsObj').map(tech => 
+                            <a className='techObj' id='dbsObj' target='_blank' rel='noopener noreferrer' href={tech.url}>
+                                {tech.icon}
+                                <p className='techName'>{tech.name}</p>
+                            </a>
+                        ) }
                     </div>
                 </div>
 
                 <div className='toolsSkillsCntr'>
                     <p className='indSkillsCntrBgText'>Tools</p>
                     <div className='skillsObjsCntr'>
-                        <div className='techObj' id='toolsObj'>
-                            <a className='techLogo' href='/'><BsGithub className='logo' /></a>
-                            <p className='techName'>Github</p>
-                        </div>
-
-                        <div className='techObj' id='toolsObj'>
-                            <a className='techLogo' href='/'><IoLogoNpm className='logo' /></a>
-                            <p className='techName'>NPM</p>
-                        </div>
-
-                        <div className='techObj' id='toolsObj'>
-                            <a className='techLogo' href='/'><FaGitAlt className='logo'/></a>
-                            <p className='techName'>Git</p>
-                        </div>
+                        { technologies.filter(tech => tech.techId === 'toolsObj').map(tech => 
+                            <a className='techObj' id='toolsObj' target='_blank' rel='noopener noreferrer' href={tech.url}>
+                                {tech.icon}
+                                <p className='techName'>{tech.name}</p>
+                            </a>
+                        ) }
                     </div>
                 </div>
 
                 <div className='learningSkillsCntr'>
                     <p className='indSkillsCntrBgText'>Learning</p>
                     <div className='skillsObjsCntr'>
-                        <div className='techObj' id='learningObj'>
-                            <a className='techLogo' href='/'><SiThreedotjs className='logo' /></a>
-                            <p className='techName'>Three JS</p>
-                        </div>
-
-                        <div className='techObj' id='learningObj'>
-                            <a className='techLogo' href='/'><SiGraphql className='logo' /></a>
-                            <p className='techName'>GraphQL</p>
-                        </div>
+                        { technologies.filter(tech => tech.techId === 'learningObj').map(tech => 
+                            <a className='techObj' id='learningObj' target='_blank' rel='noopener noreferrer' href={tech.url}>
+                                {tech.icon}
+                                <p className='techName'>{tech.name}</p>
+                            </a>
+                        ) }
                     </div>
                 </div>
             </div>
