@@ -468,14 +468,22 @@ body {
 
 .projectPix {
   display: block;
-  background: red;
+  background: #2c343a;
   width: 100%;
   height: 100%;
-  background-image: url('../src/images/BookFinder.PNG');
+  /* background-image: url('../src/images/BookFinder.PNG'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.projectPix.book { background-image: url('../src/images/BookFinder.PNG'); }
+
+.projectPix.clock { background-image: url('../src/images/TimerLogo.PNG'); }
+
+.projectPix.todoList { background-image: url('../src/images/TodoListLogo.PNG'); }
+
+.projectPix.ticTacToe { background-image: url('../src/images/Tic-Tac-Toe.PNG'); }
 
 .projectInfoCntr {
   position: absolute;
@@ -485,7 +493,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
   /* outline: 1px solid red; */
 }
 
@@ -532,6 +540,13 @@ body {
   padding: 8px 18px;
   outline: 1px solid white;
   cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+.projectBtnsCntr *:hover {
+  background: red;
+  transition: .1s linear;
 }
 
 /* me='projectsCntr'>
