@@ -1,4 +1,5 @@
 import React from 'react';
+import { BookFinder, TicTacToe, TodoListLogo, TimerLogo } from '../images/'
 
 const WorkView = (props) => {
 
@@ -14,7 +15,7 @@ const WorkView = (props) => {
 
               <div className='projectPixCntr'>
                 <div className='projectPixShade'></div>
-                <img className='projectPix' alt='Project' />
+                <div className='projectPix' />
               </div>
 
               <div className='projectInfoCntr'>
@@ -206,8 +207,15 @@ const WorkView = (props) => {
             
               </div>
             </div>
-
+    
           </div>
+
+            <p>TEST FOR TEST</p>
+            <img alt='testForImage' src={BookFinder}></img>
+            <img alt='testForImage' src={TimerLogo}></img>
+            <img alt='testForImage' src={TodoListLogo}></img>
+            <img alt='testForImage' src={TicTacToe}></img>
+  
         </div>
     );
 }
