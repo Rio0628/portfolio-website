@@ -143,7 +143,7 @@ body {
 
 /* -- HOME VIEW STYLES  */
 
-.homeView, .aboutView, .skillsView {
+.homeView, .aboutView, .skillsView, .workView {
   position: relative;
   width: 100%;
   height: 100%;
@@ -262,12 +262,12 @@ body {
 
 /* -- ABOUT VIEW STYLES -- */
 
-.aboutView {
+.aboutView, .workView{
   height: 72rem;
   align-items: center;
 }
 
-.aboutView .mainTxtBG, .skillsView .mainTxtBG {
+.aboutView .mainTxtBG, .skillsView .mainTxtBG, .workView .mainTxtBG {
   position: absolute; 
   /* right: 2rem; */
 }
@@ -281,10 +281,6 @@ body {
   width: 20rem;
   /* outline: 1px solid red; */
 }
-
-/* .aboutView {
-  margin-bottom: 20rem;
-} */
 
 .aboutTXT p, .skillsViewText {
   position: relative;
@@ -329,9 +325,6 @@ body {
   grid-row-gap: 15px;
   height: 89rem;
   width: 20rem;
-  /* background: magenta; */
-  /* outline: 1px solid red; */
-  /* background: yellow; */
 }
 
 .frontEndSkillsCntr, .backEndSkillsCntr, .databasesSkillsCntr, .toolsSkillsCntr, .learningSkillsCntr {
@@ -407,13 +400,150 @@ body {
   /* background: red; */
 }
 
-/* .databasesSkillsCntr {
-  top: 8rem;
+/* =+|+= WORK VIEW STYLES =+|+= */
+
+.projectsCntr {
+  position: relative;
+  top: 12rem;
+  height: 83%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: gray; */
+  outline: 1px solid red;
 }
 
+.indProject {
+  position: relative;
+  width: 20.2rem;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid blue;
+  /* background: rgba(255, 255, 255, .3); */
+}
+
+.projectTitle {
+  position: absolute;
+  font-family: 'Titillium Web';
+  top: -34px;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-align: center;
+  padding: 2px 30px;
+  background: #161a1d;
+  outline: 1px solid red;
+  z-index: 3;
+}
+
+.projectPixCntr {
+  position: absolute;
+  outline: 2px solid yellow;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.projectPixShade, .projectPix {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: blue;
+}
+
+.projectPix {
+  background: red;
+}
+
+.projectInfoCntr {
+  position: absolute;
+  bottom: -5px;
+  height: 85%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* outline: 1px solid red; */
+}
+
+.projectInfo {
+  width: 90%;
+  /* outline: 2px solid yellow; */
+}
+
+.projectTechsCntr {
+  width: 92%;
+  height: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto, 2rem); */
+  /* outline: 1px solid magenta; */
+  text-align: center;
+  /* background: red; */
+}
+
+.projectTech {
+  /* margin-left: 20px; */
+  height: 2rem;
+  /* width: 4rem; */
+  margin: 0px 5px;
+  list-style: none;
+  /* outline: 1px solid red; */
+}
+
+.projectBtnsCntr {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* outline: 1px solid purple; */
+}
+
+.projectBtnsCntr * {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 18px;
+  outline: 1px solid white;
+  cursor: pointer;
+}
+
+/* me='projectsCntr'>
+
+            <div className='indProject'>
+              <p className='projectTitle'>Project</p>
+
+              <div className='projectPixCntr'>
+                <div className='projectPixShade'></div>
+                <img className='projectPix' alt='Project' />
+              </div>
+
+              <div className='projectInfoCntr'>
+                <p className='projectInfo'>
+                  This is the description for the project. This project uses this one technology with this other technology and this other technology. you can use this really cool app
+                </p>
+
+                <div className='projectTechsCntr'>
+                  <p className='projectTech'>Tech 1</p>
+                </div>
+
+                <div className='projectBtnsCntr'>
+                  <p className='porjectsBtn' id='seeAppLiveBtn'>Live Demo</p>
+                  <p className='porjectsBtn' id='videCodeBtn'>Vi */
 
 
-                            
+
+
+
+
+
 /* 
   ++ CODE FOR BREAKPOINT OF GRID ++
 .allSkillsCntr {
