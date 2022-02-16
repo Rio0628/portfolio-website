@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import API from './api';
 import { HomeView, AboutView, SkillsView, WorkView, ContactView } from './components';
 import { CgMenuGridR } from 'react-icons/cg';
-import { FaRegWindowClose } from 'react-icons/fa';
+import { RiCloseLine } from 'react-icons/ri';
 import { gsap } from 'gsap';
 
 export default class App extends Component {  
@@ -50,9 +50,13 @@ export default class App extends Component {
         <CgMenuGridR className='menuBtn' onClick={() => this.navAnims.play()} />
 
         <div className='nav' ref={this.setNavRef}>
-          <div className='bgTitle'>NAV</div>
+          <div className='bgTitle'>
+            <p>N</p>
+            <p>A</p>
+            <p>V</p>
+          </div>
 
-          <div className='closeNavBtn' ref={this.setNavBtnRef} onClick={() => this.navAnims.reverse()}><FaRegWindowClose className='icon'/></div>
+          <div className='closeNavBtn' ref={this.setNavBtnRef} onClick={() => this.navAnims.reverse()}><RiCloseLine className='icon'/></div>
 
           <p className='mainLogo' ref={this.setNavLogoRef}>Mario Domenech</p>
 

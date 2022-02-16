@@ -50,7 +50,7 @@ body {
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(8px);
-  background: rgba(22, 26, 29, .9);
+  background: rgba(22, 26, 29, .7);
   opacity: 1;
   z-index: 9;
   overflow: hidden;
@@ -58,23 +58,31 @@ body {
 
 .bgTitle {
   position: absolute;
-  bottom: 4.5rem;
+  /* bottom: 4.5rem; */
   color: #2c343a;
   height: 100vh;
   width: 100%;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
   font-family: 'Titillium Web';
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  text-align: center;
-  font-size: 12rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
   /* letter-spacing: 2px; */
   font-weight: 800;
   pointer-events: none;
+  outline: 1px solid red;
+}
+
+.bgTitle p {
+  position: absolute;
+  font-size: 12rem;
   /* outline: 1px solid red; */
 }
+
+.bgTitle p:nth-child(1) { top: -16rem; }
+
+.bgTitle p:nth-child(3) { bottom: -15.5rem; }
 
 .closeNavBtn {
   position: absolute;
@@ -84,6 +92,7 @@ body {
   font-size: 45px;
   opacity: 1;
   cursor: pointer;
+  text-shadow: 2px 2px 5px #161a1d, -2px -2px 5px #161a1d;
   /* background: red; */
 }
 
@@ -187,7 +196,7 @@ body {
   position: relative;
   bottom: 3.2rem;
   left: 1rem;
-  width: 20rem;
+  width: 18.3rem;
   opacity: 0;
   text-shadow: 5px 5px 5px #161a1d, -5px -5px 5px #161a1d;
   /* font-size: 28px; */
@@ -204,7 +213,7 @@ body {
   position: relative;
   bottom: 13.5rem;
   left: 1rem;
-  width: 20rem;
+  width: 18.3rem;
   opacity: 0;
   /* outline: 1px solid magenta; */
   height: 6rem;
@@ -278,7 +287,7 @@ body {
   /* left: 1rem; */
   display: flex;
   flex-direction: column;
-  width: 20rem;
+  width: 18.3rem;
   /* outline: 1px solid red; */
 }
 
@@ -324,7 +333,7 @@ body {
   grid-template-rows: repeat(auto, 1fr);
   grid-row-gap: 15px;
   height: 89rem;
-  width: 20rem;
+  width: 18.3rem;
 }
 
 .frontEndSkillsCntr, .backEndSkillsCntr, .databasesSkillsCntr, .toolsSkillsCntr, .learningSkillsCntr {
@@ -421,7 +430,7 @@ body {
 
 .indProject {
   position: relative;
-  width: 20.2rem;
+  width: 18.3rem;
   height: 25rem;
   display: flex;
   flex-direction: column;
@@ -440,7 +449,7 @@ body {
   position: absolute;
   font-family: 'Titillium Web';
   top: -20px;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 800;
   letter-spacing: 3px;
   text-align: center;
@@ -523,6 +532,7 @@ body {
 
 .projectInfo {
   width: 90%;
+  font-size: 15px;
   /* font-weight: 600; */
   /* outline: 2px solid yellow; */
 }
@@ -564,7 +574,7 @@ body {
 .projectBtnsCntr * {
   font-size: 18px;
   font-weight: 600;
-  padding: 8px 18px;
+  padding: 6px 10px;
   outline: 1px solid white;
   cursor: pointer;
   text-decoration: none;
