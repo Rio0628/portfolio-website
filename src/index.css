@@ -236,13 +236,13 @@ body {
   padding: 18px 28px;
 }
 
-.viewWorkBtn:hover, .contactMeBtn:hover {
+.viewWorkBtn:hover, .contactMeBtn:hover, .projectBtnsCntr *:hover  {
   background: white;
   color:#2c343a;
   transition: .1s linear; 
 }
 
-.viewWorkBtn:active, .contactMeBtn:active {
+.viewWorkBtn:active, .contactMeBtn:active, .projectBtnsCntr *:active {
   background: none;
   color: white;
   transition: none;
@@ -429,6 +429,7 @@ body {
   justify-content: center;
   margin-bottom: 30px;
   box-shadow: 8px 8px 20px #0b0d0f, -8px -8px 20px #0b0d0f;
+  overflow: hidden;
   /* outline: 2px solid #21272c; */
   /* background: rgba(255, 255, 255, .3); */
 }
@@ -444,8 +445,7 @@ body {
   letter-spacing: 5px;
   text-align: center;
   padding: 2px 30px;
-  background: #161a1d;
-  outline: 1px solid red;
+  text-shadow: 2px 2px 5px #161a1d, -2px -2px 5px #161a1d;
   z-index: 3;
 }
 
@@ -468,8 +468,12 @@ body {
 }
 
 .projectPixShade {
+  position: absolute;
+  height: 100%;
+  width: 100%;
   background: rgba(22, 26, 29, .6);
-  z-index: 2; 
+  opacity: 0;
+  z-index: 2;
 }
 
 .projectPix {
@@ -500,8 +504,14 @@ body {
   flex-direction: column;
   align-items: center;
   z-index: 3;
+  /* transform: translateX(-100px); */
   /* outline: 1px solid red; */
 }
+
+
+.indProject:nth-child(1) .projectInfoCntr, .indProject:nth-child(3) .projectInfoCntr { transform: translateX(-500px); }
+
+.indProject:nth-child(2) .projectInfoCntr, .indProject:nth-child(4) .projectInfoCntr { transform: translateX(500px); }
 
 .projectInfo {
   width: 90%;
@@ -551,11 +561,6 @@ body {
   cursor: pointer;
   text-decoration: none;
   color: #fff;
-}
-
-.projectBtnsCntr *:hover {
-  background: red;
-  transition: .1s linear;
 }
 
 /* me='projectsCntr'>
