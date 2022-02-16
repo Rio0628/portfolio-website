@@ -440,13 +440,21 @@ body {
   position: absolute;
   font-family: 'Titillium Web';
   top: -20px;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 800;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   text-align: center;
   padding: 2px 30px;
-  text-shadow: 2px 2px 5px #161a1d, -2px -2px 5px #161a1d;
+  color: #fff;
+  background: #0b0d0f;
+  /* text-shadow: 2px 2px 5px #161a1d, -2px -2px 5px #161a1d; */
   z-index: 3;
+  transition: .1s linear;
+}
+
+.indProject:hover .projectTitle {
+  background: none;
+  transition: .1s linear;
 }
 
 .projectPixCntr {
