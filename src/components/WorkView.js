@@ -9,9 +9,9 @@ const WorkView = (props) => {
 
       { name: 'Tic Tac Toe', image: 'ticTacToe', description: "Simple React application that allows user to play against another user or against a CPU.Return to a past move within a game and choose which side to play as ", techs: ['React', 'Styled Components', 'Heroku'], seeLive: 'https://tic-tac-toe-mario-domenech.herokuapp.com/', seeCode: 'https://github.com/Rio0628/tic-tac-toe' },
 
-      { name: 'Todo List', image: 'todoList', description: "Full-Stack CRUD application that uses React, Express, and MongoDB. Utilizing a fully functional REST API and that connects to the front end side of application allowing an user to create, edit, and delete objects from the database", techs: ['React', 'Express', 'REST API', 'MONGO DB', 'Heroku'], seeLive: 'https://todo-list-mario-domenech.herokuapp.com/', seeCode: 'https://github.com/Rio0628/todo-list2.0' },
+      { name: 'Todo List', image: 'todoList', description: "Full-Stack CRUD application that uses React, Express, and MongoDB. Utilizing a fully functional REST API and that connects to the front end side of application allowing an user to create, edit, and delete objects from the database", techs: ['React', 'Express', 'REST API', 'Mongo DB', 'Heroku'], seeLive: 'https://todo-list-mario-domenech.herokuapp.com/', seeCode: 'https://github.com/Rio0628/todo-list2.0' },
 
-      { name: 'Clock - Timer', image: 'clock', description: "Full-Stack CRUD application that uses React, Express, and MongoDB. Showcases time across different timezones, allows users to create sessions with different timer intervals, and save or delete sessions in database", techs: ['React', 'Express', 'REST API', 'MONGO DB', 'Heroku'], seeLive: 'https://clock-timer-mario-domenech.herokuapp.com/', seeCode: 'https://github.com/Rio0628/clock-timer' },
+      { name: 'Clock - Timer', image: 'clock', description: "Full-Stack CRUD application that uses React, Express, and MongoDB. Showcases time across different timezones, allows users to create sessions with different timer intervals, and save or delete sessions in database", techs: ['React', 'Express', 'REST API', 'Mongo DB', 'Heroku'], seeLive: 'https://clock-timer-mario-domenech.herokuapp.com/', seeCode: 'https://github.com/Rio0628/clock-timer' },
     ];
     return (
         <div className='workView'>
