@@ -44,7 +44,7 @@ const WorkView = (props) => {
           <div className='projectsCntr'>
 
             { projects.map( project => 
-              <div className='indProject' onMouseEnter={() => project.anim.play()} onMouseLeave={ () => project.anim.reverse() }>
+              <div className='indProject' onMouseEnter={() => project.anim.play()} onMouseLeave={ () => project.anim.reverse() } key={project.name}>
                 <p className='projectTitle'>{project.name}</p>
   
                 <div className='projectPixCntr'>
@@ -56,7 +56,7 @@ const WorkView = (props) => {
                   <p className='projectInfo'>{project.description}</p>
   
                   <div className='projectTechsCntr'>
-                    { project.techs.map( tech => <p className='projectTech'>{tech}</p>) }
+                    { project.techs.map( tech => <p className='projectTech' key={tech}>{tech}</p>) }
                   </div>
   
                   <div className='projectBtnsCntr'>

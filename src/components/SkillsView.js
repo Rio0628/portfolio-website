@@ -56,7 +56,7 @@ const SkillsView = () => {
                     <p className='indSkillsCntrBgText'>Front-End</p>
                     <div className='skillsObjsCntr'>
                         { technologies.filter(tech => tech.techId === 'frontEndObj').map(tech => 
-                            <a className='techObj' id='frontEndObj' target='_blank' rel='noopener noreferrer' href={tech.url}>
+                            <a className='techObj' id='frontEndObj' target='_blank' rel='noopener noreferrer' href={tech.url} key={tech.name}>
                                 {tech.icon}
                                 <p className='techName'>{tech.name}</p>
                             </a>
@@ -68,7 +68,7 @@ const SkillsView = () => {
                     <p className='indSkillsCntrBgText'>Back-End</p>
                     <div className='skillsObjsCntr'>
                         { technologies.filter(tech => tech.techId === 'backEndObj').map(tech => 
-                            <a className='techObj' id='backEndObj' target='_blank' rel='noopener noreferrer' href={tech.url}>
+                            <a className='techObj' id='backEndObj' target='_blank' rel='noopener noreferrer' href={tech.url} key={tech.name}>
                                 {tech.icon}
                                 <p className='techName'>{tech.name}</p>
                             </a>
@@ -80,7 +80,7 @@ const SkillsView = () => {
                     <p className='indSkillsCntrBgText'>Databases</p>
                     <div className='skillsObjsCntr'>
                         { technologies.filter(tech => tech.techId === 'dbsObj').map(tech => 
-                            <a className='techObj' id='dbsObj' target='_blank' rel='noopener noreferrer' href={tech.url}>
+                            <a className='techObj' id='dbsObj' target='_blank' rel='noopener noreferrer' href={tech.url} key={tech.name}>
                                 {tech.icon}
                                 <p className='techName'>{tech.name}</p>
                             </a>
@@ -92,7 +92,7 @@ const SkillsView = () => {
                     <p className='indSkillsCntrBgText'>Tools</p>
                     <div className='skillsObjsCntr'>
                         { technologies.filter(tech => tech.techId === 'toolsObj').map(tech => 
-                            <a className='techObj' id='toolsObj' target='_blank' rel='noopener noreferrer' href={tech.url}>
+                            <a className='techObj' id='toolsObj' target='_blank' rel='noopener noreferrer' href={tech.url} key={tech.name}>
                                 {tech.icon}
                                 <p className='techName'>{tech.name}</p>
                             </a>
@@ -104,7 +104,7 @@ const SkillsView = () => {
                     <p className='indSkillsCntrBgText'>Learning</p>
                     <div className='skillsObjsCntr'>
                         { technologies.filter(tech => tech.techId === 'learningObj').map(tech => 
-                            <a className='techObj' id='learningObj' target='_blank' rel='noopener noreferrer' href={tech.url}>
+                            <a className='techObj' id='learningObj' target='_blank' rel='noopener noreferrer' href={tech.url} key={tech.name}>
                                 {tech.icon}
                                 <p className='techName'>{tech.name}</p>
                             </a>
