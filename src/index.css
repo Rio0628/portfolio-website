@@ -152,7 +152,7 @@ body {
 
 /* -- HOME VIEW STYLES  */
 
-.homeView, .aboutView, .skillsView, .workView {
+.homeView, .aboutView, .skillsView, .workView, .contactView {
   position: relative;
   width: 100%;
   height: 100%;
@@ -245,13 +245,13 @@ body {
   padding: 18px 28px;
 }
 
-.viewWorkBtn:hover, .contactMeBtn:hover, .projectBtnsCntr *:hover  {
+.viewWorkBtn:hover, .contactMeBtn:hover, .projectBtnsCntr *:hover, .submitBtn:hover  {
   background: white;
   color:#2c343a;
   transition: .1s linear; 
 }
 
-.viewWorkBtn:active, .contactMeBtn:active, .projectBtnsCntr *:active {
+.viewWorkBtn:active, .contactMeBtn:active, .projectBtnsCntr *:active, .submitBtn:active {
   background: none;
   color: white;
   transition: none;
@@ -276,7 +276,7 @@ body {
   align-items: center;
 }
 
-.aboutView .mainTxtBG, .skillsView .mainTxtBG, .workView .mainTxtBG {
+.aboutView .mainTxtBG, .skillsView .mainTxtBG, .workView .mainTxtBG, .contactView .mainTxtBG {
   position: absolute; 
   /* right: 2rem; */
 }
@@ -581,30 +581,69 @@ body {
   color: #fff;
 }
 
-/* me='projectsCntr'>
-
-            <div className='indProject'>
-              <p className='projectTitle'>Project</p>
-
-              <div className='projectPixCntr'>
-                <div className='projectPixShade'></div>
-                <img className='projectPix' alt='Project' />
-              </div>
-
-              <div className='projectInfoCntr'>
-                <p className='projectInfo'>
-                  This is the description for the project. This project uses this one technology with this other technology and this other technology. you can use this really cool app
-                </p>
-
-                <div className='projectTechsCntr'>
-                  <p className='projectTech'>Tech 1</p>
-                </div>
-
-                <div className='projectBtnsCntr'>
-                  <p className='porjectsBtn' id='seeAppLiveBtn'>Live Demo</p>
-                  <p className='porjectsBtn' id='videCodeBtn'>Vi */
+/* ++|++ CONTACT VIEW ++|++ */
 
 
+.contactView {
+  align-items: center;
+  height: 60rem;
+}
+
+.inputFieldsCntr {
+  position: relative;
+  top: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18.3rem;
+  /* height: 80%; */
+  /* outline: 1px solid red; */
+}
+
+.inputName, .inputEmail, .inputMessage, .submitBtn {
+  width: 90%;
+  height: 2.7rem;
+  font-size: 19px;
+  padding-left: 10px;
+  background: #161a1d;
+  color: #fff;
+  border: none;
+  outline: 2px solid #fff;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.inputName, .inputEmail {
+  width: 90%;
+}
+
+.inputMessage {
+  width: 90%;
+  height: 5rem;
+  /* backgroundred; */
+}
+
+.submitBtn {
+  width: 94%;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+/* 'contactView' id='contact' ref={props.setContactRef}>
+            <p className='mainTxtBG'>Contact</p>
+
+            <form className='inputFieldsCntr' onSubmit={props.sendEmail}>
+                <input className='inputName' id='name' placeholder='Name' type='text' name='from_name' onChange={props.onChange}/>
+
+                <input className='inputEmail' id='email' placeholder='Email Address' type='email' name='from_email' onChange={props.onChange}/>
+                
+                <textarea className='inputMessage' id='message' name='message' placeholder='Message' type='text' onChange={props.onChange}/>
+    
+                <input type='submit' className='submitBtn'></input> */
 
 
 

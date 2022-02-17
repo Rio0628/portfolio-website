@@ -77,6 +77,8 @@ export default class App extends Component {
           <SkillsView />
 
           <WorkView />
+
+          <ContactView />
         </div>
 
       </div>
