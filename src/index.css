@@ -597,7 +597,7 @@ body {
   align-items: center;
   width: 18.3rem;
   /* height: 80%; */
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 .inputName, .inputEmail, .inputMessage, .submitBtn {
@@ -638,6 +638,9 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* z-index: 5; */
   /* background: red; */
 }
 
