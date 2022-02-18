@@ -281,22 +281,16 @@ body {
   /* right: 2rem; */
 }
 
-.aboutTXT, .skillsViewText {
+.aboutTXT, .skillsViewText, .contactViewText {
   position: relative;
   top: 16rem;
   /* left: 1rem; */
-  display: flex;
-  flex-direction: column;
-  width: 18.3rem;
-  /* outline: 1px solid red; */
-}
-
-.aboutTXT p, .skillsViewText {
-  position: relative;
-  bottom: 1rem;
   font-size: 1.2rem;
   font-weight: 600;
-  /* outline: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  width: 17.8rem;
+  /* outline: 1px solid red; */
 }
 
 .aboutTXT p:nth-child(2) { bottom: 2.2rem; }
@@ -333,7 +327,7 @@ body {
   grid-template-rows: repeat(auto, 1fr);
   grid-row-gap: 15px;
   height: 89rem;
-  width: 18.3rem;
+  width: 17.8rem;
 }
 
 .frontEndSkillsCntr, .backEndSkillsCntr, .databasesSkillsCntr, .toolsSkillsCntr, .learningSkillsCntr {
@@ -342,13 +336,13 @@ body {
 }
 
 .indSkillsCntrBgText {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color:#2c343a;
   /* font-family: 'Titillium Web'; */
   font-weight: 800;
   position: absolute;
-  top: -35px;
-  left: 2px;
+  top: -30px;
+  left: 5px;
   /* outline: 1px solid blue; */
   z-index: 2; /* 2 */
 }
@@ -418,7 +412,7 @@ body {
 .projectsCntr {
   position: relative;
   /* z-index: -1;  */
-  top: 16rem;
+  top: 18rem; /* NORMALLY 16rem*/
   height: 90%;
   width: 100%;
   display: flex;
@@ -430,7 +424,7 @@ body {
 
 .indProject {
   position: relative;
-  width: 18.3rem;
+  width: 17.5rem;
   height: 25rem;
   display: flex;
   flex-direction: column;
@@ -597,7 +591,8 @@ body {
   align-items: center;
   width: 18.3rem;
   /* height: 80%; */
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
+  /* z-index: -1; */
 }
 
 .inputName, .inputEmail, .inputMessage, .submitBtn {
@@ -613,18 +608,13 @@ body {
   font-weight: 600;
 }
 
-.inputName, .inputEmail {
-  width: 90%;
-}
-
 .inputMessage {
-  width: 90%;
   height: 5rem;
   /* backgroundred; */
 }
 
 .submitBtn {
-  width: 94%;
+  width: 95%;
   text-align: center;
   font-weight: 800;
   cursor: pointer;
@@ -632,16 +622,6 @@ body {
 
 ::placeholder {
   color: #fff;
-}
-
-.bgCanvas {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  /* z-index: 5; */
-  /* background: red; */
 }
 
 /* 'contactView' id='contact' ref={props.setContactRef}>
