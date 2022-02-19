@@ -497,7 +497,7 @@ body {
   width: 100%;
   background: rgba(22, 26, 29, .6);
   opacity: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 .projectPix {
@@ -509,6 +509,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 2;
 }
 
 .projectPix.book { background-image: url('../src/images/BookFinder.PNG'); }
@@ -532,9 +533,9 @@ body {
   /* outline: 1px solid red; */
 }
 
-.indProject:nth-child(1) .projectInfoCntr, .indProject:nth-child(3) .projectInfoCntr { transform: translateX(-500px); }
+.indProject:nth-child(1) .projectInfoCntr, .indProject:nth-child(3) .projectInfoCntr { transform: translateX(-100rem); }
 
-.indProject:nth-child(2) .projectInfoCntr, .indProject:nth-child(4) .projectInfoCntr { transform: translateX(500px); }
+.indProject:nth-child(2) .projectInfoCntr, .indProject:nth-child(4) .projectInfoCntr { transform: translateX(100rem); } 
 
 .projectInfo {
   width: 90%;
@@ -826,37 +827,89 @@ body {
   }
 
   .inputFieldsCntr { width: 38rem; }
-
 }
 
+@media screen and (min-width: 1050px) {
+  
+  .aboutView { 
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-/* 
-  ++ CODE FOR BREAKPOINT OF GRID ++
-.allSkillsCntr {
-  position: relative;
-  top: 17rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: 20rem;
-  width: 90%;
-  outline: 1px solid blue;
-}
+  .aboutView .mainTxtBG, .skillsView .mainTxtBG{
+    font-size: 10rem;
+  }
 
-.allSkillsCntr * {
-  min-height: 100px;
-  min-width: 100px;
-  background: lightgreen;
-  outline: 1px solid magenta;
-}
+  .aboutTXT {
+    top: 0;
+    width: 30rem;
+  }
 
-.allSkillsCntr *:nth-child(1) {
-  background: red;
-  grid-column: 1 / 3; 
-  grid-row: 1;
-  width: 100%;
-}
+  .skillCanvas {
+    top: 0;
+    height: 25rem;
+    width: 27rem;
+  }
 
-.allSkillsCntr *:nth-child(4) {
-  background: blue;
+  .skillsViewText { 
+    top: 25rem; 
+    width: 42rem;
+    /* outline: 1px solid red; */
+  }
+
+  .allSkillsCntr { top: 30rem;}
+
+  .indProject {
+    width: 55rem;
+    height: 30rem;
+    flex-direction: row;
+    justify-content: space-between;
+    /* outline: 2px solid red; */
+    box-shadow: 2px 2px 5px #0b0d0f, -2px -2px 5px #0b0d0f;
+  }
+
+  .projectTitle {
+    left: 14rem;
+    top: -3rem;
+    font-size: 5rem;
+    background: none;
+    z-index: 1;
+    color: #fff;
+  }
+
+  .indProject:hover .projectTitle {
+    color: #38424a;
+    transition: .1s linear;
+  }
+
+  .projectPixCntr {
+    top: 7rem;
+    left: 20px; 
+    height: 45%;
+    width: 40%;
+  }
+
+  .projectInfoCntr {
+    right: 0px;
+    top: 6.2rem;
+    width: 70%;
+    height: 55%;
+    /* outline: 1px solid magenta; */
+  }
+
+  .projectInfo {
+    font-size: 17px;
+    padding: 2px 5px;
+    /* background:#2c343a; */
+    /* outline: 1px solid blue; */
+  }
+
+  .projectTech { font-size: 15px; }
+
+  .projectBtnsCntr { top: -1.5rem; }
+
+  .projectBtnsCntr * {
+    font-size: 20px;
+    padding: 8px 30px;
+  }
 }
- */
