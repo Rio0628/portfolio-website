@@ -322,26 +322,20 @@ body {
 .allSkillsCntr {
   position: relative;
   top: 15rem;
-  -moz-column-count:1;
-  -moz-column-gap: 3%;
-  -moz-column-width: 30%;
-  -webkit-column-count: 1;
-  -webkit-column-gap: 3%;
-  -webkit-column-width: 30%;
-  column-count: 1;
-  column-gap: 3%;
-  column-width: 30%;
-  height: 95rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 98rem;
   width: 17.8rem;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 .frontEndSkillsCntr, .backEndSkillsCntr, .databasesSkillsCntr, .toolsSkillsCntr, .learningSkillsCntr {
   position: relative;
-  grid-column: span 2;
   outline: 2px solid #fff;
   height: 100px;
-  margin-bottom: 33px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .frontEndSkillsCntr { height: 21.5rem; }
@@ -786,19 +780,26 @@ body {
 
   .allSkillsCntr {
     height: 60rem;
-    -moz-column-count: 2;
-    -moz-column-gap: 3%;
-    -moz-column-width: 30%;
-    -webkit-column-count: 2;
-    -webkit-column-gap: 3%;
-    -webkit-column-width: 30%;
-    column-count: 2;
-    column-gap: 3%;
-    column-width: 30%;
   }
 
+  .frontEndSkillsCntr, .backEndSkillsCntr, .databasesSkillsCntr, .toolsSkillsCntr, .learningSkillsCntr {
+    width: 49%;
+  }
+
+  .frontEndSkillsCntr { margin-right: 10px; }
+
+  .backEndSkillsCntr { 
+    order: 4; 
+    margin-bottom: 43px;
+  }  
+
+  .learningSkillsCntr { order: 2; }
+
+  .toolsSkillsCntr { order: 3; }
+
   .databasesSkillsCntr {
-    height: 15.5rem;
+    /* height: 15.5rem; */
+    order: 6;
   }
 
   .projectTitle {
