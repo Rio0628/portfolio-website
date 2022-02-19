@@ -6,8 +6,8 @@ body {
 }
 
 .container {
-  /* display: flex; */
-  /* flex-direction: column; */
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   background: #161a1d;
@@ -106,6 +106,7 @@ body {
   right: 50px;
   font-size: 35px;
   font-family: 'Titillium Web';
+  text-align: center;
   font-weight: 800;
   opacity: 0;
   letter-spacing: 2px;
@@ -911,5 +912,42 @@ body {
   .projectBtnsCntr * {
     font-size: 20px;
     padding: 8px 30px;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  
+  .container {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .nav {
+    position: relative;
+    top: 0;
+    width: 25%;
+  }
+
+  .menuBtn, .closeNavBtn {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none; 
+  }
+
+  .mainContainer {
+    /* left: 20rem;  */
+    width: 75%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .mainLogo  {
+    right: 0;
+    opacity: 1;
+  }
+
+  .navItems {
+    left: 0;
+    opacity: 1;
   }
 }
