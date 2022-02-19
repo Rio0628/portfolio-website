@@ -205,7 +205,7 @@ body {
   opacity: 0;
   text-shadow: 5px 5px 5px #161a1d, -5px -5px 5px #161a1d;
   /* font-size: 28px; */
-  /* outline: 1px solid blue; */
+  outline: 1px solid blue;
 }
 
 .welcomeTxt p:nth-child(2) {
@@ -220,7 +220,7 @@ body {
   left: 1rem;
   width: 18.3rem;
   opacity: 0;
-  /* outline: 1px solid magenta; */
+  outline: 1px solid magenta;
   height: 6rem;
   text-shadow: 5px 5px 5px #161a1d, -5px -5px 5px #161a1d;
 }
@@ -238,7 +238,7 @@ body {
 
 .viewWorkBtn, .contactMeBtn {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 2px;
   padding: 18px 30px;
   text-align: center;
@@ -322,18 +322,37 @@ body {
 .allSkillsCntr {
   position: relative;
   top: 15rem;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
-  grid-row-gap: 15px;
-  height: 89rem;
+  -moz-column-count:1;
+  -moz-column-gap: 3%;
+  -moz-column-width: 30%;
+  -webkit-column-count: 1;
+  -webkit-column-gap: 3%;
+  -webkit-column-width: 30%;
+  column-count: 1;
+  column-gap: 3%;
+  column-width: 30%;
+  height: 95rem;
   width: 17.8rem;
+  /* outline: 1px solid red; */
 }
 
 .frontEndSkillsCntr, .backEndSkillsCntr, .databasesSkillsCntr, .toolsSkillsCntr, .learningSkillsCntr {
   position: relative;
+  grid-column: span 2;
   outline: 2px solid #fff;
+  height: 100px;
+  margin-bottom: 33px;
 }
+
+.frontEndSkillsCntr { height: 21.5rem; }
+
+.backEndSkillsCntr { height: 28.5rem; }
+
+.databasesSkillsCntr, .toolsSkillsCntr { 
+  top: 2px;
+  height: 14.2rem; } 
+
+.learningSkillsCntr { height: 7.2rem; }
 
 .indSkillsCntrBgText {
   font-size: 3rem;
@@ -649,7 +668,7 @@ body {
 
   .indSkillsCntrBgText { 
     left: 10px;
-    font-size: 3.5rem;
+    font-size: 3.3rem;
   } 
 
   .projectInfo { font-size: 17px; }
@@ -662,6 +681,151 @@ body {
   }
 
   .inputFieldsCntr { width: 23rem; }
+}
+
+@media screen and (min-width: 600px) {
+  
+  .viewWorkBtn, .contactMeBtn {
+    font-size: 23px;
+  }
+
+  .mainTxtBG, .homeView .mainTxtBG {
+    top: 2.5rem;
+    left: 1rem;
+    font-size: 6rem;
+  }
+
+  .welcomeTxt-DetailsCntr {
+    left: 1.5rem;
+    font-size: 3.5rem;
+    outline: 1px solid red;
+  }
+
+  .welcomeTxt, .homeViewDetails { width: 32rem; }
+
+  .aboutTXT, .skillsViewText, .contactViewText { width: 28rem; }
+
+  .skillCanvas {
+    height: 25rem;
+    width: 28rem;
+  }
+
+  .indProject {
+    width: 24rem;
+    height: 30rem;
+    margin-bottom: 50px;
+  }
+  
+  .projectTitle { 
+    font-size: 45px;
+    padding: 2px 38px;
+  }
+
+  .projectInfo { font-size: 18px; }
+
+  .projectTech { font-size: 16px; }
+
+  .inputFieldsCntr { width: 29rem; }
+
+  .inputName, .inputEmail, .submitBtn {
+    height: 3.5rem;
+    font-size: 21px;
+  } 
+
+  .inputMessage {
+    height: 7rem;
+    font-size: 21px;
+  }
+
+}
+
+@media screen and (min-width: 800px) {
+
+  .bgTitle p { font-size: 15rem; }
+
+  .bgTitle p:nth-child(1) { top: -18rem; }
+
+  .bgTitle p:nth-child(3) { bottom: -17.5rem; }
+
+  .mainLogo { 
+    bottom: 5.5rem;
+    font-size: 40px; 
+  }
+
+  .navItems { bottom: 4rem; }
+
+  .navItems li { font-size: 35px; }
+
+  .mainTxtBG, .homeView .mainTxtBG {
+    top: -1.5rem;
+    left: 2rem;
+    font-size: 7rem;
+  }
+
+  .welcomeTxt-DetailsCntr {
+    top: 13rem;
+    font-size: 4rem;
+  }
+
+  .welcomeTxt, .homeViewDetails { width: 40rem; }
+  
+  .homeViewDetails { bottom: 16rem; }
+
+  .homeViewBtns { 
+    top: 5rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .aboutTXT, .skillsViewText, .allSkillsCntr, .contactViewText, .indProject { width: 40rem; }
+
+  .skillCanvas {
+    height: 28rem;
+    width: 30rem;
+  }
+
+  .allSkillsCntr {
+    height: 60rem;
+    -moz-column-count: 2;
+    -moz-column-gap: 3%;
+    -moz-column-width: 30%;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 3%;
+    -webkit-column-width: 30%;
+    column-count: 2;
+    column-gap: 3%;
+    column-width: 30%;
+  }
+
+  .databasesSkillsCntr {
+    height: 15.5rem;
+  }
+
+  .projectTitle {
+    top: -40px;
+    font-size: 50px;
+    padding: 2px 50px;
+  }
+
+  .projectInfo {
+    font-size: 22px;
+  }
+
+  .projectTech {
+    font-size: 20px;
+  }
+
+  .projectBtnsCntr {
+    top: -2rem;
+  }
+
+  .projectBtnsCntr * {
+    font-size: 24px;
+    padding: 12px 30px; 
+  }
+
+  .inputFieldsCntr { width: 38rem; }
+
 }
 
 
