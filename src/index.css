@@ -210,6 +210,8 @@ body {
   outline: 1px solid blue;
 }
 
+.welcomeTxt p:nth-child(1) { position: relative; }
+
 .welcomeTxt p:nth-child(2) {
   position: relative;
   bottom: 4rem;
@@ -992,7 +994,7 @@ body {
 
   .skillsViewText {
     left: 30px;
-    top: -5rem;
+    top: -10rem;
     width: 30rem;
   }
 
@@ -1023,5 +1025,45 @@ body {
 }
 
 @media screen and (min-width: 2000px) {
+  .homeView .mainTxtBG {
+    left: 5rem;
+    font-size: 8rem;
+  }
 
+  .welcomeTxt-DetailsCntr {
+    left: 5rem;
+    font-size: 5rem;
+    /* width: 40rem; */
+  }
+
+  .welcomeTxt, .homeViewDetails {
+    width: 52rem;
+  }
+
+  .welcomeTxt p:nth-child(1) { top: 1rem; }
+
+  .welcomeTxt p:nth-child(2) { bottom: 6rem; }
+
+  .homeViewDetails { top: -21rem; }
+
+  .viewWorkBtn, .contactMeBtn { font-size: 28px; }
+
+  .skillCanvas {
+    height: 36rem;
+    width: 38rem;
+  }
+
+  .aboutView .mainTxtBG, .skillsView .mainTxtBG, .workView .mainTxtBG, .contactView .mainTxtBG {
+    /* color: red; */
+    left: 8rem;
+  }
+
+  .aboutTXT, .skillsViewText, .contactViewText {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .viewWorkBtn, .contactMeBtn { font-size: 32px; }
 }
