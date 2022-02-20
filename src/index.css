@@ -54,6 +54,7 @@ body {
   opacity: 1;
   z-index: 9;
   overflow: hidden;
+  outline: 1px solid magenta;
 }
 
 .bgTitle {
@@ -67,7 +68,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   /* letter-spacing: 2px; */
   font-weight: 800;
   pointer-events: none;
@@ -838,7 +839,7 @@ body {
   }
 
   .aboutView .mainTxtBG, .skillsView .mainTxtBG{
-    font-size: 10rem;
+    font-size: 9rem;
   }
 
   .aboutTXT {
@@ -861,18 +862,19 @@ body {
   .allSkillsCntr { top: 30rem;}
 
   .indProject {
-    width: 55rem;
-    height: 30rem;
+    width: 50rem;
+    height: 26rem;
     flex-direction: row;
     justify-content: space-between;
     /* outline: 2px solid red; */
     box-shadow: 2px 2px 5px #0b0d0f, -2px -2px 5px #0b0d0f;
+    margin-bottom: 5rem;
   }
 
   .projectTitle {
     left: 14rem;
-    top: -3rem;
-    font-size: 5rem;
+    top: -2rem;
+    font-size: 4.5rem;
     background: none;
     z-index: 1;
     color: #fff;
@@ -880,8 +882,11 @@ body {
 
   .indProject:hover .projectTitle {
     color: #38424a;
+    z-index: 2;
     transition: .1s linear;
   }
+
+  .indProject:hover .projectPixCntr { z-index: 1;}
 
   .projectPixCntr {
     top: 7rem;
@@ -895,7 +900,7 @@ body {
     top: 6.2rem;
     width: 70%;
     height: 55%;
-    /* outline: 1px solid magenta; */
+    outline: 1px solid magenta;
   }
 
   .projectInfo {
@@ -929,6 +934,22 @@ body {
     width: 20rem;
   }
 
+  .bgTitle p { font-size: 13rem;}
+
+  .bgTitle p:nth-child(1) { top: -14rem; }
+
+  .bgTitle p:nth-child(3) { bottom: -13.5rem; }
+
+  .mainLogo { 
+    bottom: 4rem;
+    font-size: 35px; 
+  }
+
+  .navItems li {
+    bottom: -1rem;
+    font-size: 28px; 
+  }
+
   .menuBtn, .closeNavBtn {
     position: absolute;
     opacity: 0;
@@ -956,7 +977,12 @@ body {
 @media screen and (min-width: 1600px) {
   .nav { width: 30rem; }
 
-  .mainContainer { width: 100% - 30rem; }
+  .mainContainer { width: 100% - 30rem; } 
+
+  .skillCanvas {
+    height: 30rem;
+    width: 32rem;
+  }
 
   .skillsView {
     height: 85rem;
@@ -965,6 +991,7 @@ body {
   }
 
   .skillsViewText {
+    left: 30px;
     top: -5rem;
     width: 30rem;
   }
@@ -972,5 +999,29 @@ body {
   .allSkillsCntr {
     top: 2rem;
   }
+
+  .indProject {
+    width: 56rem;
+    height: 29rem;
+  }
+
+  .projectTitle {
+    top: -3rem;
+    font-size: 5rem;
+  }
+
+  .projectPixCntr {
+    /* top: 6rem; */
+    height: 52%;
+    width: 45%;
+  }
+
+  .projectInfo { font-size: 18px; }
+
+  .projectTech { font-size: 16px; }
+
+}
+
+@media screen and (min-width: 2000px) {
 
 }
