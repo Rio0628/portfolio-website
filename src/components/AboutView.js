@@ -70,6 +70,7 @@ const AboutView = (props) => {
         <div className='aboutView' >
 
             <p className='mainTxtBG'>About</p>
+            <p className='largeTtlBG'>About</p>
             
             <div className='aboutTXT'>
                 {/* This is where the text will go | Include different p elements for the text*/}

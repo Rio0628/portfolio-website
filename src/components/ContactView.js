@@ -13,6 +13,7 @@ const ContactView = (props) => {
         <div className='contactView' id='contact' ref={viewRef}>
             
             <p className='mainTxtBG'>Contact</p>
+            <p className='largeTtlBG'>Contact</p>
 
             <p className='contactViewText'>
                 I am interested in any opportunities that allow me to showcase my skills. If you have any questions or requests do not hesitate to use the form below. 

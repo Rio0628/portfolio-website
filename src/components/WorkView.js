@@ -41,6 +41,8 @@ const WorkView = (props) => {
     return (
         <div className='workView'>
           <p className='mainTxtBG'>Projects</p>
+          <p className='largeTtlBG'>Projects</p>
+
           <div className='projectsCntr'>
 
             { projects.map( project => 

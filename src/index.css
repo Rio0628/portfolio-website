@@ -186,6 +186,11 @@ body {
   left: .4rem;
 }
 
+.aboutView .mainTxtBG, .skillsView .mainTxtBG, .workView .mainTxtBG, .contactView .mainTxtBG { 
+  color: #f5cb5c; 
+  z-index: 2;
+}
+
 .welcomeTxt-DetailsCntr {
   position: relative;
   top: 16rem;
@@ -285,6 +290,18 @@ body {
   align-items: center;
 }
 
+.largeTtlBG {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 6.5rem;
+  font-family: 'titillium web';
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #2c343a;
+  z-index: 1;
+}
+
 .aboutTXT, .skillsViewText, .contactViewText {
   position: relative;
   top: 16rem;
@@ -294,6 +311,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 17.8rem;
+  z-index: 2;
   /* outline: 1px solid red; */
 }
 
