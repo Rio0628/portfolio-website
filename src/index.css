@@ -781,7 +781,7 @@ body {
   }
 
   .allSkillsCntr {
-    height: 60rem;
+    height: 48rem;
   }
 
   .frontEndSkillsCntr, .backEndSkillsCntr, .databasesSkillsCntr, .toolsSkillsCntr, .learningSkillsCntr {
@@ -951,4 +951,26 @@ body {
     left: 0;
     opacity: 1;
   }
+}
+
+@media screen and (min-width: 1600px) {
+  .nav { width: 30rem; }
+
+  .mainContainer { width: 100% - 30rem; }
+
+  .skillsView {
+    height: 85rem;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .skillsViewText {
+    top: -5rem;
+    width: 30rem;
+  }
+
+  .allSkillsCntr {
+    top: 2rem;
+  }
+
 }
