@@ -54,7 +54,7 @@ body {
   opacity: 1;
   z-index: 9;
   overflow: hidden;
-  outline: 1px solid magenta;
+  /* outline: 1px solid magenta; */
 }
 
 .bgTitle {
@@ -72,7 +72,7 @@ body {
   /* letter-spacing: 2px; */
   font-weight: 800;
   pointer-events: none;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 .bgTitle p {
@@ -212,7 +212,7 @@ body {
   opacity: 0;
   text-shadow: 5px 5px 5px #161a1d, -5px -5px 5px #161a1d;
   /* font-size: 28px; */
-  outline: 1px solid blue;
+  /* outline: 1px solid blue; */
 }
 
 .welcomeTxt p:nth-child(1) { position: relative; }
@@ -229,7 +229,7 @@ body {
   left: 1rem;
   width: 18.3rem;
   opacity: 0;
-  outline: 1px solid magenta;
+  /* outline: 1px solid magenta; */
   height: 6rem;
   text-shadow: 5px 5px 5px #161a1d, -5px -5px 5px #161a1d;
 }
@@ -292,14 +292,14 @@ body {
 
 .largeTtlBG {
   position: absolute;
-  top: 1rem;
+  top: -4rem;
   left: 1rem;
-  font-size: 6.5rem;
+  font-size: 11rem;
   font-family: 'titillium web';
   font-weight: 800;
   letter-spacing: 2px;
   color: #2c343a;
-  z-index: 1;
+  z-index: 0;
 }
 
 .aboutTXT, .skillsViewText, .contactViewText {
@@ -338,12 +338,12 @@ body {
 
 .skillsViewText {
   position: relative;
-  top: 14rem;
+  top: 17rem;
 }
 
 .allSkillsCntr {
   position: relative;
-  top: 15rem;
+  top: 19rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -447,7 +447,7 @@ body {
 .projectsCntr {
   position: relative;
   /* z-index: -1;  */
-  top: 18rem; /* NORMALLY 16rem*/
+  top: 22rem; /* NORMALLY 16rem*/
   height: 90%;
   width: 100%;
   display: flex;
@@ -662,6 +662,11 @@ body {
 
 
 @media screen and (min-width: 400px) {
+  .largeTtlBG {
+    top: -7rem;
+    font-size: 13rem;
+  }
+
   .mainTxtBG, .homeView .mainTxtBG { font-size: 5.5rem; }
   
   .welcomeTxt-DetailsCntr { font-size: 3.2rem; }
@@ -706,16 +711,24 @@ body {
     font-size: 23px;
   }
 
+  .largeTtlBG {
+    top: -10rem;
+    left: 5rem;
+    font-size: 15rem;
+  }
+
   .mainTxtBG, .homeView .mainTxtBG {
     top: 2.5rem;
     left: 1rem;
     font-size: 6rem;
   }
 
+  .aboutView .mainTxtBG, .skillsView .mainTxtBG, .workView .mainTxtBG, .contactView .mainTxtBG { letter-spacing: 4px; }
+
   .welcomeTxt-DetailsCntr {
     left: 1.5rem;
     font-size: 3.5rem;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
   }
 
   .welcomeTxt, .homeViewDetails { width: 32rem; }
@@ -772,6 +785,12 @@ body {
   .navItems { bottom: 4rem; }
 
   .navItems li { font-size: 35px; }
+
+  .largeTtlBG {
+    top: -11rem;
+    left: 6.5rem;
+    /* font-size: 16rem; */
+  }
 
   .mainTxtBG, .homeView .mainTxtBG {
     top: -1.5rem;
@@ -862,6 +881,14 @@ body {
     font-size: 9rem;
   }
 
+  .largeTtlBG {
+    font-size: 17rem;
+  }
+
+  .workView .largeTtlBG, .contactView .largeTtlBG { 
+    top: -14rem;
+  }
+
   .aboutTXT {
     top: 0;
     width: 30rem;
@@ -920,7 +947,7 @@ body {
     top: 6.2rem;
     width: 70%;
     height: 55%;
-    outline: 1px solid magenta;
+    /* outline: 1px solid magenta; */
   }
 
   .projectInfo {
@@ -946,6 +973,8 @@ body {
     flex-direction: row;
     overflow: hidden;
   }
+
+  .aboutView .mainTxtBG, .skillsView .mainTxtBG, .workView .mainTxtBG, .contactView .mainTxtBG { letter-spacing: 6px; }
 
   .nav {
     position: relative;
@@ -999,6 +1028,15 @@ body {
 
   .mainContainer { width: 100% - 30rem; } 
 
+  .largeTtlBG {
+    font-size: 19rem;
+    top: -15rem;
+  }
+
+  .workView .largeTtlBG, .contactView .largeTtlBG { 
+    top: -18rem;
+  }
+
   .skillCanvas {
     height: 30rem;
     width: 32rem;
@@ -1046,6 +1084,16 @@ body {
   .homeView .mainTxtBG {
     left: 5rem;
     font-size: 8rem;
+  }
+
+  .largeTtlBG {
+    font-size: 21rem;
+    top: -18rem;
+    left: 17rem; 
+  }
+
+  .workView .largeTtlBG, .contactView .largeTtlBG { 
+    top: -21rem;
   }
 
   .welcomeTxt-DetailsCntr {
