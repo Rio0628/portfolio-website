@@ -35,7 +35,7 @@ body {
 }
 
 .menuBtn:hover, .closeNavBtn:hover {
-  color: #bfc0c0;
+  color: #fecf3e;
   transition: .1s linear;
 }
 
@@ -107,11 +107,12 @@ body {
   right: 50px;
   font-size: 35px;
   font-family: 'Titillium Web';
+  text-transform: uppercase;
   text-align: center;
   font-weight: 800;
   opacity: 0;
   letter-spacing: 2px;
-  color: #fff; /* #fecf3e */
+  color: #fecf3e; /* #fecf3e */
   /* outline: 1px solid red; */
 }
 
@@ -145,7 +146,7 @@ body {
 
 .navItems li:hover {
   color: #fecf3e;
-  outline: 1px solid #1e2428;
+  outline: 2px solid #fecf3e; /* #1e2428 */
   transition: .1s linear;
 }
 
@@ -262,7 +263,8 @@ body {
 }
 
 .viewWorkBtn:hover, .contactMeBtn:hover, .projectBtnsCntr *:hover, .submitBtn:hover  {
-  background: white;
+  background: #fecf3e;
+  outline: 2px solid #fecf3e ;
   color:#2c343a;
   transition: .1s linear; 
 }
@@ -316,6 +318,7 @@ body {
   flex-direction: column;
   width: 17.8rem;
   z-index: 2;
+  color: #b8b8b8;
   /* outline: 1px solid red; */
 }
 
@@ -358,10 +361,15 @@ body {
 
 .frontEndSkillsCntr, .backEndSkillsCntr, .databasesSkillsCntr, .toolsSkillsCntr, .learningSkillsCntr {
   position: relative;
-  outline: 2px solid #fff;
+  outline: 2px solid #c2c2c2;
   height: 100px;
   width: 100%;
   margin-bottom: 20px;
+}
+
+.frontEndSkillsCntr:hover, .backEndSkillsCntr:hover, .databasesSkillsCntr:hover, .toolsSkillsCntr:hover, .learningSkillsCntr:hover {
+  outline:2px solid #fecf3e;
+  transition: .2s ease;
 }
 
 .frontEndSkillsCntr { height: 21.5rem; }
@@ -405,8 +413,10 @@ body {
   /* background: red; */
   cursor: pointer;
   text-decoration: none;
-  color: #fff;
+  color: #c2c2c2;
 }
+
+.techObj:hover { color: #fff; }
 
 /* #frontEndObj:nth-child(n + 3) {
   grid-column: span 2;
@@ -418,7 +428,7 @@ body {
   height: 3.2rem;
   width: 3.2rem;
   /* font-size: 10px; */
-  color: #fff;
+  color: #c2c2c2;
   /* outline: 1px solid blue; */
   pointer-events: none; 
 }
@@ -647,9 +657,9 @@ body {
   font-size: 19px;
   padding-left: 10px;
   background: #161a1d;
-  color: #fff;
+  color: #b8b8b8;
   border: none;
-  outline: 2px solid #fff;
+  outline: 2px solid #b8b8b8;
   margin-bottom: 30px;
   font-weight: 600;
 }
@@ -668,7 +678,7 @@ body {
 }
 
 ::placeholder {
-  color: #fff;
+  color: #b8b8b8;
 }
 
 
@@ -881,6 +891,8 @@ body {
   }
 
   .inputFieldsCntr { width: 38rem; }
+
+  .submitBtn { width: 92%; }
 }
 
 @media screen and (min-width: 1050px) {

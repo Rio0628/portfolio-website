@@ -37,9 +37,9 @@ const AboutView = (props) => {
         
         const TagCanvas = window.TagCanvas;
         const tagCanvasOptions = {
-           textColour: '#fff',
+           textColour: '#fecf3e',
            outlineThickness: 5,
-           outlineColour: '#fff',
+           outlineColour: '#fecf3e',
            maxSpeed: 0.05,
            freezeActive: false,
            shuffleTags: true,
