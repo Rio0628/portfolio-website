@@ -35,7 +35,7 @@ body {
 }
 
 .menuBtn:hover, .closeNavBtn:hover {
-  color: #fecf3e;
+  color: #fed557;
   transition: .1s linear;
 }
 
@@ -112,7 +112,7 @@ body {
   font-weight: 800;
   opacity: 0;
   letter-spacing: 2px;
-  color: #fecf3e; /* #fecf3e */
+  color: #fed557; /* #fed557 */
   /* outline: 1px solid red; */
 }
 
@@ -145,8 +145,8 @@ body {
 }
 
 .navItems li:hover {
-  color: #fecf3e;
-  outline: 2px solid #fecf3e; /* #1e2428 */
+  color: #fed557;
+  outline: 2px solid #fed557; /* #1e2428 */
   transition: .1s linear;
 }
 
@@ -160,7 +160,7 @@ body {
 .homeView, .aboutView, .skillsView, .workView, .contactView {
   position: relative;
   width: 100%;
-  height: 115%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   /* outline: 1px solid red; */
@@ -190,7 +190,7 @@ body {
 }
 
 .aboutView .mainTxtBG, .skillsView .mainTxtBG, .workView .mainTxtBG, .contactView .mainTxtBG { 
-  color: #fecf3e; 
+  color: #fed557; 
   z-index: 2;
 }
 
@@ -232,8 +232,9 @@ body {
   left: 1rem;
   width: 18.3rem;
   opacity: 0;
-  /* outline: 1px solid magenta; */
+  /* outline: 1px solid/ magenta; */
   height: 6rem;
+  color: #fed557;
   text-shadow: 5px 5px 5px #161a1d, -5px -5px 5px #161a1d;
 }
 
@@ -263,8 +264,8 @@ body {
 }
 
 .viewWorkBtn:hover, .contactMeBtn:hover, .projectBtnsCntr *:hover, .submitBtn:hover  {
-  background: #fecf3e;
-  outline: 2px solid #fecf3e ;
+  background: #fed557;
+  outline: 2px solid #fed557 ;
   color:#2c343a;
   transition: .1s linear; 
 }
@@ -368,7 +369,7 @@ body {
 }
 
 .frontEndSkillsCntr:hover, .backEndSkillsCntr:hover, .databasesSkillsCntr:hover, .toolsSkillsCntr:hover, .learningSkillsCntr:hover {
-  outline:2px solid #fecf3e;
+  outline:2px solid #fed557;
   transition: .2s ease;
 }
 
@@ -498,7 +499,7 @@ body {
   letter-spacing: 3px;
   text-align: center;
   padding: 2px 30px;
-  color: #fecf3e;
+  color: #fed557;
   /* background: #0b0d0f; */
   /* text-shadow: 2px 2px 5px #161a1d, -2px -2px 5px #161a1d; */
   z-index: 3;
@@ -506,7 +507,7 @@ body {
 }
 
 .indProject:hover {
-  outline: 1px solid #fecf3e;
+  outline: 1px solid #fed557;
   transition: .1s linear;
 }
 
@@ -657,9 +658,9 @@ body {
   font-size: 19px;
   padding-left: 10px;
   background: #161a1d;
-  color: #b8b8b8;
+  color: #fff;
   border: none;
-  outline: 2px solid #b8b8b8;
+  outline: 2px solid #fff;
   margin-bottom: 30px;
   font-weight: 600;
 }
@@ -678,7 +679,7 @@ body {
 }
 
 ::placeholder {
-  color: #b8b8b8;
+  color: #fff;
 }
 
 
@@ -954,7 +955,7 @@ body {
   }
 
   .indProject:hover .projectTitle {
-    color: #fecf3e;
+    color: #fed557;
     z-index: 2;
     transition: .1s linear;
   }
