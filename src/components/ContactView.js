@@ -10,7 +10,7 @@ const ContactView = (props) => {
     }, []);
 
     return (
-        <div className='contactView' id='contact' ref={viewRef}>
+        <div className='contactView' id='contact' ref={props.setContactRef}>
             
             <p className='mainTxtBG'>Contact</p>
             <p className='largeTtlBG'>Contact</p>

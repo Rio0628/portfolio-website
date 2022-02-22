@@ -320,6 +320,7 @@ body {
   width: 17.8rem;
   z-index: 2;
   color: #b8b8b8;
+  /* opacity: 1; */
   /* outline: 1px solid red; */
 }
 
@@ -729,10 +730,7 @@ body {
 
 @media screen and (min-width: 600px) {
   
-  .homeViewBtns {
-    top: 6rem;
-    /* background: red; */
-  }
+  .homeViewBtns { top: 6rem; }
 
   .viewWorkBtn, .contactMeBtn {
     font-size: 23px;

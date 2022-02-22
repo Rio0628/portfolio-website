@@ -7,7 +7,7 @@ import { SiExpress, SiPhp, SiCplusplus, SiJava, SiTypescript, SiMongodb, SiMysql
 import { GrMysql } from 'react-icons/gr';
 import './SkillsHoverEffects.css';
 
-const SkillsView = () => {
+const SkillsView = (props) => {
 
     const technologies = [
         // FRONT END OBJECTS
@@ -41,10 +41,10 @@ const SkillsView = () => {
         { name: 'GraphQL', icon: <SiGraphql className='logo' />, techId: 'learningObj', url: 'https://graphql.org/'},
     ];
 
-    console.log(technologies.filter(tech => tech.techId === 'frontEndObj').map(tech => tech))
+    // console.log(technologies.filter(tech => tech.techId === 'frontEndObj').map(tech => tech))
 
     return (
-        <div className='skillsView'>
+        <div className='skillsView' ref={props.setSkillsRef}>
             <p className='mainTxtBG'>Skills</p>
             <p className='largeTtlBG'>Skills</p>
         

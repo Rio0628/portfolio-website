@@ -39,7 +39,7 @@ const WorkView = (props) => {
     // console.log(testAnim)
 
     return (
-        <div className='workView'>
+        <div className='workView' ref={props.setWorkRef}>
           <p className='mainTxtBG'>Projects</p>
           <p className='largeTtlBG'>Projects</p>
 

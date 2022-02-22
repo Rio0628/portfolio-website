@@ -65,7 +65,7 @@ const AboutView = (props) => {
     }, []);
 
     return (
-        <div className='aboutView' >
+        <div className='aboutView' ref={props.setAboutRef}>
 
             <p className='mainTxtBG' ref={props.addToRefs}>About</p>
             <p className='largeTtlBG' ref={props.addToRefs}>About</p>
@@ -76,7 +76,7 @@ const AboutView = (props) => {
                     I'm a Front-End / Web Developer based in Miami, US. 
                     I have a passion for Software Development,
                     creating animations, and solving all types
-                    of problems. 
+                    of problems.
                 </p>
 
                 <p>

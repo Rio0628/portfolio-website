@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // import emailjs from 'emailjs-com';
 // import API from './api';
 import { HomeView, AboutView, SkillsView, WorkView, ContactView } from './components';
@@ -9,7 +9,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {  
-  gsap.registerPlugin(ScrollTrigger);
   let revealRefs = useRef([]);
   let navRef = useRef(null);
   let navBtnRef = useRef(null);
@@ -19,32 +18,14 @@ const App = () => {
 
 
   useEffect( () => {
-    gsap.registerPlugin(ScrollTrigger);
 
     navAnims.to(navRef.current, { opacity: 1, duration: 1, top: 0 });
     navAnims.to(navBtnRef.current, { opacity: 1, duration: .3 });
     navAnims.to(navLogoRef.current, { opacity: 1, duration: .3, right: 0});
     navAnims.to(navItemsRef.current, { opacity: 1, marginTop: 0, duration: .3, left: 0 });
     // test.play().timeScale(1)
-  
-    revealRefs.current.forEach((el, index) => {
-  
-      gsap.fromTo(el, {
-        autoAlpha: 0 
-      }, {
-        duration: 1,
-        autoAlpha: 1,
-        ease: 'none',
-        scrollTrigger: {
-          id: `Section: ${index + 1}`,
-          trigger: el,
-          start: 'top center += 100',
-          toggleActions: 'pay none none reverse',
-          marker: true
-        }    
-      })
-    })
-  }, [navAnims, revealRefs, navBtnRef, navItemsRef, navLogoRef, navRef]);
+
+  }, [navAnims, navBtnRef, navItemsRef, navLogoRef, navRef]);
 
   const addToRefs = (el) => {
       if (el && !revealRefs.current.includes(el)) {
@@ -52,6 +33,43 @@ const App = () => {
       }
       console.log(revealRefs.current)
   }
+
+  const useOnScreen = (options) => {
+    // Function to create a new intersection obsverer on a certain element
+    // Will trigger true if the element is within view 
+    const [ref, setRef] = useState(null);
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(([entry]) => {
+        setVisible(entry.isIntersecting);
+      }, options)
+
+      if (ref) { observer.observe(ref); }
+
+      return () => {
+        if (ref) { observer.unobserve(ref); }
+      };
+    }, [ref, options] );
+  
+    return [setRef, visible];
+  }
+
+  const options = {
+    // Main options for intersectionObserver functioning
+    root: null,
+    threshold: 0,
+    rootMargin: '-350px',
+  }
+
+  // Will set a new intersection observer for each of the view in the website. 
+  const [setSkillsRef, skillsViewVisible] = useOnScreen(options);
+  const [setAboutRef, aboutViewVisible] = useOnScreen(options);
+  const [setWorkRef, workViewVisible] = useOnScreen(options);
+  const [setContactRef, contactViewVisible] = useOnScreen(options);
+
+  console.log(skillsViewVisible, aboutViewVisible, workViewVisible, contactViewVisible)
+
   return (
     <div className="container">
       <CgMenuGridR className='menuBtn' onClick={() => navAnims.play()} />
@@ -79,13 +97,13 @@ const App = () => {
       <div className='mainContainer'>
         <HomeView />
 
-        <AboutView addToRefs={addToRefs}/>
+        <AboutView setAboutRef={setAboutRef} aboutViewVisible={aboutViewVisible}/>
 
-        <SkillsView />
+        <SkillsView setSkillsRef={setSkillsRef}/>
 
-        <WorkView />
+        <WorkView setWorkRef={setWorkRef} />
 
-        <ContactView />
+        <ContactView setContactRef={setContactRef} />
       </div>
 
     </div>
