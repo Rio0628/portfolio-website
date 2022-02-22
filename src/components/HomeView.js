@@ -285,12 +285,20 @@ const HomeView = () => {
 		// animate();
     }, []);
 
+    let revealRefs = useRef([]);
+    const addToRefs = (el) => {
+        if (el && !revealRefs.current.includes(el)) {
+            revealRefs.current.push(el);
+        }
+        // console.log(revealRefs.current)
+    }
+
     return (
-        <div className='homeView' ref={homeViewRef}>
+        <div className='homeView' ref={addToRefs}>
             {/* CANVAS OBJECT WILL GO HERE */}
             <canvas className='spiralCanvas' ref={canvasRef}></canvas>
         
-            <p className='mainTxtBG'>Welcome</p>
+            <p className='mainTxtBG' ref={addToRefs}>Welcome</p>
 
             <div className='welcomeTxt-DetailsCntr'>
                 <div className='welcomeTxt' ref={welcomeTxtRef}>

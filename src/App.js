@@ -1,90 +1,98 @@
-import React, { Component } from 'react';
+import React, { useEffect, useRef } from 'react';
 // import emailjs from 'emailjs-com';
 // import API from './api';
 import { HomeView, AboutView, SkillsView, WorkView, ContactView } from './components';
 import { CgMenuGridR } from 'react-icons/cg';
 import { RiCloseLine } from 'react-icons/ri';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
-export default class App extends Component {  
-  constructor(props) {
-    super(props);
-    this.state = {
-      test: "HEllo"
-    }
-    this.navRef = null;
-    this.navBtnRef = null;
-    this.navLogoRef = null;
-    this.navItemsRef = null;
-    this.setNavRef = (el) => { this.navRef = el }
-    this.setNavBtnRef = (el) => { this.navBtnRef = el }
-    this.setNavLogoRef = (el) => { this.navLogoRef = el}
-    this.setNavItemsRef = (el) => { this.navItemsRef = el }
-    this.navAnims = gsap.timeline({ paused: true });
-  }
+const App = () => {  
+  gsap.registerPlugin(ScrollTrigger);
+  let revealRefs = useRef([]);
+  let navRef = useRef(null);
+  let navBtnRef = useRef(null);
+  let navLogoRef = useRef(null);
+  let navItemsRef = useRef(null);
+  let navAnims = gsap.timeline({ paused: true });
 
-  componentDidMount () {
-    // console.log(this.navRef);
-    // console.log(this.navBtnRef);
-    // console.log(this.navLogoRef);
-    // console.log(this.navItemsRef);
-    this.navAnims.to(this.navRef, { opacity: 1, duration: 1, top: 0 });
-    this.navAnims.to(this.navBtnRef, { opacity: 1, duration: .3 });
-    this.navAnims.to(this.navLogoRef, { opacity: 1, duration: .3, right: 0});
-    this.navAnims.to(this.navItemsRef, { opacity: 1, marginTop: 0, duration: .3, left: 0 });
+
+  useEffect( () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    navAnims.to(navRef.current, { opacity: 1, duration: 1, top: 0 });
+    navAnims.to(navBtnRef.current, { opacity: 1, duration: .3 });
+    navAnims.to(navLogoRef.current, { opacity: 1, duration: .3, right: 0});
+    navAnims.to(navItemsRef.current, { opacity: 1, marginTop: 0, duration: .3, left: 0 });
     // test.play().timeScale(1)
+  
+    revealRefs.current.forEach((el, index) => {
+  
+      gsap.fromTo(el, {
+        autoAlpha: 0 
+      }, {
+        duration: 1,
+        autoAlpha: 1,
+        ease: 'none',
+        scrollTrigger: {
+          id: `Section: ${index + 1}`,
+          trigger: el,
+          start: 'top center += 100',
+          toggleActions: 'pay none none reverse',
+          marker: true
+        }    
+      })
+    })
+  }, [navAnims, revealRefs, navBtnRef, navItemsRef, navLogoRef, navRef]);
+
+  const addToRefs = (el) => {
+      if (el && !revealRefs.current.includes(el)) {
+        revealRefs.current.push(el);
+      }
+      console.log(revealRefs.current)
   }
+  return (
+    <div className="container">
+      <CgMenuGridR className='menuBtn' onClick={() => navAnims.play()} />
 
-  testForFunction() {
-    this.test.play();
-  }
-
-  testForAnimation() {
-    this.test.reverse();
-  }
-
-  render () {
-
-    return (
-      <div className="container">
-        <CgMenuGridR className='menuBtn' onClick={() => this.navAnims.play()} />
-
-        <div className='nav' ref={this.setNavRef}>
-          <div className='bgTitle'>
-            <p>N</p>
-            <p>A</p>
-            <p>V</p>
-          </div>
-
-          <div className='closeNavBtn' ref={this.setNavBtnRef} onClick={() => this.navAnims.reverse()}><RiCloseLine className='icon'/></div>
-
-          <p className='mainLogo' ref={this.setNavLogoRef}>Mario Domenech</p>
-
-          <ul className='navItems' ref={this.setNavItemsRef}>
-            <li className='homeItem'>Home</li>
-            <li className='aboutItem'>About</li>
-            <li className='skillsItem'>Skills</li>
-            <li className='workItem'>Work</li>
-            <li className='contactItem'>Contact</li>
-          </ul>
-        </div>
-        
-        <div className='mainContainer'>
-          <HomeView />
-
-          <AboutView />
-
-          <SkillsView />
-
-          <WorkView />
-
-          <ContactView />
+      <div className='nav' ref={navRef}>
+        <div className='bgTitle'>
+          <p>N</p>
+          <p>A</p>
+          <p>V</p>
         </div>
 
+        <div className='closeNavBtn' ref={navBtnRef} onClick={() => navAnims.reverse()}><RiCloseLine className='icon'/></div>
+
+        <p className='mainLogo' ref={navLogoRef}>Mario Domenech</p>
+
+        <ul className='navItems' ref={navItemsRef}>
+          <li className='homeItem'>Home</li>
+          <li className='aboutItem'>About</li>
+          <li className='skillsItem'>Skills</li>
+          <li className='workItem'>Work</li>
+          <li className='contactItem'>Contact</li>
+        </ul>
       </div>
-    );
-  }
+      
+      <div className='mainContainer'>
+        <HomeView />
+
+        <AboutView addToRefs={addToRefs}/>
+
+        <SkillsView />
+
+        <WorkView />
+
+        <ContactView />
+      </div>
+
+    </div>
+  );
 }
+
+export default App;
 
 // const [ expandDropdown, setExpandDropdown ] = useState(false);
     // const [ projects, setProjects ] = useState();

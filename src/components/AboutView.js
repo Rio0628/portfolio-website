@@ -62,17 +62,15 @@ const AboutView = (props) => {
             console.log('Canvas Error: ');
             console.log(e)
         }
-
-
     }, []);
 
     return (
         <div className='aboutView' >
 
-            <p className='mainTxtBG'>About</p>
-            <p className='largeTtlBG'>About</p>
+            <p className='mainTxtBG' ref={props.addToRefs}>About</p>
+            <p className='largeTtlBG' ref={props.addToRefs}>About</p>
             
-            <div className='aboutTXT'>
+            <div className='aboutTXT' ref={props.addToRefs}>
                 {/* This is where the text will go | Include different p elements for the text*/}
                 <p>
                     I'm a Front-End / Web Developer based in Miami, US. 
@@ -94,7 +92,7 @@ const AboutView = (props) => {
 
             {/* <p className='skillsTitle'>Skills</p> */}
 
-            <div className='skillCanvasCntr'>
+            <div className='skillCanvasCntr' ref={props.addToRefs}>
                 <canvas className='skillCanvas' id='canvas' width='500' height='500'></canvas>
             </div>
 
