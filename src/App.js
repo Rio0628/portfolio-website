@@ -59,7 +59,7 @@ const App = () => {
     // Main options for intersectionObserver functioning
     root: null,
     threshold: 0,
-    rootMargin: '-350px',
+    rootMargin: '-50%',
   }
 
   // Will set a new intersection observer for each of the view in the website. 
@@ -68,7 +68,7 @@ const App = () => {
   const [setWorkRef, workViewVisible] = useOnScreen(options);
   const [setContactRef, contactViewVisible] = useOnScreen(options);
 
-  console.log(skillsViewVisible, aboutViewVisible, workViewVisible, contactViewVisible)
+  // console.log(skillsViewVisible, aboutViewVisible, workViewVisible, contactViewVisible)
 
   return (
     <div className="container">
@@ -97,13 +97,13 @@ const App = () => {
       <div className='mainContainer'>
         <HomeView />
 
-        <AboutView setAboutRef={setAboutRef} aboutViewVisible={aboutViewVisible}/>
+        <AboutView useOnScreen={useOnScreen} options={options} />
 
-        <SkillsView setSkillsRef={setSkillsRef}/>
+        <SkillsView useOnScreen={useOnScreen} options={options} />
 
-        <WorkView setWorkRef={setWorkRef} />
+        <WorkView useOnScreen={useOnScreen} options={options} />
 
-        <ContactView setContactRef={setContactRef} />
+        <ContactView useOnScreen={useOnScreen} options={options} />
       </div>
 
     </div>

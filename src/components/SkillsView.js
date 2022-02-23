@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { AiFillHtml5 } from 'react-icons/ai';
 import { BsGithub } from 'react-icons/bs';
 import { IoLogoCss3, IoLogoJavascript, IoLogoAngular, IoLogoNodejs, IoLogoLaravel, IoLogoPython, IoLogoNpm } from 'react-icons/io';
@@ -6,8 +6,12 @@ import { FaReact, FaLaravel, FaGitAlt } from 'react-icons/fa';
 import { SiExpress, SiPhp, SiCplusplus, SiJava, SiTypescript, SiMongodb, SiMysql, SiThreedotjs, SiGraphql } from 'react-icons/si'; 
 import { GrMysql } from 'react-icons/gr';
 import './SkillsHoverEffects.css';
+import { gsap } from 'gsap';
 
 const SkillsView = (props) => {
+
+    const useOnScreen = props.useOnScreen;
+    const options = props.options;
 
     const technologies = [
         // FRONT END OBJECTS
@@ -40,22 +44,76 @@ const SkillsView = (props) => {
         { name: 'Three JS', icon: <SiThreedotjs className='logo' />, techId: 'learningObj', url: 'https://threejs.org/'},
         { name: 'GraphQL', icon: <SiGraphql className='logo' />, techId: 'learningObj', url: 'https://graphql.org/'},
     ];
+    let titleRef = useRef(null);
+    let textRef = useRef(null);
+    let skillsCntrRef = useRef(null);
+    let skillsRefs = useRef([]);
 
-    // console.log(technologies.filter(tech => tech.techId === 'frontEndObj').map(tech => tech))
+    const [setViewRef, viewRef] = useOnScreen(options);
+    let popupAnims = gsap.timeline({paused: true});
+    let conditional = viewRef;
 
+    const addToRefs = (el) => {
+        if (el && !skillsRefs.current.includes(el)) {
+          skillsRefs.current.push(el);
+        }
+        // console.log(skillsRefs.current)
+    }
+
+    useEffect( () => {
+      
+        popupAnims.fromTo(titleRef.current, { opacity: 0, x: -50}, { opacity: 1, x: 0, y: 0, duration: .2, ease: 'expo'});
+        popupAnims.fromTo(textRef.current, { opacity: 0, y: 10}, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+        popupAnims.fromTo(skillsCntrRef.current, { opacity: 0, y: 10}, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+        // skillsRefs.current.forEach( (el) => {
+        //     popupAnims.fromTo(el, { opacity: 0, y: 10}, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+        // })
+        
+
+        const TagCanvas = window.TagCanvas;
+        const tagCanvasOptions = {
+           textColour: '#fedc71',
+           outlineThickness: 5,
+           outlineColour: '#fedc71',
+           maxSpeed: 0.05,
+           freezeActive: false,
+           shuffleTags: true,
+           shape: 'sphere',
+           zoom: .9,
+           wheelZoom: false,
+           noSelect: true,
+           textFont: 'Titillium Web',
+           textHeight: 25,
+           reverse: true,
+           freezeDecel: true,
+           fadeIn: 3000,
+           initial: [0.05, -.1],
+           depth: 1.1,
+
+        };
+        try {
+           TagCanvas.Start('canvas', 'allTags', tagCanvasOptions);
+        } catch (e) {
+            console.log('Canvas Error: ');
+            console.log(e)
+        }
+    }, [popupAnims]);
+
+    if (conditional) { popupAnims.play(); }
+    
     return (
-        <div className='skillsView' ref={props.setSkillsRef}>
-            <p className='mainTxtBG'>Skills</p>
+        <div className='skillsView' ref={setViewRef}>
+            <p className='mainTxtBG' ref={titleRef}>Skills</p>
             <p className='largeTtlBG'>Skills</p>
         
-            <p className='skillsViewText'>
+            <p className='skillsViewText' ref={textRef}>
                 I create intuitive and responsive web applications using a variety of techonologies. I specialize in Front End Development using different frameworks, implementing APIs, and creating animations to bring applications to life. I also have Full Stack Development experience creating backend servers and working with REST APIs.
             </p>
 
-            <div className='allSkillsCntr'>
-                <div className='frontEndSkillsCntr'>
+            <div className='allSkillsCntr' ref={skillsCntrRef}>
+                <div className='frontEndSkillsCntr' ref={addToRefs}>
                     <p className='indSkillsCntrBgText'>Front-End</p>
-                    <div className='skillsObjsCntr'>
+                    <div className='skillsObjsCntr' >
                         { technologies.filter(tech => tech.techId === 'frontEndObj').map(tech => 
                             <a className='techObj' id='frontEndObj' target='_blank' rel='noopener noreferrer' href={tech.url} key={tech.name}>
                                 {tech.icon}
@@ -65,7 +123,7 @@ const SkillsView = (props) => {
                     </div>
                 </div>
 
-                <div className='backEndSkillsCntr'>
+                <div className='backEndSkillsCntr' ref={addToRefs}>
                     <p className='indSkillsCntrBgText'>Back-End</p>
                     <div className='skillsObjsCntr'>
                         { technologies.filter(tech => tech.techId === 'backEndObj').map(tech => 
@@ -77,7 +135,7 @@ const SkillsView = (props) => {
                     </div>
                 </div>
                  
-                <div className='databasesSkillsCntr'>
+                <div className='databasesSkillsCntr' ref={addToRefs}>
                     <p className='indSkillsCntrBgText'>Databases</p>
                     <div className='skillsObjsCntr'>
                         { technologies.filter(tech => tech.techId === 'dbsObj').map(tech => 
@@ -89,7 +147,7 @@ const SkillsView = (props) => {
                     </div>
                 </div>
 
-                <div className='toolsSkillsCntr'>
+                <div className='toolsSkillsCntr' ref={addToRefs}>
                     <p className='indSkillsCntrBgText'>Tools</p>
                     <div className='skillsObjsCntr'>
                         { technologies.filter(tech => tech.techId === 'toolsObj').map(tech => 
@@ -101,7 +159,7 @@ const SkillsView = (props) => {
                     </div>
                 </div>
 
-                <div className='learningSkillsCntr'>
+                <div className='learningSkillsCntr' ref={addToRefs}>
                     <p className='indSkillsCntrBgText'>Learning</p>
                     <div className='skillsObjsCntr'>
                         { technologies.filter(tech => tech.techId === 'learningObj').map(tech => 

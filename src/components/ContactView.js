@@ -3,23 +3,36 @@ import { gsap } from 'gsap';
 
 const ContactView = (props) => {
 
-    let canvasRef = useRef(null), viewRef = useRef(null);
-        
+    const useOnScreen = props.useOnScreen;
+    const options = props.options;
+
+    let titleRef = useRef(null);
+    let textRef = useRef(null);
+    let formRef = useRef(null);
+
+    const [setViewRef, viewRef] = useOnScreen(options);
+    let popupAnims = gsap.timeline({paused: true});
+    let conditional = viewRef;
+
     useEffect( () => {
-       
-    }, []);
+        popupAnims.fromTo(titleRef.current, { opacity: 0, x: -50}, { opacity: 1, x: 0, y: 0, duration: .2, ease: 'expo'});
+        popupAnims.fromTo(textRef.current, { opacity: 0, y: 10}, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+        popupAnims.fromTo(formRef.current, { opacity: 0, y: 10}, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+    }, [popupAnims]);
+
+    if (conditional) { popupAnims.play(); }
 
     return (
-        <div className='contactView' id='contact' ref={props.setContactRef}>
+        <div className='contactView' id='contact' ref={setViewRef}>
             
-            <p className='mainTxtBG'>Contact</p>
+            <p className='mainTxtBG' ref={titleRef}>Contact</p>
             <p className='largeTtlBG'>Contact</p>
 
-            <p className='contactViewText'>
+            <p className='contactViewText' ref={textRef}>
                 I am interested in any opportunities that allow me to showcase my skills. If you have any questions or requests do not hesitate to use the form below. 
             </p>
 
-            <form className='inputFieldsCntr' onSubmit={props.sendEmail}>
+            <form className='inputFieldsCntr' onSubmit={props.sendEmail} ref={formRef}>
                 <input className='inputName' id='name' placeholder='Name' type='text' name='from_name' onChange={props.onChange}/>
 
                 <input className='inputEmail' id='email' placeholder='Email Address' type='email' name='from_email' onChange={props.onChange}/>

@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 // import * as TagCanvas from 'jquery-tagcanvas';
+import { gsap } from 'gsap'; 
 
 const AboutView = (props) => {
 
-    // Will trigger the animations in the about view once it is within the viewport 
-    // const aboutViewActive = () => props.aboutViewVisible ? ' active' : '';
+    const useOnScreen = props.useOnScreen;
+    const options = props.options;
 
     const skills = [
         { href: "#git_", title: "Git" },  
@@ -31,10 +32,22 @@ const AboutView = (props) => {
         { href: "#nodemon_", title: "Nodemon" },
     ];
     
-    // console.log(window.innerWidth);
+    let titleRef = useRef(null);
+    let textRef = useRef(null);
+    let canvasRef = useRef(null);
+
+    const [setViewRef, viewRef] = useOnScreen(options);
+    let popupAnims = gsap.timeline({paused: true});
+    let conditional = viewRef;
+
+    // console.log(viewRef);
     useEffect( () => {
-      
-        
+            
+        popupAnims.fromTo(titleRef.current, { opacity: 0, x: -50}, { opacity: 1, x: 0, y: 0, duration: .2, ease: 'expo'});
+        popupAnims.fromTo(textRef.current, { opacity: 0, y: 10}, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+        popupAnims.fromTo(canvasRef.current, { opacity: 0, y: 10, x: 20}, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+        // console.log(titleRef)
+
         const TagCanvas = window.TagCanvas;
         const tagCanvasOptions = {
            textColour: '#fedc71',
@@ -62,15 +75,18 @@ const AboutView = (props) => {
             console.log('Canvas Error: ');
             console.log(e)
         }
-    }, []);
+    }, [popupAnims]);
+    // popupAnims.play()
 
+    if (conditional) { popupAnims.play() }
+    
     return (
-        <div className='aboutView' ref={props.setAboutRef}>
+        <div className='aboutView' ref={setViewRef} >
 
-            <p className='mainTxtBG' ref={props.addToRefs}>About</p>
-            <p className='largeTtlBG' ref={props.addToRefs}>About</p>
+            <p className='mainTxtBG' ref={titleRef}>About</p>
+            <p className='largeTtlBG' >About</p>
             
-            <div className='aboutTXT' ref={props.addToRefs}>
+            <div className='aboutTXT' ref={textRef}>
                 {/* This is where the text will go | Include different p elements for the text*/}
                 <p>
                     I'm a Front-End / Web Developer based in Miami, US. 
@@ -92,8 +108,8 @@ const AboutView = (props) => {
 
             {/* <p className='skillsTitle'>Skills</p> */}
 
-            <div className='skillCanvasCntr' ref={props.addToRefs}>
-                <canvas className='skillCanvas' id='canvas' width='500' height='500'></canvas>
+            <div className='skillCanvasCntr' >
+                <canvas className='skillCanvas' ref={canvasRef} id='canvas' width='500' height='500'></canvas>
             </div>
 
             <div className='tags' id='allTags' style={{ display: 'none'}}>

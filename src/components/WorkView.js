@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 const WorkView = (props) => {
+    const useOnScreen = props.useOnScreen;
+    const options = props.options;
 
     let prjct1RefBG = useRef(null), prjct2RefBG = useRef(null), prjct3RefBG = useRef(null), prjct4RefBG = useRef(null);
 
@@ -19,8 +21,26 @@ const WorkView = (props) => {
       { name: 'Clock - Timer', image: 'clock', description: "Full-Stack CRUD application that uses React, Express, and MongoDB. Showcases time across different timezones, allows users to create sessions with different timer intervals, and save or delete sessions in database", techs: ['React', 'Express', 'REST API', 'Mongo DB', 'Heroku'], seeLive: 'https://clock-timer-mario-domenech.herokuapp.com/', seeCode: 'https://github.com/Rio0628/clock-timer',  refBG: prjct4RefBG, refTXT: prjct4RefTXT, anim: prjct4Anims },
     ];
     
-    
+    let titleRef = useRef(null);
+    let projectsRefs = useRef([]);
+
+    const [setViewRef, viewRef] = useOnScreen(options);
+    let popupAnims = gsap.timeline({paused: true});
+    let conditional = viewRef;
+
+    const addToRefs = (el) => {
+        if (el && !projectsRefs.current.includes(el)) {
+          projectsRefs.current.push(el);
+        }
+        // console.log(projectsRefs.current)
+    }
+
     useEffect( () => {
+
+      popupAnims.fromTo(titleRef.current, { opacity: 0, x: -50}, { opacity: 1, x: 0, y: 0, duration: .2, ease: 'expo'});
+      projectsRefs.current.forEach( (el) => {
+          popupAnims.fromTo(el, { opacity: 0, y: 10}, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+      })
 
       prjct1Anims.to( prjct1RefBG.current, { opacity: 1, duration: .1 });
       prjct1Anims.to( prjct1RefTXT.current, { x: 0, duration: .1 });
@@ -34,19 +54,19 @@ const WorkView = (props) => {
       prjct4Anims.to( prjct4RefBG.current, { opacity: 1, duration: .1 });
       prjct4Anims.to( prjct4RefTXT.current, { x: 0, duration: .1 });
       
-    }, [prjct1Anims, prjct2Anims, prjct3Anims, prjct4Anims]);
+    }, [prjct1Anims, prjct2Anims, prjct3Anims, prjct4Anims, popupAnims]);
   
-    // console.log(testAnim)
+    if (conditional) { popupAnims.play(); }
 
     return (
-        <div className='workView' ref={props.setWorkRef}>
-          <p className='mainTxtBG'>Projects</p>
+        <div className='workView' ref={setViewRef}>
+          <p className='mainTxtBG' ref={titleRef}>Projects</p>
           <p className='largeTtlBG'>Projects</p>
 
           <div className='projectsCntr'>
 
             { projects.map( project => 
-              <div className='indProject' onMouseEnter={() => project.anim.play()} onMouseLeave={ () => project.anim.reverse() } key={project.name}>
+              <div className='indProject' onMouseEnter={() => project.anim.play()} onMouseLeave={ () => project.anim.reverse() } key={project.name} ref={addToRefs}>
                 <p className='projectTitle'>{project.name}</p>
   
                 <div className='projectPixCntr'>
