@@ -69,7 +69,6 @@ const App = () => {
   const [setContactRef, contactViewVisible] = useOnScreen(options);
 
   // console.log(skillsViewVisible, aboutViewVisible, workViewVisible, contactViewVisible)
-
   return (
     <div className="container">
       <CgMenuGridR className='menuBtn' onClick={() => navAnims.play()} />

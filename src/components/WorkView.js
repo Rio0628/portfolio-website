@@ -37,9 +37,9 @@ const WorkView = (props) => {
 
     useEffect( () => {
 
-      popupAnims.fromTo(titleRef.current, { opacity: 0, x: -50}, { opacity: 1, x: 0, y: 0, duration: .2, ease: 'expo'});
+      popupAnims.to(titleRef.current, { opacity: 1, x: 0, y: 0, duration: 1, ease: 'expo'});
       projectsRefs.current.forEach( (el) => {
-          popupAnims.fromTo(el, { opacity: 0, y: 10}, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+          popupAnims.to(el, { opacity: 1, x: 0, y: 0, ease: 'expo' });
       })
 
       prjct1Anims.to( prjct1RefBG.current, { opacity: 1, duration: .1 });

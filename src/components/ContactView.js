@@ -13,14 +13,17 @@ const ContactView = (props) => {
     const [setViewRef, viewRef] = useOnScreen(options);
     let popupAnims = gsap.timeline({paused: true});
     let conditional = viewRef;
+    let appearCnt = 0;
 
     useEffect( () => {
-        popupAnims.fromTo(titleRef.current, { opacity: 0, x: -50}, { opacity: 1, x: 0, y: 0, duration: .2, ease: 'expo'});
-        popupAnims.fromTo(textRef.current, { opacity: 0, y: 10}, { opacity: 1, x: 0, y: 0, ease: 'expo' });
-        popupAnims.fromTo(formRef.current, { opacity: 0, y: 10}, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+        popupAnims.to(titleRef.current, { opacity: 1, x: 0, y: 0, duration: 1, ease: 'expo'});
+        popupAnims.to(textRef.current, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+        popupAnims.to(formRef.current, { opacity: 1, x: 0, y: 0, ease: 'expo' });
     }, [popupAnims]);
 
-    if (conditional) { popupAnims.play(); }
+    if (conditional) {
+        popupAnims.play();
+    }
 
     return (
         <div className='contactView' id='contact' ref={setViewRef}>

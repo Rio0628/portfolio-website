@@ -43,9 +43,9 @@ const AboutView = (props) => {
     // console.log(viewRef);
     useEffect( () => {
             
-        popupAnims.fromTo(titleRef.current, { opacity: 0, x: -50}, { opacity: 1, x: 0, y: 0, duration: .2, ease: 'expo'});
-        popupAnims.fromTo(textRef.current, { opacity: 0, y: 10}, { opacity: 1, x: 0, y: 0, ease: 'expo' });
-        popupAnims.fromTo(canvasRef.current, { opacity: 0, y: 10, x: 20}, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+        popupAnims.to(titleRef.current, { opacity: 1, x: 0, y: 0, duration: 1, ease: 'expo'});
+        popupAnims.to(textRef.current, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+        popupAnims.to(canvasRef.current, { opacity: 1, x: 0, y: 0, ease: 'expo' });
         // console.log(titleRef)
 
         const TagCanvas = window.TagCanvas;
@@ -77,8 +77,8 @@ const AboutView = (props) => {
         }
     }, [popupAnims]);
     // popupAnims.play()
-
-    if (conditional) { popupAnims.play() }
+    
+    if (conditional) { popupAnims.play(); }
     
     return (
         <div className='aboutView' ref={setViewRef} >

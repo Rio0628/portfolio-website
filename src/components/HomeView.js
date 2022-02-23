@@ -6,6 +6,7 @@ const HomeView = () => {
     
     const welcomeTxtRef = useRef(null);
     const detailsTxtRef = useRef(null);
+    const titleRef = useRef(null);
     const homeBtnRef = useRef(null);
     const canvasRef = useRef(null);
     const homeViewRef = useRef(null);
@@ -14,8 +15,9 @@ const HomeView = () => {
     useEffect( () => {
         
         let homeViewAnims = gsap.timeline({ paused: false });
-        homeViewAnims.to(welcomeTxtRef.current, { opacity: 1, duration: .5 }).play();
-        homeViewAnims.to(detailsTxtRef.current, { opacity: 1, duration: .3 }).play();
+        homeViewAnims.to(welcomeTxtRef.current, { opacity: 1, duration: .8 }).play();
+        homeViewAnims.to(detailsTxtRef.current, { opacity: 1, duration: .2 }).play();
+        homeViewAnims.to(titleRef.current, { opacity: 1, duration: .2 }).play();
         homeViewAnims.to(homeBtnRef.current, { opacity: 1, duration: .3 }).play();
 
         let canvas = canvasRef.current;
@@ -285,23 +287,16 @@ const HomeView = () => {
 		// animate();
     }, []);
 
-    let revealRefs = useRef([]);
-    const addToRefs = (el) => {
-        if (el && !revealRefs.current.includes(el)) {
-            revealRefs.current.push(el);
-        }
-        // console.log(revealRefs.current)
-    }
 
     return (
-        <div className='homeView' ref={addToRefs}>
+        <div className='homeView'>
             {/* CANVAS OBJECT WILL GO HERE */}
             <canvas className='spiralCanvas' ref={canvasRef}></canvas>
         
-            <p className='mainTxtBG' ref={addToRefs}>Welcome</p>
+            <p className='mainTxtBG' ref={titleRef}>Welcome</p>
 
-            <div className='welcomeTxt-DetailsCntr'>
-                <div className='welcomeTxt' ref={welcomeTxtRef}>
+            <div className='welcomeTxt-DetailsCntr'  >
+                <div className='welcomeTxt' ref={welcomeTxtRef} >
                     <p>Hello,</p>
                     <p>I'm Mario</p>
                 </div>
