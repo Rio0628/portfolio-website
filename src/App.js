@@ -7,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {  
-  let revealRefs = useRef([]);
   let navRef = useRef(null);
   let navBtnRef = useRef(null);
   let navLogoRef = useRef(null);
@@ -24,13 +23,6 @@ const App = () => {
     // test.play().timeScale(1)
 
   }, [navAnims, navBtnRef, navItemsRef, navLogoRef, navRef]);
-
-  const addToRefs = (el) => {
-      if (el && !revealRefs.current.includes(el)) {
-        revealRefs.current.push(el);
-      }
-      console.log(revealRefs.current)
-  }
 
   const useOnScreen = (options) => {
     // Function to create a new intersection obsverer on a certain element
@@ -61,12 +53,7 @@ const App = () => {
   }
 
   // Will set a new intersection observer for each of the view in the website. 
-  const [setSkillsRef, skillsViewVisible] = useOnScreen(options);
-  const [setAboutRef, aboutViewVisible] = useOnScreen(options);
-  const [setWorkRef, workViewVisible] = useOnScreen(options);
-  const [setContactRef, contactViewVisible] = useOnScreen(options);
 
-  // console.log(skillsViewVisible, aboutViewVisible, workViewVisible, contactViewVisible)
   return (
     <div className="container">
       <CgMenuGridR className='menuBtn' onClick={() => navAnims.play()} />

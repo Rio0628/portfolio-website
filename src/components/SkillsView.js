@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { AiFillHtml5 } from 'react-icons/ai';
 import { BsGithub } from 'react-icons/bs';
-import { IoLogoCss3, IoLogoJavascript, IoLogoAngular, IoLogoNodejs, IoLogoLaravel, IoLogoPython, IoLogoNpm } from 'react-icons/io';
+import { IoLogoCss3, IoLogoJavascript, IoLogoAngular, IoLogoNodejs, IoLogoPython, IoLogoNpm } from 'react-icons/io';
 import { FaReact, FaLaravel, FaGitAlt } from 'react-icons/fa';
-import { SiExpress, SiPhp, SiCplusplus, SiJava, SiTypescript, SiMongodb, SiMysql, SiThreedotjs, SiGraphql } from 'react-icons/si'; 
+import { SiExpress, SiPhp, SiCplusplus, SiJava, SiMongodb, SiMysql, SiThreedotjs, SiGraphql } from 'react-icons/si'; 
 import { GrMysql } from 'react-icons/gr';
 import './SkillsHoverEffects.css';
 import { gsap } from 'gsap';
