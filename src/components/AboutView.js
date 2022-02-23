@@ -81,11 +81,12 @@ const AboutView = (props) => {
     if (conditional) { popupAnims.play(); }
     
     return (
-        <div className='aboutView' ref={setViewRef} >
+        <div className='aboutView' ref={setViewRef}>
 
-            <p className='mainTxtBG' ref={titleRef}>About</p>
+            <p className='mainTxtBG' ref={titleRef} id='about'>About</p>
             <p className='largeTtlBG' >About</p>
             
+
             <div className='aboutTXT' ref={textRef}>
                 {/* This is where the text will go | Include different p elements for the text*/}
                 <p>
@@ -105,8 +106,6 @@ const AboutView = (props) => {
                     Apart from having a passion for Software Development I have a passion for exercising and spending time outdoors.
                 </p>
             </div>
-
-            {/* <p className='skillsTitle'>Skills</p> */}
 
             <div className='skillCanvasCntr' >
                 <canvas className='skillCanvas' ref={canvasRef} id='canvas' width='500' height='500'></canvas>

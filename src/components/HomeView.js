@@ -322,8 +322,8 @@ const HomeView = () => {
             </div>
 
             <div className='homeViewBtns' ref={homeBtnRef}>
-                <p className='viewWorkBtn'>View Work</p>
-                <p className='contactMeBtn'>Contact Me</p>
+                <a className='viewWorkBtn' href='#work'>View Work</a>
+                <a className='contactMeBtn' href='#contact'>Contact Me</a>
             </div>
         </div>
     );

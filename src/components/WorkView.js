@@ -60,7 +60,7 @@ const WorkView = (props) => {
 
     return (
         <div className='workView' ref={setViewRef}>
-          <p className='mainTxtBG' ref={titleRef}>Projects</p>
+          <p className='mainTxtBG' ref={titleRef} id='work'>Projects</p>
           <p className='largeTtlBG'>Projects</p>
 
           <div className='projectsCntr'>

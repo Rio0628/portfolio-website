@@ -13,7 +13,6 @@ const ContactView = (props) => {
     const [setViewRef, viewRef] = useOnScreen(options);
     let popupAnims = gsap.timeline({paused: true});
     let conditional = viewRef;
-    let appearCnt = 0;
 
     useEffect( () => {
         popupAnims.to(titleRef.current, { opacity: 1, x: 0, y: 0, duration: .5});
@@ -26,9 +25,9 @@ const ContactView = (props) => {
     }
 
     return (
-        <div className='contactView' id='contact' ref={setViewRef}>
+        <div className='contactView' ref={setViewRef}>
             
-            <p className='mainTxtBG' ref={titleRef}>Contact</p>
+            <p className='mainTxtBG' id='contact' ref={titleRef}>Contact</p>
             <p className='largeTtlBG'>Contact</p>
 
             <p className='contactViewText' ref={textRef}>

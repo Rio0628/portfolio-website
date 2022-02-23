@@ -102,8 +102,8 @@ const SkillsView = (props) => {
     if (conditional) { popupAnims.play(); }
     
     return (
-        <div className='skillsView' ref={setViewRef}>
-            <p className='mainTxtBG' ref={titleRef}>Skills</p>
+        <div className='skillsView' ref={setViewRef} >
+            <p className='mainTxtBG' ref={titleRef} id='skills'>Skills</p>
             <p className='largeTtlBG'>Skills</p>
         
             <p className='skillsViewText' ref={textRef}>

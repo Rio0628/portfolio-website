@@ -83,15 +83,17 @@ const App = () => {
         <p className='mainLogo' ref={navLogoRef}>Mario Domenech</p>
 
         <ul className='navItems' ref={navItemsRef}>
-          <li className='homeItem'>Home</li>
-          <li className='aboutItem'>About</li>
-          <li className='skillsItem'>Skills</li>
-          <li className='workItem'>Work</li>
-          <li className='contactItem'>Contact</li>
+          <a className='homeItem' href='#home'>Home</a>
+          <a className='aboutItem' href='#about'>About</a>
+          <a className='skillsItem' href='#skills'>Skills</a>
+          <a className='workItem' href='#work'>Work</a>
+          <a className='contactItem' href='#contact'>Contact</a>
         </ul>
       </div>
       
-      <div className='mainContainer'>
+      <div className='mainContainer' >
+        <div className='top' id='home'></div>
+
         <HomeView />
 
         <AboutView useOnScreen={useOnScreen} options={options} />
