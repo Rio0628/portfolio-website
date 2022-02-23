@@ -16,7 +16,7 @@ const App = () => {
 
   useEffect( () => {
 
-    navAnims.to(navRef.current, { opacity: 1, duration: 1, top: 0 });
+    navAnims.to(navRef.current, { opacity: 1, duration: .8, top: 0 });
     navAnims.to(navBtnRef.current, { opacity: 1, duration: .3 });
     navAnims.to(navLogoRef.current, { opacity: 1, duration: .3, right: 0});
     navAnims.to(navItemsRef.current, { opacity: 1, marginTop: 0, duration: .3, left: 0 });
@@ -70,11 +70,11 @@ const App = () => {
         <p className='mainLogo' ref={navLogoRef}>Mario Domenech</p>
 
         <ul className='navItems' ref={navItemsRef}>
-          <a className='homeItem' href='#home'>Home</a>
-          <a className='aboutItem' href='#about'>About</a>
-          <a className='skillsItem' href='#skills'>Skills</a>
-          <a className='workItem' href='#work'>Work</a>
-          <a className='contactItem' href='#contact'>Contact</a>
+          <a className='homeItem' href='#home' onClick={() => navAnims.reverse()}>Home</a>
+          <a className='aboutItem' href='#about' onClick={() => navAnims.reverse()}>About</a>
+          <a className='skillsItem' href='#skills' onClick={() => navAnims.reverse()}>Skills</a>
+          <a className='workItem' href='#work' onClick={() => navAnims.reverse()}>Work</a>
+          <a className='contactItem' href='#contact' onClick={() => navAnims.reverse()}>Contact</a>
         </ul>
       </div>
       
