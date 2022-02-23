@@ -43,9 +43,9 @@ const AboutView = (props) => {
     // console.log(viewRef);
     useEffect( () => {
             
-        popupAnims.to(titleRef.current, { opacity: 1, x: 0, y: 0, duration: 1, ease: 'expo'});
-        popupAnims.to(textRef.current, { opacity: 1, x: 0, y: 0, ease: 'expo' });
-        popupAnims.to(canvasRef.current, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+        popupAnims.to(titleRef.current, { opacity: 1, x: 0, y: 0, duration: .5});
+        popupAnims.to(textRef.current, { opacity: 1, x: 0, y: 0 });
+        popupAnims.to(canvasRef.current, { opacity: 1, x: 0, y: 0 });
         // console.log(titleRef)
 
         const TagCanvas = window.TagCanvas;
@@ -77,7 +77,7 @@ const AboutView = (props) => {
         }
     }, [popupAnims]);
     // popupAnims.play()
-    
+
     if (conditional) { popupAnims.play(); }
     
     return (

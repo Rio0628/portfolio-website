@@ -62,7 +62,7 @@ const SkillsView = (props) => {
 
     useEffect( () => {
       
-        popupAnims.to(titleRef.current, { opacity: 1, x: 0, y: 0, duration: 1});
+        popupAnims.to(titleRef.current, { opacity: 1, x: 0, y: 0, duration: .5});
         popupAnims.to(textRef.current, { opacity: 1, x: 0, y: 0 });
         popupAnims.to(skillsCntrRef.current, { opacity: 1, x: 0, y: 0 });
         // skillsRefs.current.forEach( (el) => {

@@ -113,8 +113,8 @@ const HomeView = () => {
             lastX = event.touches[0].clientX;
             lastY = event.touches[0].clientY;
 
-            document.addEventListener( 'touchmove', onTouchMove );
-            document.addEventListener( 'touchend', onTouchEnd );
+            homeView.addEventListener( 'touchmove', onTouchMove );
+            homeView.addEventListener( 'touchend', onTouchEnd );
         }
 
         const onTouchMove = (event) => {
@@ -131,8 +131,8 @@ const HomeView = () => {
         }
 
         const onTouchEnd = (event) => {
-            document.removeEventListener( 'touchmove', onTouchMove );
-            document.removeEventListener( 'touchend', onTouchEnd );
+            homeView.removeEventListener( 'touchmove', onTouchMove );
+            homeView.removeEventListener( 'touchend', onTouchEnd );
         }
 
         const setup = () => {
@@ -290,7 +290,7 @@ const HomeView = () => {
 
     return (
         <div className='homeView'>
-            {/* CANVAS OBJECT WILL GO HERE */}
+            
             <canvas className='spiralCanvas' ref={canvasRef}></canvas>
         
             <p className='mainTxtBG' ref={titleRef}>Welcome</p>

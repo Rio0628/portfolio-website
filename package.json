@@ -31,10 +31,8 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
-    "postinstall": "cd src && npm run build",
-    "server": "nodemon index.js",
-    "start": "node index.js",
-    "dev": "concurrently \"set PORT=8000 && react-scripts --openssl-legacy-provider start\" \" nodemon index\"",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "dev": "react-scripts --openssl-legacy-provider start",
     "test": "react-scripts test",
     "build": "react-scripts --openssl-legacy-provider build",
     "eject": "react-scripts eject",

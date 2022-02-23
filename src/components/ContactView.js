@@ -16,9 +16,9 @@ const ContactView = (props) => {
     let appearCnt = 0;
 
     useEffect( () => {
-        popupAnims.to(titleRef.current, { opacity: 1, x: 0, y: 0, duration: 1, ease: 'expo'});
-        popupAnims.to(textRef.current, { opacity: 1, x: 0, y: 0, ease: 'expo' });
-        popupAnims.to(formRef.current, { opacity: 1, x: 0, y: 0, ease: 'expo' });
+        popupAnims.to(titleRef.current, { opacity: 1, x: 0, y: 0, duration: .5});
+        popupAnims.to(textRef.current, { opacity: 1, x: 0, y: 0 });
+        popupAnims.to(formRef.current, { opacity: 1, x: 0, y: 0 });
     }, [popupAnims]);
 
     if (conditional) {
