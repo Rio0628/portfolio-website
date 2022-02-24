@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import emailjs from 'emailjs-com';
 import { gsap } from 'gsap';
 
 const ContactView = (props) => {
@@ -24,6 +25,21 @@ const ContactView = (props) => {
         popupAnims.play();
     }
 
+    const sendEmail = (e) => {
+        // Send the email message that the user creates to maker's main email.  
+        e.preventDefault();
+  
+        if (e.target.elements[0].value && e.target.elements[1].value && e.target.elements[2].value) {
+            emailjs.sendForm('service_s96ceec', 'template_sbt77qu', e.target, 'user_ZnbEy3YQ1cqh19gURzYbS').then((result) => {
+                alert('Email Sent.');
+                window.location.reload();
+              }, (err) => { alert(err.text) });
+        }
+        else alert("Please fill the form to send message!");
+      
+      }
+  
+
     return (
         <div className='contactView' ref={setViewRef}>
             
@@ -34,7 +50,7 @@ const ContactView = (props) => {
                 I am interested in any opportunities that allow me to showcase my skills. If you have any questions or requests do not hesitate to use the form below. 
             </p>
 
-            <form className='inputFieldsCntr' onSubmit={props.sendEmail} ref={formRef}>
+            <form className='inputFieldsCntr' ref={formRef} onSubmit={sendEmail}>
                 <input className='inputName' id='name' placeholder='Name' type='text' name='from_name' onChange={props.onChange}/>
 
                 <input className='inputEmail' id='email' placeholder='Email Address' type='email' name='from_email' onChange={props.onChange}/>

@@ -113,8 +113,8 @@ const HomeView = () => {
             lastX = event.touches[0].clientX;
             lastY = event.touches[0].clientY;
 
-            homeView.addEventListener( 'touchmove', onTouchMove );
-            homeView.addEventListener( 'touchend', onTouchEnd );
+            document.addEventListener( 'touchmove', onTouchMove );
+            document.addEventListener( 'touchend', onTouchEnd );
         }
 
         const onTouchMove = (event) => {
