@@ -236,6 +236,7 @@ body {
   text-decoration: none;
   outline: 3px solid white;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .contactMeBtn {
@@ -656,8 +657,6 @@ body {
 }
 
 @media screen and (min-width: 600px) {
-  
-  .homeViewBtns { top: 6rem; }
 
   .viewWorkBtn, .contactMeBtn {
     font-size: 23px;
