@@ -873,16 +873,15 @@ body {
 
   .projectTitle {
     left: 14rem;
-    top: -2rem;
+    top: 4rem; /* top: -2rem; */
     font-size: 4.5rem;
     background: none;
-    z-index: 1;
-    color: #fff;
+    z-index: 5;
+    color: #fed557;
   }
 
   .indProject:hover .projectTitle {
-    color: #fed557;
-    z-index: 2;
+    top: -3.5rem;
     transition: .1s linear;
   }
 
@@ -891,8 +890,8 @@ body {
   .projectPixCntr {
     top: 7rem;
     left: 20px; 
-    height: 45%;
-    width: 40%;
+    height: 50%;
+    width: 45%;
   }
 
   .projectInfoCntr {
