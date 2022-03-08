@@ -33,7 +33,7 @@ const SkillsView = (props) => {
         // DATABASE OBJECTS
         { name: 'SQL', icon: <GrMysql className='logo' />, techId: 'dbsObj', url: 'https://searchdatamanagement.techtarget.com/definition/SQL#:~:text=Structured%20Query%20Language%20(SQL)%20is,on%20the%20data%20in%20them.&text=SQL%20is%20used%20for%20the,deleting%20rows%20of%20data%3B%20and'},
         { name: 'My Sql', icon: <SiMysql className='logo' />, techId: 'dbsObj', url: 'https://www.mysql.com/'},
-        { name: 'Monog DB', icon: <SiMongodb className='logo' />, techId: 'dbsObj', url: 'https://www.mongodb.com/'},
+        { name: 'Mongo DB', icon: <SiMongodb className='logo' />, techId: 'dbsObj', url: 'https://www.mongodb.com/'},
         
         // TOOLS OBJECTS
         { name: 'Github', icon: <BsGithub className='logo' />, techId: 'toolsObj', url: 'https://github.com/'},
@@ -111,7 +111,7 @@ const SkillsView = (props) => {
             </p>
 
             <div className='allSkillsCntr' ref={skillsCntrRef}>
-                <div className='frontEndSkillsCntr' ref={addToRefs}>
+                <div className='frontEndSkillsCntr' id='skillsCntr' ref={addToRefs}>
                     <p className='indSkillsCntrBgText'>Front-End</p>
                     <div className='skillsObjsCntr' >
                         { technologies.filter(tech => tech.techId === 'frontEndObj').map(tech => 
@@ -123,7 +123,7 @@ const SkillsView = (props) => {
                     </div>
                 </div>
 
-                <div className='backEndSkillsCntr' ref={addToRefs}>
+                <div className='backEndSkillsCntr' id='skillsCntr' ref={addToRefs}>
                     <p className='indSkillsCntrBgText'>Back-End</p>
                     <div className='skillsObjsCntr'>
                         { technologies.filter(tech => tech.techId === 'backEndObj').map(tech => 
@@ -135,7 +135,7 @@ const SkillsView = (props) => {
                     </div>
                 </div>
                  
-                <div className='databasesSkillsCntr' ref={addToRefs}>
+                <div className='databasesSkillsCntr' id='skillsCntr' ref={addToRefs}>
                     <p className='indSkillsCntrBgText'>Databases</p>
                     <div className='skillsObjsCntr'>
                         { technologies.filter(tech => tech.techId === 'dbsObj').map(tech => 
@@ -147,7 +147,7 @@ const SkillsView = (props) => {
                     </div>
                 </div>
 
-                <div className='toolsSkillsCntr' ref={addToRefs}>
+                <div className='toolsSkillsCntr' id='skillsCntr' ref={addToRefs}>
                     <p className='indSkillsCntrBgText'>Tools</p>
                     <div className='skillsObjsCntr'>
                         { technologies.filter(tech => tech.techId === 'toolsObj').map(tech => 
@@ -159,7 +159,7 @@ const SkillsView = (props) => {
                     </div>
                 </div>
 
-                <div className='learningSkillsCntr' ref={addToRefs}>
+                <div className='learningSkillsCntr' id='skillsCntr' ref={addToRefs}>
                     <p className='indSkillsCntrBgText'>Learning</p>
                     <div className='skillsObjsCntr'>
                         { technologies.filter(tech => tech.techId === 'learningObj').map(tech => 
