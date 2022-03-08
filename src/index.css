@@ -281,6 +281,7 @@ body {
   letter-spacing: 2px;
   color: #1e2428;
   z-index: 0;
+  pointer-events: none;
 }
 
 .aboutTXT, .skillsViewText, .contactViewText {
