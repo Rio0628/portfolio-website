@@ -514,7 +514,7 @@ body {
 
 .projectPix.todoList { background-image: url('../src/images/TodoListLogo.PNG'); }
 
-.projectPix.ticTacToe { background-image: url('../src/images/Tic-Tac-Toe.PNG'); }
+.projectPix.weatherMaps { background-image: url('../src/images/WeatherMaps.PNG'); }
 
 .projectInfoCntr {
   position: absolute;
@@ -570,6 +570,8 @@ body {
   text-decoration: none;
   color: #fff;
 }
+
+.indProject:nth-child(1) .projectBtnsCntr { top: -10px; }
 
 /* ++|++ CONTACT VIEW ++|++ */
 
