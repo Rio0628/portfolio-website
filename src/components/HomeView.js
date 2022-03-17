@@ -289,7 +289,7 @@ const HomeView = () => {
 
 
     return (
-        <div className='homeView'>
+        <main className='homeView'>
             
             <canvas className='spiralCanvas' ref={canvasRef}></canvas>
         
@@ -325,7 +325,7 @@ const HomeView = () => {
                 <a className='viewWorkBtn' href='#work'>View Work</a>
                 <a className='contactMeBtn' href='#contact'>Contact Me</a>
             </div>
-        </div>
+        </main>
     );
 }
 

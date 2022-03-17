@@ -59,7 +59,7 @@ const WorkView = (props) => {
     if (conditional) { popupAnims.play(); }
 
     return (
-        <div className='workView' ref={setViewRef}>
+        <section className='workView' ref={setViewRef}>
           <p className='mainTxtBG' ref={titleRef} id='work'>Projects</p>
           <p className='largeTtlBG'>Projects</p>
 
@@ -92,7 +92,7 @@ const WorkView = (props) => {
             
           </div>
   
-        </div>
+        </section>
     );
 }
 

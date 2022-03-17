@@ -102,7 +102,7 @@ const SkillsView = (props) => {
     if (conditional) { popupAnims.play(); }
     
     return (
-        <div className='skillsView' ref={setViewRef} >
+        <section className='skillsView' ref={setViewRef} >
             <p className='mainTxtBG' ref={titleRef} id='skills'>Skills</p>
             <p className='largeTtlBG'>Skills</p>
         
@@ -172,7 +172,7 @@ const SkillsView = (props) => {
                 </div>
             </div>
 
-        </div>
+        </section>
     );
 }
 

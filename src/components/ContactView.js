@@ -41,7 +41,7 @@ const ContactView = (props) => {
   
 
     return (
-        <div className='contactView' ref={setViewRef}>
+        <section className='contactView' ref={setViewRef}>
             
             <p className='mainTxtBG' id='contact' ref={titleRef}>Contact</p>
             <p className='largeTtlBG'>Contact</p>
@@ -59,7 +59,7 @@ const ContactView = (props) => {
     
                 <input type='submit' className='submitBtn'></input>
             </form>
-        </div>
+        </section>
     );
 }
 
