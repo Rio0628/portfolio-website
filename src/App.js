@@ -71,10 +71,10 @@ const App = () => {
         <ul className='navItems' ref={navItemsRef}>
           <a className='homeItem' href='#home' onClick={() => navAnims.reverse()}>Home</a>
           <a className='aboutItem' href='#about' onClick={() => navAnims.reverse()}>About</a>
-          <a className='resumeItem' href='https://drive.google.com/file/d/1GTt9QY0V1jlKI5MW_HzqZfIujP__DnZJ/view?usp=sharing' target='_blank' rel='noopener noreferrer' onClick={() => navAnims.reverse()}>Resume</a>
           <a className='skillsItem' href='#skills' onClick={() => navAnims.reverse()}>Skills</a>
           <a className='workItem' href='#work' onClick={() => navAnims.reverse()}>Work</a>
           <a className='contactItem' href='#contact' onClick={() => navAnims.reverse()}>Contact</a>
+          <a className='resumeItem' href='https://drive.google.com/file/d/1GTt9QY0V1jlKI5MW_HzqZfIujP__DnZJ/view?usp=sharing' target='_blank' rel='noopener noreferrer' onClick={() => navAnims.reverse()}>Resume</a>
         </ul>
       </div>
       
