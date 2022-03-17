@@ -92,7 +92,7 @@ const AboutView = (props) => {
                 <p>
                     I'm a Front-End / Web Developer based in Miami, US. 
                     I have a passion for Software Development,
-                    creating animations, and solving all types
+                    learning through doing, and solving all types
                     of problems.
                 </p>
 
@@ -103,7 +103,7 @@ const AboutView = (props) => {
                 </p>
 
                 <p>
-                    Apart from having a passion for Software Development I have a passion for exercising and spending time outdoors.
+                    Apart from having a passion for Software Development I have a passion for exercising, spending time outdoors, and learning about the universe.
                 </p>
             </div>
 
