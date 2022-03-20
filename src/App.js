@@ -74,7 +74,7 @@ const App = () => {
           <a className='skillsItem' href='#skills' onClick={() => navAnims.reverse()}>Skills</a>
           <a className='workItem' href='#work' onClick={() => navAnims.reverse()}>Work</a>
           <a className='contactItem' href='#contact' onClick={() => navAnims.reverse()}>Contact</a>
-          <a className='resumeItem' href='https://drive.google.com/file/d/1GTt9QY0V1jlKI5MW_HzqZfIujP__DnZJ/view?usp=sharing' target='_blank' rel='noopener noreferrer' onClick={() => navAnims.reverse()}>Resume</a>
+          <a className='resumeItem' href='https://drive.google.com/file/d/1OY4jsxmfhd6mx97-0kdGLSv34UOYVn2K/view?usp=sharing' target='_blank' rel='noopener noreferrer' onClick={() => navAnims.reverse()}>Resume</a>
         </ul>
       </div>
       
