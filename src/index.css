@@ -263,7 +263,6 @@ body {
   margin: auto;
 }
 
-
 /* -- ABOUT VIEW STYLES -- */
 
 .aboutView, .workView{
@@ -360,7 +359,8 @@ body {
 
 .databasesSkillsCntr, .toolsSkillsCntr { 
   top: 2px;
-  height: 14.2rem; } 
+  height: 14.2rem; 
+} 
 
 .learningSkillsCntr { height: 7.2rem; }
 
@@ -416,9 +416,7 @@ body {
   grid-column: span 6;
 }
 
-.workView {
-  height: 175rem;
-}
+.workView { height: 205rem; }
 
 .projectsCntr {
   position: relative;
@@ -516,6 +514,8 @@ body {
 
 .projectPix.weatherMaps { background-image: url('../src/images/WeatherMaps.PNG'); }
 
+.projectPix.exercisePedia { background-image: url('../src/images/ExercisePedia.PNG'); }
+
 .projectInfoCntr {
   position: absolute;
   bottom: -5px;
@@ -527,9 +527,13 @@ body {
   z-index: 3;
 }
 
-.indProject:nth-child(1) .projectInfoCntr, .indProject:nth-child(3) .projectInfoCntr { transform: translateX(-100rem); }
+.indProject:nth-child(1) .projectInfoCntr { transform: translateX(-100rem); }
 
-.indProject:nth-child(2) .projectInfoCntr, .indProject:nth-child(4) .projectInfoCntr { transform: translateX(100rem); } 
+.indProject:nth-child(3) .projectInfoCntr, .indProject:nth-child(5) .projectInfoCntr { transform: translateX(-100rem); }
+
+.indProject:nth-child(2) .projectInfoCntr { transform: translateX(100rem); } 
+
+.indProject:nth-child(4) .projectInfoCntr { transform: translateX(100rem); }
 
 .projectInfo {
   width: 90%;
@@ -572,6 +576,8 @@ body {
 }
 
 .indProject:nth-child(1) .projectBtnsCntr { top: -10px; }
+
+.indProject:nth-child(3) .projectBtnsCntr { top: -20px; }
 
 /* ++|++ CONTACT VIEW ++|++ */
 
@@ -827,6 +833,8 @@ body {
     padding: 12px 30px; 
   }
 
+  .indProject:nth-child(3) .projectBtnsCntr { top: -40px; }
+
   .inputFieldsCntr { width: 38rem; }
 
   .submitBtn { width: 92%; }
@@ -922,6 +930,8 @@ body {
     font-size: 20px;
     padding: 8px 30px;
   }
+
+  .indProject:nth-child(3) .projectBtnsCntr { top: 10px; }
 }
 
 @media screen and (min-width: 1300px) {
