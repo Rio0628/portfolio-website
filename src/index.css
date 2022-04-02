@@ -344,13 +344,8 @@ body {
 }
 
 #skillsCntr:hover {
-  outline: 2px solid #fed557;
+  outline: 4px solid #fed557;
   transition: .2s ease;
-}
-
-#skillsCntr:hover .indSkillsCntrBgText { 
-  color: #fed557; 
-  transition: .1s linear;
 }
 
 .frontEndSkillsCntr { height: 21.5rem; }
