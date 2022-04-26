@@ -511,6 +511,8 @@ body {
 
 .projectPix.exercisePedia { background-image: url('../src/images/ExercisePedia.PNG'); }
 
+.projectPix.lyricfy { background-image: url('../src/images/Lyricfy.PNG') }
+
 .projectInfoCntr {
   position: absolute;
   bottom: -5px;
@@ -572,7 +574,7 @@ body {
 
 .indProject:nth-child(1) .projectBtnsCntr { top: -10px; }
 
-.indProject:nth-child(3) .projectBtnsCntr { top: -20px; }
+.indProject:nth-child(2) .projectBtnsCntr, .indProject:nth-child(3) .projectBtnsCntr { top: -20px; }
 
 /* ++|++ CONTACT VIEW ++|++ */
 
@@ -828,7 +830,7 @@ body {
     padding: 12px 30px; 
   }
 
-  .indProject:nth-child(3) .projectBtnsCntr { top: -40px; }
+  .indProject:nth-child(2) .projectBtnsCntr, .indProject:nth-child(3) .projectBtnsCntr { top: -40px; }
 
   .inputFieldsCntr { width: 38rem; }
 
@@ -926,7 +928,7 @@ body {
     padding: 8px 30px;
   }
 
-  .indProject:nth-child(3) .projectBtnsCntr { top: 10px; }
+  .indProject:nth-child(2) .projectBtnsCntr, indProject:nth-child(3) .projectBtnsCntr { top: 10px; }
 }
 
 @media screen and (min-width: 1300px) {

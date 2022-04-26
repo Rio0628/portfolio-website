@@ -88,7 +88,7 @@ const AboutView = (props) => {
             
 
             <div className='aboutTXT' ref={textRef}>
-                {/* This is where the text will go | Include different p elements for the text*/}
+
                 <p>
                     I'm a Front-End / Web Developer based in Miami, US. 
                     I have a passion for Software Development,
